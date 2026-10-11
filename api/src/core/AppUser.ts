@@ -18,6 +18,7 @@ import { UiPreferencesManager } from '../tv-modules/ui-preferences/UiPreferences
 import { SprintsManager } from '../tv-modules/sprints/SprintsManager';
 import { RecurrenceManager } from '../tv-modules/recurrence/RecurrenceManager';
 import { FilesManager } from '../tv-modules/files/FilesManager';
+import { AutomationsManager } from '../tv-modules/automations/AutomationsManager';
 import type { UserDbRecord, UserJwtPayload } from '../types/auth.types';
 import { GoalPermissionsFetcher } from './GoalPermissionsFetcher';
 
@@ -49,6 +50,7 @@ export class AppUser {
     public readonly sprintsManager: SprintsManager;
     public readonly recurrenceManager: RecurrenceManager;
     public readonly filesManager: FilesManager;
+    public readonly automationsManager: AutomationsManager;
 
     constructor(userData?: UserJwtPayload) {
         this.userData = userData;
@@ -73,6 +75,7 @@ export class AppUser {
         this.sprintsManager = new SprintsManager(this);
         this.recurrenceManager = new RecurrenceManager(this);
         this.filesManager = new FilesManager(this);
+        this.automationsManager = new AutomationsManager(this);
     }
 
     getTokenId(): number | undefined {

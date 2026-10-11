@@ -87,6 +87,11 @@ export const useGraphStore = defineStore('use-graph-store', {
       this.edges = [...edges]
     },
 
+    hasTask(taskId: number): boolean {
+      const nodeId = taskId.toString()
+      return this.allNodes.some((node) => node.id === nodeId)
+    },
+
     removeTask(taskId: number) {
       const nodeId = taskId.toString()
       this.allNodes = this.allNodes.filter((n) => n.id !== nodeId)

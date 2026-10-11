@@ -173,6 +173,15 @@ export const TvPermissions: Record<Uppercase<keyof GoalPermissions>, keyof GoalP
      * Can upload, rename, link/unlink and delete project files
      */
     FILE_CAN_MANAGE: 'file_can_manage',
+
+    /**
+     * Can view the project's automation rules
+     */
+    AUTOMATION_CAN_VIEW: 'automation_can_view',
+    /**
+     * Can create, edit, enable, disable and delete automation rules
+     */
+    AUTOMATION_CAN_MANAGE: 'automation_can_manage',
 } as const;
 
 export type GoalPermissions = {
@@ -229,4 +238,7 @@ export type GoalPermissions = {
 
     file_can_view?: true;
     file_can_manage?: true;
+
+    automation_can_view?: true;
+    automation_can_manage?: true;
 };

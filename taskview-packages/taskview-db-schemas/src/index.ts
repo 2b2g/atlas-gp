@@ -39,3 +39,4 @@ export * from './schemas/recurrence-template-assignees.schema';
 export * from './schemas/recurrence-template-tags.schema';
 export * from './schemas/files.schema';
 export * from './schemas/file-to-task.schema';
+export * from './schemas/automation-rules.schema';

@@ -9,6 +9,7 @@ export interface AppEvents {
     'task.created': { task: TasksSchemaTypeForSelect; initiatorId: number };
     'task.updated': { task: TasksSchemaTypeForSelect; changes: Record<string, unknown>; initiatorId: number };
     'task.assigneesChanged': { taskId: number; userIds: number[]; initiatorId: number };
+    'task.tagsChanged': { taskId: number; tagId: number; added: boolean; initiatorId: number };
     'task.deleted': { taskId: number; goalId: number; initiatorId: number };
     // A task (with the subtasks in taskIds) moved to another project; the copy mode emits task.created instead
     'task.moved': { task: TasksSchemaTypeForSelect; taskIds: number[]; fromGoalId: number; toGoalId: number; initiatorId: number };
@@ -42,6 +43,9 @@ export interface AppEvents {
     'recurrence.ended': { ruleId: number; goalId: number; initiatorId: number };
     'recurrence.deleted': { ruleId: number; goalId: number; initiatorId: number };
     'recurrence.instanceSkipped': { ruleId: number; goalId: number; date: string; initiatorId: number };
+    'kanban.statusDeleted': { statusId: number; goalId: number; initiatorId: number };
+    'tag.deleted': { tagId: number; goalId: number; initiatorId: number };
+    'list.deleted': { listId: number; goalId: number; initiatorId: number };
     'files.changed': { goalId: number; taskIds: number[]; initiatorId: number };
     [FileEvents.Uploaded]: FileEventPayload;
     [FileEvents.Renamed]: FileEventPayload;

@@ -33,6 +33,8 @@ export function useGoalPermissionsFor(goalRef: Ref<GoalItem | null>) {
     canViewSprintAnalytics: can('SPRINT_CAN_VIEW_ANALYTICS'),
     canViewFiles: computed(() => hasPermission(goalRef.value, 'FILE_CAN_VIEW') || hasPermission(goalRef.value, 'FILE_CAN_MANAGE')),
     canManageFiles: can('FILE_CAN_MANAGE'),
+    canViewAutomations: computed(() => hasPermission(goalRef.value, 'AUTOMATION_CAN_VIEW') || hasPermission(goalRef.value, 'AUTOMATION_CAN_MANAGE')),
+    canManageAutomations: can('AUTOMATION_CAN_MANAGE'),
   }
 }
 
@@ -98,6 +100,8 @@ export const useGoalPermissions = () => {
 
   const canViewFiles = computed(() => permissions.FILE_CAN_VIEW || permissions.FILE_CAN_MANAGE)
   const canManageFiles = computed(() => permissions.FILE_CAN_MANAGE)
+  const canViewAutomations = computed(() => permissions.AUTOMATION_CAN_VIEW || permissions.AUTOMATION_CAN_MANAGE)
+  const canManageAutomations = computed(() => permissions.AUTOMATION_CAN_MANAGE)
 
   return {
     permissions,
@@ -142,5 +146,7 @@ export const useGoalPermissions = () => {
     canViewSprintAnalytics,
     canViewFiles,
     canManageFiles,
+    canViewAutomations,
+    canManageAutomations,
   }
 }

@@ -18,9 +18,9 @@ import {
 } from 'taskview-api'
 import { $tvApi } from '@/plugins/axios'
 import { DEFAULT_ID } from '@/types/app.types'
-import { type TasksStoreState } from '@/types/tasks.types'
+import { type TasksApplyRemoteArgs, type TasksStoreState } from '@/types/tasks.types'
 import { useTagsStore } from './tag.store'
-import { isNotNullable, logError } from '@/helpers/Helper'
+import { hasActiveFilters, isNotNullable, logError } from '@/helpers/Helper'
 
 export const useTasksStore = defineStore('tasks', {
   state(): TasksStoreState {
@@ -640,6 +640,43 @@ export const useTasksStore = defineStore('tasks', {
       const task = await $tvApi.tasks.fetchTaskById(data.taskId).catch(() => null)
       if (!task) return
       this.insertRecurrenceInstance(task)
+    },
+
+    findLoadedTask(taskId: number): Task | null {
+      for (const task of this.tasks) {
+        if (task.id === taskId) return task
+        const subtask = task.subtasks.find(({ id }) => id === taskId)
+        if (subtask) return subtask
+      }
+      return null
+    },
+
+    isInCurrentView(task: Task): boolean {
+      const rules = this.fetchRules
+      if (Number(rules.goalId) !== task.goalId) return false
+      if (rules.searchText || hasActiveFilters(rules.filters)) return false
+      if (!rules.showCompleted && task.complete) return false
+      const listId = Number(rules.currentListId)
+      return listId === ALL_TASKS_LIST_ID || listId === DEFAULT_ID || listId === task.goalListId
+    },
+
+    applyRemoteTask(args: TasksApplyRemoteArgs) {
+      const { task } = args
+      this.updateSelectedTask(task)
+
+      const local = this.findLoadedTask(task.id)
+      if (local) {
+        Object.assign(local, task)
+        return
+      }
+      if (!args.created) return
+
+      if (task.parentId) {
+        const parent = this.findLoadedTask(task.parentId)
+        if (parent && !parent.subtasks.some(({ id }) => id === task.id)) parent.subtasks.push(task)
+        return
+      }
+      if (this.isInCurrentView(task)) this.insertRecurrenceInstance(task)
     },
 
     insertRecurrenceInstance(task: Task) {

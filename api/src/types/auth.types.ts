@@ -208,6 +208,9 @@ export const GoalPermissions = {
 
     FILE_CAN_VIEW: 'file_can_view',
     FILE_CAN_MANAGE: 'file_can_manage',
+
+    AUTOMATION_CAN_VIEW: 'automation_can_view',
+    AUTOMATION_CAN_MANAGE: 'automation_can_manage',
 } as const;
 
 export type PermissionsEntityType =

@@ -67,6 +67,8 @@ export default class App {
         this.app.use(corsMiddleware);
         this.app.use(cookieParser());
         this.app.use(express.json({
+            // RFC 7644 §3.1: SCIM clients (Entra ID, Okta, OneLogin) send application/scim+json
+            type: ['application/json', 'application/scim+json'],
             verify: (req: any, _res, buf) => {
                 // Store raw body for webhook signature verification github and gitlab integrations
                 if (req.url?.includes('/webhook/')) {

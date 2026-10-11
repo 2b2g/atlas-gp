@@ -227,6 +227,11 @@ export const useBaseScreenStore = defineStore('base-screen-store', {
       }
     },
 
+    hasTask(taskId: number): boolean {
+      const lists = ['tasks', 'tasksToday', 'tasksUpcoming', 'tasksLastCompleted'] as const
+      return lists.some((list) => this[list].some((task) => task.id === taskId))
+    },
+
     removeTask(taskId: number) {
       const lists = ['tasks', 'tasksToday', 'tasksUpcoming', 'tasksLastCompleted'] as const
       for (const list of lists) {
