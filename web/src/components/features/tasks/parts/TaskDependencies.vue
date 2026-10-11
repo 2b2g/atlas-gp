@@ -52,7 +52,7 @@ import { logError } from '@/helpers/Helper'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
 import { useTaskDetailPanel } from '@/composables/useTaskDetailPanel'
 import TaskDependencyGroup from './TaskDependencyGroup.vue'
-import type { DependencyEntry, DependencyTask } from './TaskDependencies.types'
+import type { DependencyEdgeAddArgs, DependencyEntry, DependencyTask } from './TaskDependencies.types'
 
 const props = defineProps<{
   taskId: number
@@ -60,6 +60,7 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
+const toast = useToast()
 const { canViewGraph, canManageGraph } = useGoalPermissions()
 const { openTask } = useTaskDetailPanel()
 
@@ -111,9 +112,12 @@ async function load() {
 
 watch(() => props.taskId, load, { immediate: true })
 
-async function addEdge({ source, target, task }: { source: number; target: number; task: DependencyTask }) {
+async function addEdge({ source, target, task }: DependencyEdgeAddArgs) {
   const edge = await $tvApi.graph.addEdge({ source, target }).catch((err: unknown) => logError(err))
-  if (!edge) return
+  if (!edge) {
+    toast.add({ title: t('tasks.dependencies.addFailed'), color: 'error' })
+    return
+  }
   taskNames.value.set(task.id, task)
   edges.value.push(edge)
 }

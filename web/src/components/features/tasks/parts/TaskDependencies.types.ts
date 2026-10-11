@@ -8,3 +8,9 @@ export type DependencyEntry = {
   edgeId: number
   task: DependencyTask
 }
+
+export type DependencyEdgeAddArgs = {
+  source: number
+  target: number
+  task: DependencyTask
+}

@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col gap-1 min-w-0 h-full">
+  <div
+    class="flex flex-col gap-1 min-w-0 h-full"
+    :data-testid="`dependency-group-${direction}`"
+  >
     <div class="flex items-center gap-1.5 px-1">
       <UIcon
         :name="icon"
