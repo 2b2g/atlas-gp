@@ -54,7 +54,7 @@ function isShown(request: RealtimeTaskRefresh): boolean {
   ) {
     return true
   }
-  return request.created && (Number(tasksStore.fetchRules.goalId) === request.goalId || kanbanStore.goalId === request.goalId)
+  return request.created && [Number(tasksStore.fetchRules.goalId), kanbanStore.goalId, useGraphStore().goalId].includes(request.goalId)
 }
 
 async function refreshTask(request: RealtimeTaskRefresh) {
@@ -74,7 +74,9 @@ async function refreshTask(request: RealtimeTaskRefresh) {
   const kanbanStore = useKanbanStore()
   kanbanStore.syncTask(task)
   if (created) kanbanStore.insertTask(task)
-  useGraphStore().syncTask(task)
+  const graphStore = useGraphStore()
+  graphStore.syncTask(task)
+  if (created) graphStore.insertTask({ task })
   useBaseScreenStore().syncTask(task)
 }
 

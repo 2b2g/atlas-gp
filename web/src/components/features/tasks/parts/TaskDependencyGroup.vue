@@ -57,6 +57,7 @@
         :goal-id="goalId"
         :excluded-ids="excludedIds"
         @select="(task) => $emit('add', task)"
+        @created="(task) => $emit('created', task)"
       />
     </div>
   </div>
@@ -64,6 +65,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import type { Task } from 'taskview-api'
 import TaskDependencyPicker from './TaskDependencyPicker.vue'
 import type { DependencyEntry, DependencyTask } from './TaskDependencies.types'
 
@@ -80,6 +82,7 @@ defineProps<{
 defineEmits<{
   open: [taskId: number]
   add: [task: DependencyTask]
+  created: [task: Task]
   remove: [edgeId: number]
 }>()
 

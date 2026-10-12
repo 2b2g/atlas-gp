@@ -76,7 +76,7 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDebounceFn } from '@vueuse/core'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID, type Task } from 'taskview-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
@@ -89,6 +89,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   select: [task: DependencyTask]
+  created: [task: Task]
 }>()
 
 const { t } = useI18n()
@@ -152,6 +153,7 @@ async function create() {
     toast.add({ title: t('tasks.dependencies.createFailed'), color: 'error' })
     return
   }
+  emit('created', task)
   pick({ id: task.id, description: task.description, complete: task.complete })
 }
 </script>
