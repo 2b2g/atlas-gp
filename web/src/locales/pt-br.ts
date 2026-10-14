@@ -892,6 +892,8 @@ export default {
       defaultProjectNone: 'Tela inicial (padrão)',
       defaultView: 'Visualização padrão',
       defaultViewHint: 'Qual visualização do projeto padrão abrir.',
+      showTaskId: 'Mostrar ID da tarefa',
+      showTaskIdHint: 'Mostra o número da tarefa (#163) nos cartões e listas; clique para copiar.',
       viewTasks: 'Tarefas',
       viewKanban: 'Kanban',
       viewGraph: 'Gráfico',

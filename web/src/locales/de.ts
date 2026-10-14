@@ -879,6 +879,8 @@ export default {
       defaultProjectNone: 'Startbildschirm (Standard)',
       defaultView: 'Standardansicht',
       defaultViewHint: 'Welche Ansicht beim Öffnen eines Projekts angezeigt wird.',
+      showTaskId: 'Aufgaben-ID anzeigen',
+      showTaskIdHint: 'Zeigt die Aufgabennummer (#163) auf Karten und in Listen; Klick kopiert sie.',
       viewTasks: 'Aufgaben',
       viewKanban: 'Kanban',
       viewGraph: 'Graph',

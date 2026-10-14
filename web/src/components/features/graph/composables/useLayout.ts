@@ -1,6 +1,7 @@
 import dagre from '@dagrejs/dagre'
 import { type Edge, type GraphNode, type Node, Position, type XYPosition } from '@vue-flow/core'
 import type { GraphPlaceNodeNearArgs } from '@/types/graph.types'
+import { useUiPreferencesStore } from '@/stores/uiPreferences.store'
 
 const NODE_WIDTH = 288 // w-72 wrapper in TaskNode
 const NODE_MIN_HEIGHT = 74 // checkbox + priority column with paddings
@@ -41,7 +42,8 @@ export function estimateNodeSize(node: Pick<Node, 'data'>): { width: number; hei
   const badgeWidth = (labelLength: number) =>
     Math.min(CONTENT_WIDTH, BADGE_CHROME_WIDTH + labelLength * BADGE_CHAR_WIDTH)
   const badgeWidths: number[] = []
-  if (task.endDate) badgeWidths.push(badgeWidth(11)) // dd.Mon.yyyy
+  if (useUiPreferencesStore().settings.showTaskId === 1) badgeWidths.push(badgeWidth(String(task.id).length))
+  if (task.endDate) badgeWidths.push(badgeWidth(task.startDate ? 25 : 11)) // dd.Mon.yyyy, or dd.Mon.yyyy → dd.Mon.yyyy
   if (task.recurrenceRuleId) badgeWidths.push(BADGE_CHROME_WIDTH) // icon-only
   if (task.goalListId) badgeWidths.push(badgeWidth(10)) // list name (unknown here)
   if (task.amount) badgeWidths.push(badgeWidth(String(task.amount).length + 1))

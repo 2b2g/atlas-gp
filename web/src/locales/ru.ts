@@ -860,6 +860,8 @@ export default {
       defaultProjectNone: 'Главный экран (по умолчанию)',
       defaultView: 'Вид по умолчанию',
       defaultViewHint: 'Какой вид открывать при переходе в проект.',
+      showTaskId: 'Показывать ID задачи',
+      showTaskIdHint: 'Номер задачи (#163) на карточках и в списках, по клику копируется.',
       viewTasks: 'Задачи',
       viewKanban: 'Канбан',
       viewGraph: 'Граф',

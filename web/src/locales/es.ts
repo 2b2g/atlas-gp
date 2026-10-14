@@ -879,6 +879,8 @@ export default {
       defaultProjectNone: 'Pantalla de inicio (predeterminado)',
       defaultView: 'Vista predeterminada',
       defaultViewHint: 'Qué vista abrir al entrar en un proyecto.',
+      showTaskId: 'Mostrar ID de la tarea',
+      showTaskIdHint: 'Muestra el número de la tarea (#163) en tarjetas y listas; haz clic para copiarlo.',
       viewTasks: 'Tareas',
       viewKanban: 'Kanban',
       viewGraph: 'Grafo',

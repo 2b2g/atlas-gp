@@ -893,6 +893,8 @@ export default {
       defaultProjectNone: 'Home screen (default)',
       defaultView: 'Default view',
       defaultViewHint: 'Which view to open when you enter a project.',
+      showTaskId: 'Show task ID',
+      showTaskIdHint: 'Show the task number (#163) on cards and list rows; click to copy.',
       viewTasks: 'Tasks',
       viewKanban: 'Kanban',
       viewGraph: 'Graph',

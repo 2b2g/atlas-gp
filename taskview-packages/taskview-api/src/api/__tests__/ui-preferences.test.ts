@@ -33,6 +33,20 @@ describe('UI preferences: remembered task sort', () => {
     expect(settingsOf(await api.uiPreferences.fetch())).toMatchObject({ taskSortBy: 'priority', taskSortFirstNew: 0 })
   })
 
+  it('stores whether task cards show the task ID', async () => {
+    const saved = await api.uiPreferences.update({
+      ...original,
+      [UI_SETTINGS_KEY]: { ...settingsOf(original), showTaskId: 1 },
+    })
+    expect(settingsOf(saved)).toMatchObject({ showTaskId: 1 })
+    expect(settingsOf(await api.uiPreferences.fetch())).toMatchObject({ showTaskId: 1 })
+
+    await expectApiError({
+      request: api.uiPreferences.update({ [UI_SETTINGS_KEY]: { showTaskId: true as never } }),
+      status: 400,
+    })
+  })
+
   it('rejects a sort field or direction the task list does not support', async () => {
     await expectApiError({
       request: api.uiPreferences.update({ [UI_SETTINGS_KEY]: { taskSortBy: 'name' as never } }),

@@ -17,6 +17,7 @@ export type UiSettings = {
   defaultView?: DefaultView
   taskSortBy?: TaskSortBy
   taskSortFirstNew?: 0 | 1
+  showTaskId?: 0 | 1
 }
 
 export const UI_SETTINGS_KEY = '__settings__'

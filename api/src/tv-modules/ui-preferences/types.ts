@@ -48,6 +48,7 @@ export const UiSettingsArkType = type({
   'defaultView?': "'tasks' | 'kanban' | 'graph' | 'sprints'",
   'taskSortBy?': "'date' | 'priority'",
   'taskSortFirstNew?': '0 | 1',
+  'showTaskId?': '0 | 1',
 })
 
 export type UiSettings = typeof UiSettingsArkType.infer
