@@ -99,6 +99,7 @@ export default {
     tasks: 'Lista',
     kanban: 'Kanban',
     graph: 'Gráfico',
+    calendar: 'Calendario',
     sprints: 'Sprints',
     collaboration: 'Colaboración',
     integrations: 'Integraciones',
@@ -281,6 +282,22 @@ export default {
       saved: 'Recurrencia guardada',
       skipped: 'Ocurrencia omitida',
       deleted: 'Serie eliminada',
+    },
+  },
+  calendar: {
+    title: 'Calendario',
+    today: 'Hoy',
+    previous: 'Período anterior',
+    next: 'Período siguiente',
+    views: {
+      month: 'Mes',
+      week: 'Semana',
+      list: 'Lista',
+    },
+    subtasks: 'Subtareas: {count}',
+    empty: {
+      title: 'Aquí aparecen las tareas con fecha',
+      description: 'Abre una tarea y ponle fecha de inicio o de fin para verla en el calendario.',
     },
   },
   graph: {
