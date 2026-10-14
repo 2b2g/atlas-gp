@@ -6,10 +6,6 @@ import { initApi } from './init-api'
 import { createAutomationsProject, createTask, expectApiError, shareGoalWith, waitFor } from './automations-test-helpers'
 import type { AutomationsTestProject } from './automations-test-helpers.types'
 
-/**
- * Automation rules act on behalf of their author, so every permission a rule
- * relies on is checked both when the rule is saved and every time it runs.
- */
 describe('Automations permission boundaries', () => {
   let ownerApi: TvApi
   let memberApi: TvApi
@@ -104,7 +100,7 @@ describe('Automations permission boundaries', () => {
     expect(allowed.enabled).toBe(true)
   })
 
-  it('stops running the rules of an author who lost the right to manage automations', async () => {
+  it('keeps running the rules of an author who lost the right to manage automations', async () => {
     const p = await project()
     const { roleId } = await share(p.goalId, [TvPermissions.AUTOMATION_CAN_MANAGE, TvPermissions.TASK_CAN_EDIT_TAGS])
     await memberApi.automations.createRule(createdAddsTag(p, p.tagBId))
@@ -119,11 +115,17 @@ describe('Automations permission boundaries', () => {
     expect(revoked?.add).toBe(false)
 
     const after = await createTask({ api: ownerApi, goalId: p.goalId })
-    expect(await waitFor(async () => (await taskTags(after)).includes(p.tagAId))).toBe(true)
-    expect(await taskTags(after)).not.toContain(p.tagBId)
+    expect(await waitFor(async () => {
+      const tags = await taskTags(after)
+      return tags.includes(p.tagAId) && tags.includes(p.tagBId)
+    })).toBe(true)
+    await expectApiError({
+      request: memberApi.automations.createRule(createdAddsTag(p, p.tagAId)),
+      status: 403,
+    })
   })
 
-  it('makes the editor the author, so a rule never runs with someone else\'s rights', async () => {
+  it('checks the editor\'s permissions and records them as the author', async () => {
     const p = await project()
     const rule = await ownerApi.automations.createRule(createdAddsTag(p, p.tagAId))
     await share(p.goalId, [TvPermissions.AUTOMATION_CAN_MANAGE, TvPermissions.TASK_CAN_EDIT_TAGS])

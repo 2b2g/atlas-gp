@@ -47,7 +47,7 @@ export class AutomationCatalog {
             modules: this.modules.map((module) => ({
                 name: module.name,
                 events: module.events.map((event) => ({ name: event.name, params: event.params })),
-                actions: module.actions.map((action) => ({ name: action.name, params: action.params })),
+                actions: module.actions.map((action) => ({ name: action.name, params: action.params, requiredPermissions: action.requiredPermissions })),
             })),
         };
     }

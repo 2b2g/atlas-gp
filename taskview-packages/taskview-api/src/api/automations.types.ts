@@ -17,6 +17,7 @@ export type AutomationCatalogEvent = {
 export type AutomationCatalogAction = {
     name: string;
     params: AutomationParamDefinition[];
+    requiredPermissions: string[];
 };
 
 export type AutomationCatalogModule = {

@@ -1578,6 +1578,7 @@ export default {
     enabled: 'Enabled',
     runsAsHint: 'Actions run with the permissions of the person who last saved the rule.',
     unavailableOption: 'deleted value',
+    actionUnavailable: 'You lack the permissions for this in this project',
     broken: 'Not working',
     brokenHint: 'A selected column, tag or list was deleted, so the rule was turned off. Edit it and pick a new value.',
     fields: {

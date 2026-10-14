@@ -1564,6 +1564,7 @@ export default {
     enabled: 'Activada',
     runsAsHint: 'Las acciones se ejecutan con los permisos de la persona que guardó la regla por última vez.',
     unavailableOption: 'valor eliminado',
+    actionUnavailable: 'No tienes permisos para esto en este proyecto',
     broken: 'No funciona',
     brokenHint: 'Se eliminó una columna, etiqueta o lista seleccionada, por lo que la regla se desactivó. Edítala y elige un nuevo valor.',
     fields: {

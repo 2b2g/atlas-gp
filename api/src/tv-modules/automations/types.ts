@@ -137,7 +137,7 @@ export type AutomationCatalogForClient = {
     modules: {
         name: AutomationModuleName;
         events: { name: string; params: AutomationCatalogParamForClient[] }[];
-        actions: { name: string; params: AutomationCatalogParamForClient[] }[];
+        actions: { name: string; params: AutomationCatalogParamForClient[]; requiredPermissions: GoalPermissionType[] }[];
     }[];
 };
 
@@ -192,7 +192,7 @@ export type AutomationRuleMatchArgs = {
 
 export type AutomationActorForArgs = {
     chain: AutomationChain;
-    userId: number;
+    goalId: number;
 };
 
 export type AutomationErrorCode = 'not_found' | 'forbidden' | 'invalid' | 'cycle' | 'limit_reached';

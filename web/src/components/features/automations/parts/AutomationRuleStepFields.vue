@@ -48,9 +48,10 @@
 <script setup lang="ts">
 import { computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { AutomationCatalogModule, AutomationParams } from 'taskview-api'
+import type { AutomationCatalogAction, AutomationCatalogEvent, AutomationCatalogModule, AutomationParams, GoalPermissions } from 'taskview-api'
 import AutomationParamSelect from './AutomationParamSelect.vue'
 import { useAutomationLabels } from '@/composables/useAutomationLabels'
+import { useGoalsStore } from '@/stores/goals.store'
 import type { AutomationSelectItem, AutomationSetParamArgs } from '@/types/automations.types'
 
 const props = defineProps<{
@@ -66,6 +67,7 @@ const params = defineModel<AutomationParams>('params', { required: true })
 
 const { t } = useI18n()
 const { moduleLabel, eventLabel, actionLabel } = useAutomationLabels()
+const goalsStore = useGoalsStore()
 
 const itemsOf = (module: AutomationCatalogModule) => (props.kind === 'event' ? module.events : module.actions)
 
@@ -77,11 +79,22 @@ const moduleItems = computed<AutomationSelectItem[]>(() =>
 
 const selectedModule = computed(() => props.modules.find((module) => module.name === moduleName.value) ?? null)
 
+function isAvailable(item: AutomationCatalogEvent | AutomationCatalogAction): boolean {
+  if (!('requiredPermissions' in item)) return true
+  const permissions = goalsStore.goalMap.get(props.goalId)?.permissions
+  return item.requiredPermissions.every((permission) => !!permissions?.[permission as keyof GoalPermissions])
+}
+
 const stepItems = computed<AutomationSelectItem[]>(() =>
-  (selectedModule.value ? itemsOf(selectedModule.value) : []).map((item) => ({
-    label: props.kind === 'event' ? eventLabel(item.name) : actionLabel(item.name),
-    value: item.name,
-  })),
+  (selectedModule.value ? itemsOf(selectedModule.value) : []).map((item) => {
+    const available = isAvailable(item)
+    return {
+      label: props.kind === 'event' ? eventLabel(item.name) : actionLabel(item.name),
+      value: item.name,
+      disabled: !available,
+      description: available ? undefined : t('automations.actionUnavailable'),
+    }
+  }),
 )
 
 const selectedItem = computed(() =>

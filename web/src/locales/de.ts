@@ -1564,6 +1564,7 @@ export default {
     enabled: 'Aktiv',
     runsAsHint: 'Aktionen laufen mit den Rechten der Person, die die Regel zuletzt gespeichert hat.',
     unavailableOption: 'gelöschter Wert',
+    actionUnavailable: 'Ihnen fehlen die Rechte dafür in diesem Projekt',
     broken: 'Funktioniert nicht',
     brokenHint: 'Eine ausgewählte Spalte, ein Tag oder eine Liste wurde gelöscht, daher wurde die Regel deaktiviert. Bearbeiten Sie sie und wählen Sie einen neuen Wert.',
     fields: {

@@ -1575,6 +1575,7 @@ export default {
     enabled: 'Ativada',
     runsAsHint: 'As ações são executadas com as permissões de quem salvou a regra por último.',
     unavailableOption: 'valor excluído',
+    actionUnavailable: 'Você não tem permissão para isso neste projeto',
     broken: 'Não funciona',
     brokenHint: 'Uma coluna, tag ou lista selecionada foi excluída, então a regra foi desativada. Edite-a e escolha um novo valor.',
     fields: {

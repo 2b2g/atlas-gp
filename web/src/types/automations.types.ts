@@ -71,4 +71,6 @@ export type AutomationStepDescription = {
 export type AutomationSelectItem = {
   label: string
   value: string
+  disabled?: boolean
+  description?: string
 }

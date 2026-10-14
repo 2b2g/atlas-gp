@@ -122,15 +122,15 @@ export class AutomationEngine {
         const task = await this.tasksRepository.fetchTaskByIdNew(job.taskId);
         if (!task || task.goalId !== rule.goalId) return;
 
-        const actor = await this.actorFor({ chain: args.chain, userId: rule.creatorId });
+        const actor = await this.actorFor({ chain: args.chain, goalId: rule.goalId });
         if (!actor) {
-            $logger.info(`[Automations] rule=${rule.id} skipped: creator ${rule.creatorId} is unavailable`);
+            $logger.warn(`[Automations] rule=${rule.id} skipped: the owner of goal=${rule.goalId} is unavailable`);
             return;
         }
 
         const allowed = await AutomationPermissions.canRun({ actor, goalId: rule.goalId, action });
         if (!allowed) {
-            $logger.info(`[Automations] rule=${rule.id} skipped: creator ${rule.creatorId} lacks permissions`);
+            $logger.warn(`[Automations] rule=${rule.id} skipped: the owner of goal=${rule.goalId} lacks permissions`);
             return;
         }
 
@@ -141,10 +141,10 @@ export class AutomationEngine {
     }
 
     private actorFor(args: AutomationActorForArgs): Promise<AppUser | null> {
-        let actor = args.chain.actors.get(args.userId);
+        let actor = args.chain.actors.get(args.goalId);
         if (!actor) {
-            actor = this.actorFactory.forUser(args.userId);
-            args.chain.actors.set(args.userId, actor);
+            actor = this.actorFactory.forGoalOwner(args.goalId);
+            args.chain.actors.set(args.goalId, actor);
         }
         return actor;
     }

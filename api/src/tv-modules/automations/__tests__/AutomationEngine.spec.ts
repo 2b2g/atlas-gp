@@ -120,7 +120,7 @@ function setup(rules: AutomationRuleRow[], fetched: Partial<TasksSchemaTypeForSe
         dataSources: {},
     } as unknown as AutomationModuleDefinition;
 
-    const forUser = vi.fn(async () => actor);
+    const forGoalOwner = vi.fn(async () => actor);
     const enqueue = vi.fn(async (job: AutomationRunJob) => {
         jobs.push(job);
     });
@@ -133,7 +133,7 @@ function setup(rules: AutomationRuleRow[], fetched: Partial<TasksSchemaTypeForSe
     );
     const fetchTaskByIdNew = vi.fn(async (id: number) => (fetched === null ? null : task({ id, ...fetched })));
     vi.mocked(TasksRepository).mockImplementation(() => ({ fetchTaskByIdNew }) as any);
-    vi.mocked(AutomationActorFactory).mockImplementation(() => ({ forUser }) as any);
+    vi.mocked(AutomationActorFactory).mockImplementation(() => ({ forGoalOwner }) as any);
     vi.mocked(AutomationPermissions.canRun).mockResolvedValue(true);
 
     engine = new AutomationEngine({ catalog: new AutomationCatalog([module]), queue: { enqueue } as unknown as AutomationRunQueue });
@@ -149,7 +149,7 @@ function setup(rules: AutomationRuleRow[], fetched: Partial<TasksSchemaTypeForSe
         await drain();
     }
 
-    return { engine, executed, jobs, enqueue, forUser, drain, emit };
+    return { engine, executed, jobs, enqueue, forGoalOwner, drain, emit };
 }
 
 describe('AutomationEngine', () => {
@@ -212,7 +212,7 @@ describe('AutomationEngine', () => {
         expect(executed).toEqual([]);
     });
 
-    it('skips the rule when its creator lost the permissions', async () => {
+    it('skips the rule when the project owner lacks the permissions', async () => {
         const { executed, emit } = setup([rule({ actionParams: { n: 42 } })]);
         vi.mocked(AutomationPermissions.canRun).mockResolvedValue(false);
         await emit({ ping: true });
@@ -254,15 +254,23 @@ describe('AutomationEngine', () => {
         expect(executed).toEqual([42, 42]);
     });
 
-    it('loads every creator once per job', async () => {
-        const { executed, forUser, emit } = setup([
+    it('runs every rule as the project owner, loaded once per job, whoever authored it', async () => {
+        const { executed, forGoalOwner, emit } = setup([
             rule({ id: 1, actionParams: { n: 1 } }),
             rule({ id: 2, actionParams: { n: 2 } }),
             rule({ id: 3, creatorId: 8, actionParams: { n: 3 } }),
         ]);
         await emit({ ping: true });
         expect(executed).toEqual([1, 2, 3]);
-        expect(forUser.mock.calls).toEqual([[CREATOR_ID], [8]]);
+        expect(forGoalOwner.mock.calls).toEqual([[GOAL_ID]]);
+    });
+
+    it('skips the rule when the project owner is unavailable', async () => {
+        const { executed, forGoalOwner, emit } = setup([rule({ actionParams: { n: 42 } })]);
+        forGoalOwner.mockResolvedValue(null as any);
+        await emit({ ping: true });
+        expect(executed).toEqual([]);
+        expect($logger.warn).toHaveBeenCalledWith(expect.stringContaining('owner of goal=10 is unavailable'));
     });
 
     it('logs an action that failed without retrying the job', async () => {

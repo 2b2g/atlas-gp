@@ -66,18 +66,20 @@ describe('Automations', () => {
         { name: 'task.movedToColumn', params: [{ key: 'statusId', source: 'kanban.statuses' }] },
       ])
       expect(byName.get('kanban')?.actions).toEqual([
-        { name: 'change.status', params: [{ key: 'statusId', source: 'kanban.statuses' }] },
+        { name: 'change.status', params: [{ key: 'statusId', source: 'kanban.statuses' }], requiredPermissions: ['kanban_can_manage'] },
       ])
       expect(byName.get('tags')?.events).toEqual([
         { name: 'tag.addedToTask', params: [{ key: 'tagId', source: 'tags.goalTags' }] },
         { name: 'tag.removedFromTask', params: [{ key: 'tagId', source: 'tags.goalTags' }] },
       ])
-      expect(byName.get('tags')?.actions).toEqual([{ name: 'add.tag', params: [{ key: 'tagId', source: 'tags.goalTags' }] }])
+      expect(byName.get('tags')?.actions).toEqual([
+        { name: 'add.tag', params: [{ key: 'tagId', source: 'tags.goalTags' }], requiredPermissions: ['task_can_edit_tags'] },
+      ])
       expect(byName.get('lists')?.events).toEqual([
         { name: 'task.addedToList', params: [{ key: 'goalListId', source: 'lists.goalLists' }] },
       ])
       expect(byName.get('lists')?.actions).toEqual([
-        { name: 'move.toList', params: [{ key: 'goalListId', source: 'lists.goalLists' }] },
+        { name: 'move.toList', params: [{ key: 'goalListId', source: 'lists.goalLists' }], requiredPermissions: ['component_can_watch_content'] },
       ])
     })
 
