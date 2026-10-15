@@ -111,7 +111,7 @@ import { computed, ref, shallowRef, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDateFormat } from '@vueuse/core'
 import { CalendarDate } from '@internationalized/date'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useSprintsStore } from '@/stores/sprints.store'
 import { useWeekStart } from '@/composables/useWeekStart'
 import type { SprintCadenceFormValue } from '@/types/sprints.types'
@@ -130,7 +130,7 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const toast = useToast()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const sprintsStore = useSprintsStore()
 
 const loading = ref(false)

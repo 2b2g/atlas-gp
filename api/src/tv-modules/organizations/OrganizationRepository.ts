@@ -9,7 +9,7 @@ import {
   UserTokensSchema,
   type OrganizationsSchemaTypeForSelect,
   type OrganizationMembersSchemaTypeForSelect,
-} from 'taskview-db-schemas'
+} from 'atlasgp-db-schemas'
 import { Database } from '../../modules/db'
 import { callWithCatch } from '../../utils/helpers'
 import type { OrganizationArgCreate, OrganizationArgUpdate } from './types'

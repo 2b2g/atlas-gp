@@ -4,7 +4,7 @@ import type {
   CollaborationArgDeleteRoleFromGoal,
   CollaborationArgToggleRolePermission,
   GoalItem,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import type { CollaborationRolesStore } from '@/types/collaboration-roles.types'
 

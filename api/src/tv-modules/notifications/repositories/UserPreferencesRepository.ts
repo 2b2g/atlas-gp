@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { NotificationPreferencesSchema } from 'taskview-db-schemas';
+import { NotificationPreferencesSchema } from 'atlasgp-db-schemas';
 import { Database } from '../../../modules/db';
 import { callWithCatch } from '../../../utils/helpers';
 import { UserPreferences } from '../UserPreferences';

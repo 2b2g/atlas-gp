@@ -10,8 +10,8 @@
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const { t } = useI18n()
-const { hasActiveGoals } = useTaskView()
+const { hasActiveGoals } = useAtlasGP()
 </script>

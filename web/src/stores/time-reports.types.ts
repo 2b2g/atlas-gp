@@ -5,7 +5,7 @@ import type {
   TimeReportByUserRow,
   TimeReportContributor,
   TimeReportSummary,
-} from 'taskview-api'
+} from 'atlasgp-api'
 
 export type ReportView = 'by-task' | 'by-user' | 'by-day'
 

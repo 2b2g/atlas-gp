@@ -25,7 +25,7 @@
 import { computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useApiTokensStore } from '@/stores/api-tokens.store'
-import type { ApiTokenPermission } from 'taskview-api'
+import type { ApiTokenPermission } from 'atlasgp-api'
 
 const selected = defineModel<string[]>({ default: () => [] })
 

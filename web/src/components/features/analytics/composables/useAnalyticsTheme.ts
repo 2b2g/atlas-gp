@@ -1,4 +1,4 @@
-import type { AnalyticsColorToken } from 'taskview-api'
+import type { AnalyticsColorToken } from 'atlasgp-api'
 
 const palette: Record<AnalyticsColorToken, string> = {
   primary: '#10b981',

@@ -1,5 +1,5 @@
 import { type } from 'arktype';
-import type { CollaborationUsersSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { CollaborationUsersSchemaTypeForSelect } from 'atlasgp-db-schemas';
 
 export const CollaborationArkTypeAddUser = type({
     goalId: 'number',

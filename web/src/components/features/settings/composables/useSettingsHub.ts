@@ -126,9 +126,9 @@ export function useSettingsHub() {
       key: 'about',
       title: t('settings.about'),
       items: [
-        { kind: 'nav', key: 'site', icon: 'i-lucide-globe', color: 'zinc', title: t('userMenu.site'), href: 'https://taskview.tech/' },
-        { kind: 'nav', key: 'docs', icon: 'i-lucide-book-open', color: 'zinc', title: t('userMenu.documentation'), href: 'https://taskview.tech/docs/' },
-        { kind: 'nav', key: 'github', icon: 'simple-icons:github', color: 'zinc', title: t('userMenu.github'), href: 'https://github.com/Gimanh/taskview-community' },
+        { kind: 'nav', key: 'site', icon: 'i-lucide-globe', color: 'zinc', title: t('userMenu.site'), href: 'https://atlasgp.tech/' },
+        { kind: 'nav', key: 'docs', icon: 'i-lucide-book-open', color: 'zinc', title: t('userMenu.documentation'), href: 'https://atlasgp.tech/docs/' },
+        { kind: 'nav', key: 'github', icon: 'simple-icons:github', color: 'zinc', title: t('userMenu.github'), href: 'https://github.com/Gimanh/atlasgp-community' },
         { kind: 'nav', key: 'docker', icon: 'simple-icons:docker', color: 'zinc', title: t('userMenu.docker'), href: 'https://hub.docker.com/u/gimanhead' },
       ],
     }

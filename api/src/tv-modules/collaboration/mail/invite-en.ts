@@ -13,7 +13,7 @@ export default `<!DOCTYPE html>
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 480px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
                     <tr>
                         <td style="padding: 40px 32px 24px; text-align: center;">
-                            <div style="font-size: 18px; font-weight: 600; color: #000000; letter-spacing: 0.5px;">TaskView</div>
+                            <div style="font-size: 18px; font-weight: 600; color: #000000; letter-spacing: 0.5px;">ATLAS GP</div>
                         </td>
                     </tr>
                     <tr>
@@ -38,11 +38,11 @@ export default `<!DOCTYPE html>
                     </tr>
                     <tr>
                         <td style="padding: 0 32px 40px; text-align: center; border-top: 1px solid #f4f4f5;">
-                            <p style="margin: 24px 0 0; font-size: 13px; line-height: 1.5; color: #a1a1aa;">You received this email because someone invited you to a project on TaskView. If you weren't expecting it, you can safely ignore this email.</p>
+                            <p style="margin: 24px 0 0; font-size: 13px; line-height: 1.5; color: #a1a1aa;">You received this email because someone invited you to a project on ATLAS GP. If you weren't expecting it, you can safely ignore this email.</p>
                         </td>
                     </tr>
                 </table>
-                <p style="margin: 24px 0 0; font-size: 12px; color: #a1a1aa; text-align: center;">© TaskView</p>
+                <p style="margin: 24px 0 0; font-size: 12px; color: #a1a1aa; text-align: center;">© ATLAS GP</p>
             </td>
         </tr>
     </table>

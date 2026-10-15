@@ -1,5 +1,5 @@
 import { and, eq, desc, lt, sql, inArray } from 'drizzle-orm';
-import { NotificationsSchema, TasksSchema, GoalsSchema, type NotificationsSchemaTypeForSelect } from 'taskview-db-schemas';
+import { NotificationsSchema, TasksSchema, GoalsSchema, type NotificationsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import { Database } from '../../../modules/db';
 import { callWithCatch } from '../../../utils/helpers';
 

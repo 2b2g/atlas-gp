@@ -1,6 +1,6 @@
 import { and, asc, desc, eq, exists, gt, ilike, inArray, isNotNull, isNull, sql } from 'drizzle-orm';
-import type { TasksSchemaTypeForSelect } from 'taskview-db-schemas';
-import { TasksAssigneeSchema, TasksSchema, TasksToTagsSchema } from 'taskview-db-schemas';
+import type { TasksSchemaTypeForSelect } from 'atlasgp-db-schemas';
+import { TasksAssigneeSchema, TasksSchema, TasksToTagsSchema } from 'atlasgp-db-schemas';
 import { FetchTasksQueryBuilder } from '../../core/FetchTasksQueryBuilder';
 import { Database } from '../../modules/db';
 import { $logger } from '../../modules/logget';

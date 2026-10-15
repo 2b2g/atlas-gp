@@ -1,5 +1,5 @@
 import { type } from 'arktype';
-import type { GoalsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { GoalsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { GoalPermissionsForClient } from '../../types/auth.types';
 
 export const GoalsArkTypeAdd = type({

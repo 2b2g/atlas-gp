@@ -1,4 +1,4 @@
-import type { InvoiceItem } from 'taskview-api'
+import type { InvoiceItem } from 'atlasgp-api'
 import type { AddDaysArgs } from '@/types/invoices.types'
 
 export function todayIso(): string {

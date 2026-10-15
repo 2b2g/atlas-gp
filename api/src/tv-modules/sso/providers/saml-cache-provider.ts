@@ -1,6 +1,6 @@
 import type { CacheItem, CacheProvider } from '@node-saml/node-saml'
 import { eq, lt } from 'drizzle-orm'
-import { SamlRequestCacheSchema } from 'taskview-db-schemas'
+import { SamlRequestCacheSchema } from 'atlasgp-db-schemas'
 import { Database } from '../../../modules/db'
 
 export class SamlDbCacheProvider implements CacheProvider {

@@ -1,7 +1,7 @@
 import { randomBytes } from 'crypto'
 import * as client from 'openid-client'
 import type { Request, Response } from 'express'
-import type { SsoConfigsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { SsoConfigsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 import { PublicApiUrl } from '../../../modules/public-url'
 import type { SsoProvider, SsoAuthResult } from './sso-provider.interface'
 

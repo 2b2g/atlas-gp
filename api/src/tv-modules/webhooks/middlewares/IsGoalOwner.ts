@@ -1,6 +1,6 @@
 import type { NextFunction, Request, Response } from 'express'
 import { eq } from 'drizzle-orm'
-import { GoalsSchema, WebhooksSchema } from 'taskview-db-schemas'
+import { GoalsSchema, WebhooksSchema } from 'atlasgp-db-schemas'
 import { Database } from '../../../modules/db'
 
 export const IsGoalOwnerByGoalId = async (req: Request, res: Response, next: NextFunction) => {

@@ -96,7 +96,7 @@ describe('InviteEmailDispatcher', () => {
         const message = vi.mocked(Email.send).mock.calls[0][0] as any;
         expect(message.to).toBe('invitee@example.com');
         expect(message.from).toBe('noreply@test');
-        expect(message.subject).toBe('Alice invited you to "Marketing" on TaskView');
+        expect(message.subject).toBe('Alice invited you to "Marketing" on ATLAS GP');
         expect(message.text).toContain('http://localhost:3000/acme/42');
 
         const html = sentHtml();
@@ -117,7 +117,7 @@ describe('InviteEmailDispatcher', () => {
         await onUserAdded({ ...inviteEvent, locale: 'ru' });
 
         const message = vi.mocked(Email.send).mock.calls[0][0] as any;
-        expect(message.subject).toBe('Алиса приглашает вас в проект «Маркетинг» в TaskView');
+        expect(message.subject).toBe('Алиса приглашает вас в проект «Маркетинг» в ATLAS GP');
         expect(sentHtml()).toContain('Вас пригласили в проект');
         expect(sentHtml()).toContain('href="http://localhost:3000"');
     });

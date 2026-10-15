@@ -1,4 +1,4 @@
-import type { TagsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { TagsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import { $logger } from '../../modules/logget';
 import { TagItemForClient } from './TagItemForClient';

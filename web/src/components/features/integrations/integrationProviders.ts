@@ -1,4 +1,4 @@
-import type { IntegrationProvider } from 'taskview-api'
+import type { IntegrationProvider } from 'atlasgp-api'
 import type { IntegrationProviderMeta } from './integrationProviders.types'
 
 export const INTEGRATION_PROVIDERS: Record<IntegrationProvider, IntegrationProviderMeta> = {

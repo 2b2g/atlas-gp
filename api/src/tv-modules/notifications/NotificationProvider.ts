@@ -1,4 +1,4 @@
-import type { NotificationsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { NotificationsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { NotificationChannel } from './types';
 
 export interface NotificationMeta {

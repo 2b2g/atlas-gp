@@ -5,7 +5,7 @@ import type {
   InvoiceSellerSnapshot,
   InvoiceStatus,
   InvoicesSchemaTypeForSelect,
-} from 'taskview-db-schemas'
+} from 'atlasgp-db-schemas'
 import type { InvoiceTotalsResult } from '../../utils/invoiceTotals'
 
 const NumberFromString = type('string|number').pipe((v) => Number(v))

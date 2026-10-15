@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { useDebounceFn } from '@vueuse/core'
-import { UI_SETTINGS_KEY, type UiPreferences, type UiPreferencesItem, type UiSettings } from 'taskview-api'
+import { UI_SETTINGS_KEY, type UiPreferences, type UiPreferencesItem, type UiSettings } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 const SAVE_DEBOUNCE_MS = 250

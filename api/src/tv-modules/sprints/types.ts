@@ -1,5 +1,5 @@
 import { type } from 'arktype';
-import type { SprintStatus, TasksSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { SprintStatus, TasksSchemaTypeForSelect } from 'atlasgp-db-schemas';
 
 /** Request validators (ArkType) */
 

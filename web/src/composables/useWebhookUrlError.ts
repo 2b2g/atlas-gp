@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { isAxiosError } from 'axios'
-import { WEBHOOK_URL_ERROR_CODES, type WebhookUrlErrorCode, type WebhookUrlErrorResponse } from 'taskview-api'
+import { WEBHOOK_URL_ERROR_CODES, type WebhookUrlErrorCode, type WebhookUrlErrorResponse } from 'atlasgp-api'
 
 const isUrlErrorCode = (value: unknown): value is WebhookUrlErrorCode =>
   typeof value === 'string' && (WEBHOOK_URL_ERROR_CODES as readonly string[]).includes(value)

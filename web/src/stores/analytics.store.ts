@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
-import type { AnalyticsPeriod, AnalyticsScope, AnalyticsSection } from 'taskview-api'
+import type { AnalyticsPeriod, AnalyticsScope, AnalyticsSection } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import type {
   AnalyticsError,

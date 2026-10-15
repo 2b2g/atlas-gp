@@ -103,8 +103,8 @@ async function migrate() {
     }
 
     async function setEnvironment() {
-        createDbData = JSON.parse(await fs.readFile(resolve(__dirname, 'taskview/install.json'), 'utf-8'));
-        migrationData = JSON.parse(await fs.readFile(resolve(__dirname, 'taskview/migrate.json'), 'utf-8'));
+        createDbData = JSON.parse(await fs.readFile(resolve(__dirname, 'atlasgp/install.json'), 'utf-8'));
+        migrationData = JSON.parse(await fs.readFile(resolve(__dirname, 'atlasgp/migrate.json'), 'utf-8'));
     }
 
     async function disconnectOthers() {
@@ -137,7 +137,7 @@ async function migrate() {
     async function execScripts(scripts: MigrateStructure[string]['scripts']) {
         for (const script of scripts) {
             console.info(`>>>>>>>>>>>>>>_____Exec script ${script}`);
-            const data = await fs.readFile(join(__dirname, 'taskview', 'sql', script), 'utf-8');
+            const data = await fs.readFile(join(__dirname, 'atlasgp', 'sql', script), 'utf-8');
             await client.query(data).catch((err) => {
                 console.error(`Message: ${err.message}`);
                 console.error(`Detail: ${err.detail}`);

@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import InvoicesListItem from './InvoicesListItem.vue'
-import type { InvoiceItem } from 'taskview-api'
+import type { InvoiceItem } from 'atlasgp-api'
 
 defineProps<{
   invoices: InvoiceItem[]

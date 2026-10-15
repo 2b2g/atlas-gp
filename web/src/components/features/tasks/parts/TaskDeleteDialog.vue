@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 
 defineProps<{
   task: Task | null

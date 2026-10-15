@@ -3,7 +3,7 @@ import type {
   AnalyticsChartType,
   AnalyticsSection,
   AnalyticsSeriesPayload,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import { useI18n } from 'vue-i18n'
 import { useAnalyticsLocale } from './useAnalyticsLocale'
 import { useAnalyticsTheme } from './useAnalyticsTheme'

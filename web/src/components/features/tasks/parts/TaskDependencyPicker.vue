@@ -60,7 +60,7 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDebounceFn } from '@vueuse/core'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import type { DependencyTask } from './TaskDependencies.types'

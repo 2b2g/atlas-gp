@@ -4,7 +4,7 @@ import type {
   InvoiceSellerSnapshot,
   InvoiceStatus,
   SellersSchemaTypeForSelect,
-} from 'taskview-db-schemas'
+} from 'atlasgp-db-schemas'
 import { BillingRepository } from '../billing/BillingRepository'
 import { computeInvoiceTotals } from '../../utils/invoiceTotals'
 import { InvoicePdfRenderer } from './InvoicePdfRenderer'

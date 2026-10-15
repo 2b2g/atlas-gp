@@ -4,7 +4,7 @@ import {
     CollaborationUsersToGoalsSchema,
     GoalsSchema,
     UsersSchema,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 import { getCentrifugoClient } from '../../core/CentrifugoClient';
 import type { Dispatcher } from '../../core/Dispatcher';
 import type { AppEvents } from '../../core/EventBus';

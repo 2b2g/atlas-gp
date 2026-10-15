@@ -2,10 +2,10 @@ import cors from 'cors';
 
 const allow = new Set([
     ...(process.env.CORS_REMOVE_DEFAULT_ALLOWED_ORIGINS === 'true' ? [] : [
-        'https://app.taskview.tech',
-        'https://taskview.handscream.com',
-        'capacitor://taskview.handscream.com',
-        'capacitor://app.taskview.tech',
+        'https://app.atlasgp.tech',
+        'https://atlasgp.handscream.com',
+        'capacitor://atlasgp.handscream.com',
+        'capacitor://app.atlasgp.tech',
         'https://appleid.apple.com',
     ]),
     ...(process.env.CORS_ALLOWED_ORIGINS?.split(',') || []),

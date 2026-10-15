@@ -35,9 +35,9 @@ export default defineConfig({
             external: ['pg-native'],
             output: {
                 format: 'umd',
-                entryFileNames: 'taskview-db-migration.js',
-                chunkFileNames: 'taskview-db-migration-[hash].js',
-                assetFileNames: 'taskview-db-migration-[name]-[hash].[ext]',
+                entryFileNames: 'atlasgp-db-migration.js',
+                chunkFileNames: 'atlasgp-db-migration-[hash].js',
+                assetFileNames: 'atlasgp-db-migration-[name]-[hash].[ext]',
             },
         },
     },

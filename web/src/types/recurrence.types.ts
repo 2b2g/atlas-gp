@@ -1,4 +1,4 @@
-import type { RecurrenceScheduleMode } from 'taskview-api'
+import type { RecurrenceScheduleMode } from 'atlasgp-api'
 
 export type RecurrenceFrequency = 'daily' | 'weekly' | 'monthly' | 'yearly'
 export type RecurrenceEndsMode = 'never' | 'after' | 'onDate'

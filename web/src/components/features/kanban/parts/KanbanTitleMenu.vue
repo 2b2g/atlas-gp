@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { KanbanColumnItem } from 'taskview-api'
+import type { KanbanColumnItem } from 'atlasgp-api'
 import type { DropdownMenuItem } from '@nuxt/ui'
 import KanbanEditModal from './KanbanEditModal.vue'
 import KanbanDeleteModal from './KanbanDeleteModal.vue'

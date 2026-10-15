@@ -58,7 +58,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { TagItem as TagItemType } from 'taskview-api'
+import type { TagItem as TagItemType } from 'atlasgp-api'
 import TagItem from './TagItem.vue'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
 

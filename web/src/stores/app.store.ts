@@ -2,8 +2,8 @@ import { defineStore } from 'pinia'
 import type { AppStoreState, SidebarView, TaskDetailDisplayMode } from '@/types/global-app.types'
 import { $ls } from '@/plugins/axios'
 
-const TASK_DETAIL_MODE_KEY = 'taskview:taskDetailDisplayMode'
-const SIDEBAR_VIEW_KEY = 'taskview:sidebarView'
+const TASK_DETAIL_MODE_KEY = 'atlasgp:taskDetailDisplayMode'
+const SIDEBAR_VIEW_KEY = 'atlasgp:sidebarView'
 
 export const useAppStore = defineStore('app', {
   state(): AppStoreState {

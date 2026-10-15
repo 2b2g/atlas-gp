@@ -17,7 +17,7 @@ import { TotalExpenseKpi } from './financial/TotalExpenseKpi'
 import { NetProfitKpi } from './financial/NetProfitKpi'
 import { PlannedIncomeKpi } from './financial/PlannedIncomeKpi'
 import { PlannedExpenseKpi } from './financial/PlannedExpenseKpi'
-import type { AnalyticsSectionCatalogEntry } from 'taskview-api'
+import type { AnalyticsSectionCatalogEntry } from 'atlasgp-api'
 import { parseEnabledSectionIds } from './sectionEnv'
 import { sectionLocales } from './locales'
 

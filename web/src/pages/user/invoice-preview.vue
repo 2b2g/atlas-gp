@@ -79,8 +79,8 @@ import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
-import type { InvoiceStatus } from 'taskview-api'
-import { useTaskView } from '@/composables/useTaskView'
+import type { InvoiceStatus } from 'atlasgp-api'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useInvoicesStore } from '@/stores/invoices.store'
 import { useInvoiceTransitionFeedback } from '@/composables/useInvoiceTransitionFeedback'
@@ -96,7 +96,7 @@ const route = useRoute()
 const router = useRouter()
 const invoicesStore = useInvoicesStore()
 const { goals } = storeToRefs(useGoalsStore())
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const { report } = useInvoiceTransitionFeedback()
 
 const invoiceId = computed(() => Number(route.params.invoiceId))

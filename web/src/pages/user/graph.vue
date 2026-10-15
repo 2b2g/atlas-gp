@@ -64,14 +64,14 @@ import { useAppRouteInfo } from '@/composables/useAppRouteInfo'
 import { useFiltersFromQuery } from '@/composables/useFiltersFromQuery'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useProjectDataLoader } from '@/composables/useProjectDataLoader'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const { t } = useI18n()
 const { projectId } = useAppRouteInfo()
 const goalsStore = useGoalsStore()
 const projectName = computed(() => goalsStore.goalMap.get(projectId.value)?.name ?? '')
 
-const { isDesktop } = useTaskView()
+const { isDesktop } = useAtlasGP()
 const { selectedListIds, selectedAssigneeIds, selectedSprintId, hasActiveFilters } = useFiltersFromQuery()
 const showFilters = ref(isDesktop.value || hasActiveFilters.value)
 

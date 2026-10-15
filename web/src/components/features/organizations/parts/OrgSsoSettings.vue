@@ -44,7 +44,7 @@ import { storeToRefs } from 'pinia'
 import { $tvApi } from '@/plugins/axios'
 import { additionalUrlStore } from '@/stores/additional-url.store'
 import { useAdditionalServer } from '@/composables/useAdditionalServer'
-import type { SsoConfig, SsoPublicUrls } from 'taskview-api'
+import type { SsoConfig, SsoPublicUrls } from 'atlasgp-api'
 import OrgSsoConfigCard from './OrgSsoConfigCard.vue'
 import OrgSsoConfigForm from './OrgSsoConfigForm.vue'
 

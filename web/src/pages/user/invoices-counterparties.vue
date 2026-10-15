@@ -64,7 +64,7 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { storeToRefs } from 'pinia'
-import type { CounterpartyItem } from 'taskview-api'
+import type { CounterpartyItem } from 'atlasgp-api'
 import { useOrganizationStore } from '@/stores/organization.store'
 import { useCounterpartiesStore } from '@/stores/counterparties.store'
 import { useOrgPermissions } from '@/composables/useOrgPermissions'

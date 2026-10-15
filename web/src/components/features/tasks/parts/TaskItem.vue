@@ -129,7 +129,7 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import { type Task } from 'taskview-api'
+import { type Task } from 'atlasgp-api'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useGoalListsStore } from '@/stores/goal-lists.store'
 import { useBaseScreenStore } from '@/stores/base-screen.store'

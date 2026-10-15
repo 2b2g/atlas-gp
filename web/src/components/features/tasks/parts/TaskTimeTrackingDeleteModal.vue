@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const open = defineModel<boolean>('open', { default: false })
 
@@ -47,7 +47,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 
 const onConfirm = () => {
   open.value = false

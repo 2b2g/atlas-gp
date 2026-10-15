@@ -12,6 +12,6 @@ export type TvWebExtension = {
   outlets?: Record<string, Component[]>
 }
 
-export type CreateTaskviewAppOptions = {
+export type CreateAtlasGPAppOptions = {
   extensions?: TvWebExtension[]
 }

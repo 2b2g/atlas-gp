@@ -2,7 +2,7 @@
   <TvGoalLikeItem
     v-for="link in links"
     :key="link.name"
-    variant="taskview"
+    variant="atlasgp"
     :to="{ name: link.name }"
     :active="route.name === link.name"
   >

@@ -50,10 +50,10 @@ import UiCustomizationSection from '@/components/features/ui-customization/UiCus
 import { useUiPreferences } from '@/composables/useUiPreferences'
 import { uiCustomizationSections } from '@/uiCustomization/registry'
 import { useUiPreferencesStore } from '@/stores/uiPreferences.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const prefsStore = useUiPreferencesStore()
 const route = useRoute()
 const router = useRouter()

@@ -233,7 +233,7 @@ test.describe('SSO OIDC login', () => {
     expect(login).not.toBe(firstCollisionLogin)
   })
 
-  test('IdP email change keeps the same TaskView user', async () => {
+  test('IdP email change keeps the same ATLAS GP user', async () => {
     const preferredUsername = `email.change.${RUN_ID}`
     const sub = `sub-email-${RUN_ID}`
     const first = await loginViaSso({

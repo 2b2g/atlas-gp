@@ -55,7 +55,7 @@ type OidcFormData = {
 
 const form = defineModel<OidcFormData>('form', { required: true })
 
-import type { SsoConfig } from 'taskview-api'
+import type { SsoConfig } from 'atlasgp-api'
 
 defineProps<{
   callbackUrlPlaceholder: string

@@ -5,7 +5,7 @@ import { App } from '@capacitor/app'
 import { useOrganizationStore } from '@/stores/organization.store'
 import { useGoalsStore } from '@/stores/goals.store'
 
-const OPEN_PREFIX = 'taskview://open'
+const OPEN_PREFIX = 'atlasgp://open'
 
 let launchUrlHandled = false
 

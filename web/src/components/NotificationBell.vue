@@ -119,12 +119,12 @@
 import { ref, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import type { Notification } from 'taskview-api'
-import { NotificationType } from 'taskview-api'
+import type { Notification } from 'atlasgp-api'
+import { NotificationType } from 'atlasgp-api'
 import { useNotificationsStore } from '@/stores/notifications.store'
 import { useUserStore } from '@/stores/user.store'
-import { useTaskView } from '@/composables/useTaskView'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { useAtlasGP } from '@/composables/useAtlasGP'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 import { formatDistanceToNow } from 'date-fns'
 import { useOrganizationStore } from '@/stores/organization.store'
 
@@ -133,7 +133,7 @@ const router = useRouter()
 const notificationsStore = useNotificationsStore()
 const userStore = useUserStore()
 const orgStore = useOrganizationStore()
-const { isFullscreenModal } = useTaskView()
+const { isFullscreenModal } = useAtlasGP()
 const isOpen = ref(false)
 
 const notificationIconMap: Partial<Record<NotificationType, string>> = {

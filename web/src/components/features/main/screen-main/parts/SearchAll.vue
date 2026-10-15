@@ -73,12 +73,12 @@ import { useI18n } from 'vue-i18n'
 import { refDebounced } from '@vueuse/core'
 import MainScreenAddTaskDialog from './MainScreenAddTaskDialog.vue'
 import { useBaseScreenStore } from '@/stores/base-screen.store'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 import type { TaskItem } from '@/types/tasks.types'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const searchTerm = ref('')
 const searchTermDebounced = refDebounced(searchTerm, 300)
 const loading = ref(false)

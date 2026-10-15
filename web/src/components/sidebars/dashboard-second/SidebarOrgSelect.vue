@@ -97,7 +97,7 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { storeToRefs } from 'pinia'
-import type { Organization } from 'taskview-api'
+import type { Organization } from 'atlasgp-api'
 import type { OrgDetailTab } from '@/components/features/organizations/types'
 import { useOrganizationStore } from '@/stores/organization.store'
 import { useOrgSwitcher } from '@/composables/useOrgSwitcher'

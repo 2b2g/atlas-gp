@@ -1,7 +1,7 @@
 <template>
   <TvGoalLikeItem
     v-if="inbox"
-    variant="taskview"
+    variant="atlasgp"
     :to="{ name: 'user', params: { projectId: inbox.id, listId: ALL_TASKS_LIST_ID } }"
     :active="currentProjectId === inbox.id"
   >
@@ -22,7 +22,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 import { useInbox } from '@/composables/useInbox'
 import TvGoalLikeItem from '@/components/features/base/TvGoalLikeItem.vue'
 

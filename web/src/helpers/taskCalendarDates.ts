@@ -1,5 +1,5 @@
 import { addDays, format } from 'date-fns'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 
 // Which task fields a single-day event was built from, so later writes can target the same field
 export type TaskDateShape = 'range' | 'start' | 'end'

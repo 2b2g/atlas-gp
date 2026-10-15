@@ -94,9 +94,9 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useClipboard } from '@vueuse/core'
-import { WEBHOOK_EVENTS, type WebhookEvent } from 'taskview-api'
+import { WEBHOOK_EVENTS, type WebhookEvent } from 'atlasgp-api'
 import { useWebhooksStore } from '@/stores/webhooks.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useWebhookUrlError } from '@/composables/useWebhookUrlError'
 
 const props = defineProps<{
@@ -110,7 +110,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const webhooksStore = useWebhooksStore()
 const { message: urlError, capture: captureUrlError, reset: resetUrlError } = useWebhookUrlError()
 const { copy } = useClipboard()

@@ -92,7 +92,7 @@ onMounted(async () => {
 App.addListener('appUrlOpen', async ({ url }) => {
   if (!url) return
 
-  if (url.startsWith('taskview://login?tokens')) {
+  if (url.startsWith('atlasgp://login?tokens')) {
     const parsed = new URL(url)
     const tokens = parsed.searchParams.get('tokens')
 

@@ -37,14 +37,14 @@ import { useI18n } from 'vue-i18n'
 import { useDebounceFn } from '@vueuse/core'
 import MainScreenAddTaskDialog from './MainScreenAddTaskDialog.vue'
 import { useBaseScreenStore } from '@/stores/base-screen.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import type { TaskItem } from '@/types/tasks.types'
 import WidgetBase from './WidgetBase.vue'
 
 const { tm, t } = useI18n()
 const baseScreenStore = useBaseScreenStore()
 const addUpcomingTaskDialogModel = ref(false)
-const { hasActiveGoals } = useTaskView()
+const { hasActiveGoals } = useAtlasGP()
 
 const motivation = computed(
   () => tm('motivationUpcoming')[Math.floor(Math.random() * tm('motivationUpcoming').length)],

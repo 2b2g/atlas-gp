@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { GoalItem, KanbanArgDeleteColumn, KanbanArgUpdateColumn, KanbanArgUpdateTasksOrder, KanbanColumnItem, KanbanFilters, TaskArgAdd, KanbanArgAddColumn } from 'taskview-api'
+import type { GoalItem, KanbanArgDeleteColumn, KanbanArgUpdateColumn, KanbanArgUpdateTasksOrder, KanbanColumnItem, KanbanFilters, TaskArgAdd, KanbanArgAddColumn } from 'atlasgp-api'
 import { DEFAULT_ID } from '@/types/app.types'
 import type { KanbanStoreState } from '@/types/kanban.types'
 import { $tvApi } from '@/plugins/axios'

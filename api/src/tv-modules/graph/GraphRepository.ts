@@ -1,5 +1,5 @@
 import { eq, or } from 'drizzle-orm';
-import { GraphRelationsSchema } from 'taskview-db-schemas';
+import { GraphRelationsSchema } from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import { callWithCatch } from '../../utils/helpers';
 import type { GraphArgRelationsType, GraphReturnRelationsType } from './types';

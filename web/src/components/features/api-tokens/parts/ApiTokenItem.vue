@@ -73,16 +73,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { ApiTokenItem } from 'taskview-api'
+import type { ApiTokenItem } from 'atlasgp-api'
 import { useApiTokensStore } from '@/stores/api-tokens.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const props = defineProps<{
   token: ApiTokenItem
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const store = useApiTokensStore()
 
 const showDeleteConfirm = ref(false)

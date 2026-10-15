@@ -1,5 +1,5 @@
 import { and, desc, eq, lt, sql } from 'drizzle-orm';
-import { WebhooksSchema, WebhookDeliveriesSchema, type WebhooksSchemaTypeForSelect, type WebhookDeliveriesSchemaTypeForSelect } from 'taskview-db-schemas';
+import { WebhooksSchema, WebhookDeliveriesSchema, type WebhooksSchemaTypeForSelect, type WebhookDeliveriesSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import { callWithCatch } from '../../utils/helpers';
 

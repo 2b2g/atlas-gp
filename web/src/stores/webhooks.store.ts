@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { WebhookItem, WebhookDeliveryItem } from 'taskview-api'
+import type { WebhookItem, WebhookDeliveryItem } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 interface WebhooksStoreState {

@@ -27,7 +27,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import type { OAuthConsentRequest } from 'taskview-api'
+import type { OAuthConsentRequest } from 'atlasgp-api'
 import { useOAuthStore } from '@/stores/oauth.store'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useOrganizationStore } from '@/stores/organization.store'

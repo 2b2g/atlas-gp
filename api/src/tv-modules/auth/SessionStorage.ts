@@ -1,5 +1,5 @@
 import { and, eq, ne } from 'drizzle-orm'
-import { UserTokensSchema } from 'taskview-db-schemas'
+import { UserTokensSchema } from 'atlasgp-db-schemas'
 import { Database } from '../../modules/db'
 import { callWithCatch, parseDeviceName } from '../../utils/helpers'
 

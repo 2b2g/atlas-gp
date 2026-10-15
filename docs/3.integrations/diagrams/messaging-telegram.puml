@@ -1,5 +1,5 @@
 @startuml messaging-telegram
-title TaskView — Telegram messaging integration (sequence)
+title ATLAS GP — Telegram messaging integration (sequence)
 
 actor User
 participant "Web\n(frontend)" as Web

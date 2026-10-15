@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { TaskBase } from 'taskview-api'
+import type { TaskBase } from 'atlasgp-api'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
 
 type PriorityId = TaskBase['priorityId']

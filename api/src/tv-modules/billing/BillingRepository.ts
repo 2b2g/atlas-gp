@@ -7,7 +7,7 @@ import {
   type CounterpartiesSchemaTypeForSelect,
   type CurrenciesSchemaTypeForSelect,
   type SellersSchemaTypeForSelect,
-} from 'taskview-db-schemas'
+} from 'atlasgp-db-schemas'
 import { Database } from '../../modules/db'
 import { callWithCatch } from '../../utils/helpers'
 import type {

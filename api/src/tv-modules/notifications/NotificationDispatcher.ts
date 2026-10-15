@@ -1,6 +1,6 @@
 import { eq, and, or, isNull, inArray } from 'drizzle-orm';
 import { alias } from 'drizzle-orm/pg-core';
-import { TasksSchema, CollaborationUsersSchema, UsersSchema, GoalsSchema } from 'taskview-db-schemas';
+import { TasksSchema, CollaborationUsersSchema, UsersSchema, GoalsSchema } from 'atlasgp-db-schemas';
 import { eventBus, type AppEvents } from '../../core/EventBus';
 import { getJobQueue } from '../../core/JobQueue';
 import { Database } from '../../modules/db';

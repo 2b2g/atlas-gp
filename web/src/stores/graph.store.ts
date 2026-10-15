@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { GoalItem, GraphArgAddEdge, TaskArgUpdate } from 'taskview-api'
+import type { GoalItem, GraphArgAddEdge, TaskArgUpdate } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import type { GraphStore } from '@/types/graph.types'
 import type { TaskItem } from '@/types/tasks.types'

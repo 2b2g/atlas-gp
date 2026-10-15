@@ -43,7 +43,7 @@
         <UFormField :label="t('apiTokens.permissions')">
           <p class="text-xs text-muted mb-2">
             <a
-              href="https://taskview.tech/docs/collaboration/roles-and-permissions#project-permissions"
+              href="https://atlasgp.tech/docs/collaboration/roles-and-permissions#project-permissions"
               target="_blank"
               rel="noopener noreferrer"
               class="underline underline-offset-2 hover:text-default"
@@ -115,7 +115,7 @@ import { useI18n } from 'vue-i18n'
 import { useClipboard } from '@vueuse/core'
 import { useApiTokensStore } from '@/stores/api-tokens.store'
 import { useGoalsStore } from '@/stores/goals.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import TvPermissionPicker from '@/components/features/base/TvPermissionPicker.vue'
 
 const isOpen = defineModel<boolean>('open', { default: false })
@@ -125,7 +125,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const { copy } = useClipboard()
 const store = useApiTokensStore()
 const goalsStore = useGoalsStore()

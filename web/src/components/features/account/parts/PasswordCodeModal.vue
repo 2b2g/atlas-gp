@@ -49,7 +49,7 @@
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import $api from '@/helpers/axios'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const props = defineProps<{
   password: string
@@ -63,7 +63,7 @@ const emit = defineEmits<{
 const open = defineModel<boolean>('open', { required: true })
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const toast = useToast()
 
 const code = ref('')

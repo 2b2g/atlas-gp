@@ -76,7 +76,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { $tvApi } from '@/plugins/axios'
-import type { SsoConfig } from 'taskview-api'
+import type { SsoConfig } from 'atlasgp-api'
 
 const props = defineProps<{
   config: SsoConfig

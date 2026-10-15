@@ -12,7 +12,7 @@ import type {
   SprintSetTaskArgs,
   SprintUpdateArgs,
   SprintVelocityArgs,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import type { SprintsStoreState } from '@/types/sprints.types'

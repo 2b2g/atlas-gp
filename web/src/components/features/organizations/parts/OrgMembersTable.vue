@@ -55,7 +55,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { OrgMember } from 'taskview-api'
+import type { OrgMember } from 'atlasgp-api'
 
 defineProps<{
   members: OrgMember[]

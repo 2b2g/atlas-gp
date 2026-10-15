@@ -10,7 +10,7 @@ import type {
   InvoiceUnit,
   SellerArgCreate,
   SellerItem,
-} from 'taskview-api'
+} from 'atlasgp-api'
 
 export type SellerFormValue = Omit<SellerArgCreate, 'organizationId'>
 

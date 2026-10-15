@@ -1,14 +1,14 @@
 import { randomBytes } from 'crypto'
 import { resolveTxt } from 'node:dns/promises'
-import type { SsoConfigsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { SsoConfigsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 import { decryptField } from '../../utils/crypto'
 import { generateString } from '../../utils/helpers'
 import type { CheckSsoDomainProofArgs, SsoDomainVerificationMethod } from './types'
 
 export const SSO_SECRET_FIELDS = ['samlCert', 'samlSigningKey', 'samlSigningCert', 'oidcClientSecret'] as const
 
-export const SSO_DOMAIN_TXT_PREFIX = 'taskview-sso-verify='
-export const SSO_DOMAIN_WELL_KNOWN_PATH = '/.well-known/taskview-sso-verify.txt'
+export const SSO_DOMAIN_TXT_PREFIX = 'atlasgp-sso-verify='
+export const SSO_DOMAIN_WELL_KNOWN_PATH = '/.well-known/atlasgp-sso-verify.txt'
 
 export function generateDomainVerifyToken(): string {
   return `tvdom_${randomBytes(32).toString('hex')}`

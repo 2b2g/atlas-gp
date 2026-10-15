@@ -28,7 +28,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDateFormat } from '@vueuse/core'
-import type { InvoiceItem } from 'taskview-api'
+import type { InvoiceItem } from 'atlasgp-api'
 import { isInvoiceOverdue } from '@/helpers/invoiceDates'
 
 const props = defineProps<{

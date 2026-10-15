@@ -58,8 +58,8 @@
 <script setup lang="ts">
 import { computed, reactive, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { SprintRetro } from 'taskview-api'
-import { useTaskView } from '@/composables/useTaskView'
+import type { SprintRetro } from 'atlasgp-api'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useSprintsStore } from '@/stores/sprints.store'
 
 type RetroKey = 'wentWell' | 'wentBad' | 'actionItems'
@@ -71,7 +71,7 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const toast = useToast()
 const sprintsStore = useSprintsStore()
 

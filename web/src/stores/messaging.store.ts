@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { MessagingConnectionItem, MessagingConnectLinkResult, MessagingProviderId } from 'taskview-api'
+import type { MessagingConnectionItem, MessagingConnectLinkResult, MessagingProviderId } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 interface MessagingStoreState {

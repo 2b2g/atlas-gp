@@ -51,7 +51,7 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { DefaultView, FirstDayOfWeek } from 'taskview-api'
+import type { DefaultView, FirstDayOfWeek } from 'atlasgp-api'
 import { useUiPreferencesStore } from '@/stores/uiPreferences.store'
 import { useGoalsStore } from '@/stores/goals.store'
 

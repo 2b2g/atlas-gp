@@ -107,8 +107,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { MessagingConnectionItem } from 'taskview-api'
-import { useTaskView } from '@/composables/useTaskView'
+import type { MessagingConnectionItem } from 'atlasgp-api'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import MessagingEventsModal from './MessagingEventsModal.vue'
 
 const props = defineProps<{
@@ -124,7 +124,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 
 const isConfirmOpen = ref(false)
 const isEventsOpen = ref(false)

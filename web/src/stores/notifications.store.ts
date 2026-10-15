@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { Notification } from 'taskview-api'
+import type { Notification } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { useOrganizationStore } from './organization.store'
 

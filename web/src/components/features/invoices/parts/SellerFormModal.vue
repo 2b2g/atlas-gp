@@ -53,9 +53,9 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import SellerForm from './SellerForm.vue'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useSellersStore } from '@/stores/sellers.store'
-import type { SellerItem } from 'taskview-api'
+import type { SellerItem } from 'atlasgp-api'
 import type { SellerFormValue } from '@/types/invoices.types'
 
 const open = defineModel<boolean>('open', { default: false })
@@ -71,7 +71,7 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const toast = useToast()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const sellersStore = useSellersStore()
 
 const isEdit = computed(() => !!props.seller)

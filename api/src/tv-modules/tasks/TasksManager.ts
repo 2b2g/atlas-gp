@@ -1,4 +1,4 @@
-import type { TasksSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { TasksSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import { $logger } from '../../modules/logget';
 import { eventBus } from '../../core/EventBus';

@@ -1,5 +1,5 @@
 import { useI18n } from 'vue-i18n'
-import type { LocalizedText } from 'taskview-api'
+import type { LocalizedText } from 'atlasgp-api'
 
 export function useAnalyticsLocale() {
   const { locale } = useI18n()

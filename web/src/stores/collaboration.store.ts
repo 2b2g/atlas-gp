@@ -4,7 +4,7 @@ import type {
   CollaborationArgDeleteUser,
   CollaborationArgToggleUserRoles,
   GoalItem,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import type { CollaborationStore } from '@/types/collaboration.types'
 import { useOrganizationStore } from './organization.store'

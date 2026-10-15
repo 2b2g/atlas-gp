@@ -64,7 +64,7 @@ export default {
     // Messages
     success: 'Success',
     error: 'Error',
-    loggedIn: 'You are welcome to TaskView',
+    loggedIn: 'You are welcome to ATLAS GP',
     invalidCode: 'Invalid code. Please try again.',
     invalidCredentials: 'Invalid login or password',
     loginFailed: 'Login failed. Please try again.',
@@ -80,7 +80,7 @@ export default {
     ssoNotFoundDescription: 'No SSO provider found for domain {domain}',
     ssoError: 'SSO authentication failed. Please try again.',
     ssoDomainUnverified: 'SSO is not available until the organization verifies this email domain.',
-    ssoEmailInUse: 'This email is already used by another TaskView account.',
+    ssoEmailInUse: 'This email is already used by another ATLAS GP account.',
     ssoAccountBlocked: 'This account is blocked. Contact your administrator.',
 
     // Validation
@@ -907,7 +907,7 @@ export default {
     samlLogoutUrl: 'IdP Logout URL (SLO)',
     requestSigning: 'Request signing (enterprise)',
     requestSigningDescription: 'Sign SAML AuthnRequests with a private key. Required by some IdPs for enhanced security.',
-    generateKeysTitle: 'openssl req -x509 -newkey rsa:2048 -keyout sp-key.pem -out sp-cert.pem -days 3650 -nodes -subj "/CN=taskview"',
+    generateKeysTitle: 'openssl req -x509 -newkey rsa:2048 -keyout sp-key.pem -out sp-cert.pem -days 3650 -nodes -subj "/CN=atlasgp"',
     generateKeysHint: 'sp-key.pem → Private Key field. sp-cert.pem → Certificate field + upload to IdP.',
     samlSigningKey: 'SP Private Key (PEM)',
     samlSigningKeyPlaceholder: 'Paste PEM private key (-----BEGIN PRIVATE KEY-----...)',
@@ -970,8 +970,8 @@ export default {
   oauth: {
     consent: {
       title: 'Connect {client}',
-      subtitle: '{client} is asking for access to your TaskView account.',
-      rbacNote: 'Access never exceeds your own permissions — if you cannot do something in TaskView, neither can this app.',
+      subtitle: '{client} is asking for access to your ATLAS GP account.',
+      rbacNote: 'Access never exceeds your own permissions — if you cannot do something in ATLAS GP, neither can this app.',
       projectsLabel: 'Limit to projects',
       allProjects: 'All projects',
       projectsHint: 'Leave empty to allow every project you have access to.',

@@ -25,7 +25,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { GoalItem } from 'taskview-api'
+import type { GoalItem } from 'atlasgp-api'
 import { useKanbanStore } from '@/stores/kanban.store'
 
 const props = defineProps<{ goalId: GoalItem['id'] }>()

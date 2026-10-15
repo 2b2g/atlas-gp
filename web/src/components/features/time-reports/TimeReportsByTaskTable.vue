@@ -12,7 +12,7 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import type { TableColumn } from '@nuxt/ui'
-import type { TimeReportByTaskRow } from 'taskview-api'
+import type { TimeReportByTaskRow } from 'atlasgp-api'
 import { useTimeReportsStore } from '@/stores/time-reports.store'
 import { formatDuration } from '@/helpers/formatDuration'
 

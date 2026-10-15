@@ -6,7 +6,7 @@ import type {
   AnalyticsSection,
   AnalyticsSectionCatalogEntry,
   AnalyticsSectionsResponse,
-} from 'taskview-api'
+} from 'atlasgp-api'
 
 export type AnalyticsDrillDownState = {
   open: boolean

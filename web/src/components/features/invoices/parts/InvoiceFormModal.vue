@@ -74,13 +74,13 @@ import { useI18n } from 'vue-i18n'
 import InvoiceForm from './InvoiceForm.vue'
 import SellerFormModal from './SellerFormModal.vue'
 import CounterpartyFormModal from './CounterpartyFormModal.vue'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useInvoicesStore } from '@/stores/invoices.store'
 import { useSellersStore } from '@/stores/sellers.store'
 import { useCounterpartiesStore } from '@/stores/counterparties.store'
 import { todayIso } from '@/helpers/invoiceDates'
 import { useInvoiceValidation } from '@/composables/useInvoiceValidation'
-import type { InvoiceItem } from 'taskview-api'
+import type { InvoiceItem } from 'atlasgp-api'
 import type { InvoiceFormValue, InvoiceSelectOption } from '@/types/invoices.types'
 
 const open = defineModel<boolean>('open', { default: false })
@@ -97,7 +97,7 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const toast = useToast()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const invoicesStore = useInvoicesStore()
 const sellersStore = useSellersStore()
 const counterpartiesStore = useCounterpartiesStore()

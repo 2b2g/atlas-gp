@@ -1,4 +1,4 @@
-import type { MessagingConnectionsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { MessagingConnectionsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { MessagingEvent, MessagingOwnerType, MessagingProviderId } from './types';
 
 export type MessagingConnectionForClient = Omit<MessagingConnectionsSchemaTypeForSelect, 'accessTokenEncrypted'>;
@@ -186,7 +186,7 @@ export type InboundIntent =
     | {
         kind: 'createConnection';
         connection: MessagingConnectionCreate;
-        /** Personal connections also link the messenger account to a TaskView user. */
+        /** Personal connections also link the messenger account to a ATLAS GP user. */
         identity?: { userId: number; externalUserId: string; externalTeamId: string | null };
         /** In-app path to redirect the browser to (OAuth callback). */
         redirect?: string;

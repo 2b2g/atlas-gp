@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { Chart, type ChartConfiguration } from 'chart.js'
-import type { AnalyticsChartType, AnalyticsSection } from 'taskview-api'
+import type { AnalyticsChartType, AnalyticsSection } from 'atlasgp-api'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { registerChartJs } from './chart-setup'

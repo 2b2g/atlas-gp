@@ -29,10 +29,10 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useTaskViewMainUrl } from '@/composables/useTaskViewMainUrl'
+import { useAtlasGPMainUrl } from '@/composables/useAtlasGPMainUrl'
 import $api from '@/helpers/axios'
 import { INTEGRATION_PROVIDERS } from '@/components/features/integrations/integrationProviders'
-import type { IntegrationProvider } from 'taskview-api'
+import type { IntegrationProvider } from 'atlasgp-api'
 
 const props = defineProps<{
   projectId: number
@@ -42,7 +42,7 @@ const isOpen = defineModel<boolean>('open', { default: false })
 const { t } = useI18n()
 
 function startOAuth(provider: IntegrationProvider) {
-  const baseUrl = useTaskViewMainUrl()
+  const baseUrl = useAtlasGPMainUrl()
   const token = $api.defaults.headers.common['Authorization']?.toString().replace('Bearer ', '') || ''
   const url = `${baseUrl}/module/integrations/oauth/${provider}?projectId=${props.projectId}&token=${encodeURIComponent(token)}`
   window.location.href = url

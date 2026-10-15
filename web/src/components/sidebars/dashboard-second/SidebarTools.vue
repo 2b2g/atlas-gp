@@ -39,7 +39,7 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, type RouteLocationRaw } from 'vue-router'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useGoalPermissionsFor } from '@/composables/useGoalPermissions'
 import type { Project } from '@/components/features/projects/types'

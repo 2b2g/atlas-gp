@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2FAD9763203C412B000D30F8 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD9762203C412B000D30F8 /* config.xml */; };
 		30163AB74EEE183517D215DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41EECE9262690D5E2EF23CE9 /* Assets.xcassets */; };
-		30F5ABA9CC301D3E3BA985C7 /* TaskViewWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D90258576D7FDAEEBD7298B /* TaskViewWidgetBundle.swift */; };
+		30F5ABA9CC301D3E3BA985C7 /* AtlasGPWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D90258576D7FDAEEBD7298B /* AtlasGPWidgetBundle.swift */; };
 		336711805E8F2928D054F35E /* TodayWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4822ABF5AC8CD3030A5CE020 /* TodayWidget.swift */; };
 		4D22ABE92AF431CB00220026 /* CapApp-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 4D22ABE82AF431CB00220026 /* CapApp-SPM */; };
 		50379B232058CBB4000EE86E /* capacitor.config.json in Resources */ = {isa = PBXBuildFile; fileRef = 50379B222058CBB4000EE86E /* capacitor.config.json */; };
@@ -18,7 +18,7 @@
 		504EC30F1FED79650016851F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504EC30E1FED79650016851F /* Assets.xcassets */; };
 		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
 		50B271D11FEDC1A000F3C39B /* public in Resources */ = {isa = PBXBuildFile; fileRef = 50B271D01FEDC1A000F3C39B /* public */; };
-		7E638BA1BFCF4E185865F85D /* TaskViewWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7F4057F5AC9B7A7AC7E70240 /* TaskViewWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E638BA1BFCF4E185865F85D /* AtlasGPWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7F4057F5AC9B7A7AC7E70240 /* AtlasGPWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A71181DC51C8DA03879B72ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029A385E0A8D9B1FCBD9CC75 /* Foundation.framework */; };
 		AAA632B22F6BB598007C705D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA632B12F6BB598007C705D /* GoogleService-Info.plist */; };
 		ABED08BA434D23E174534E03 /* WidgetSnapshotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F85DE4FF5908A8CA6A467 /* WidgetSnapshotModel.swift */; };
@@ -32,7 +32,7 @@
 			containerPortal = 504EC2FC1FED79650016851F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13D58B519FF779A139CB09EB;
-			remoteInfo = TaskViewWidget;
+			remoteInfo = AtlasGPWidget;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				7E638BA1BFCF4E185865F85D /* TaskViewWidget.appex in Embed Foundation Extensions */,
+				7E638BA1BFCF4E185865F85D /* AtlasGPWidget.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,15 +63,15 @@
 		504EC3111FED79650016851F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		504EC3131FED79650016851F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B271D01FEDC1A000F3C39B /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
-		7F4057F5AC9B7A7AC7E70240 /* TaskViewWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskViewWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4057F5AC9B7A7AC7E70240 /* AtlasGPWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AtlasGPWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		873F85DE4FF5908A8CA6A467 /* WidgetSnapshotModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetSnapshotModel.swift; sourceTree = "<group>"; };
 		AB10F00D00000000000000A1 /* OpenTaskIntent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OpenTaskIntent.swift; sourceTree = "<group>"; };
 		958DCC722DB07C7200EA8C5F /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../debug.xcconfig; sourceTree = SOURCE_ROOT; };
-		9D90258576D7FDAEEBD7298B /* TaskViewWidgetBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TaskViewWidgetBundle.swift; sourceTree = "<group>"; };
+		9D90258576D7FDAEEBD7298B /* AtlasGPWidgetBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AtlasGPWidgetBundle.swift; sourceTree = "<group>"; };
 		AAA632B02F69F429007C705D /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 		AAA632B12F6BB598007C705D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB7495A9A40AB2365CC0624E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1EEEB83D95DC32C9728EAC4 /* TaskViewWidget.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = TaskViewWidget.entitlements; sourceTree = "<group>"; };
+		F1EEEB83D95DC32C9728EAC4 /* AtlasGPWidget.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = AtlasGPWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 				504EC3061FED79650016851F /* App */,
 				504EC3051FED79650016851F /* Products */,
 				4961C8EBB434EDD15B55395B /* Frameworks */,
-				79D12E01B1FBD77844324865 /* TaskViewWidget */,
+				79D12E01B1FBD77844324865 /* AtlasGPWidget */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				504EC3041FED79650016851F /* App.app */,
-				7F4057F5AC9B7A7AC7E70240 /* TaskViewWidget.appex */,
+				7F4057F5AC9B7A7AC7E70240 /* AtlasGPWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,19 +139,19 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		79D12E01B1FBD77844324865 /* TaskViewWidget */ = {
+		79D12E01B1FBD77844324865 /* AtlasGPWidget */ = {
 			isa = PBXGroup;
 			children = (
-				9D90258576D7FDAEEBD7298B /* TaskViewWidgetBundle.swift */,
+				9D90258576D7FDAEEBD7298B /* AtlasGPWidgetBundle.swift */,
 				4822ABF5AC8CD3030A5CE020 /* TodayWidget.swift */,
 				873F85DE4FF5908A8CA6A467 /* WidgetSnapshotModel.swift */,
 				AB10F00D00000000000000A1 /* OpenTaskIntent.swift */,
 				EB7495A9A40AB2365CC0624E /* Info.plist */,
-				F1EEEB83D95DC32C9728EAC4 /* TaskViewWidget.entitlements */,
+				F1EEEB83D95DC32C9728EAC4 /* AtlasGPWidget.entitlements */,
 				41EECE9262690D5E2EF23CE9 /* Assets.xcassets */,
 			);
-			name = TaskViewWidget;
-			path = TaskViewWidget;
+			name = AtlasGPWidget;
+			path = AtlasGPWidget;
 			sourceTree = "<group>";
 		};
 		7E3EA782F4406B2B6D7A0121 /* iOS */ = {
@@ -165,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13D58B519FF779A139CB09EB /* TaskViewWidget */ = {
+		13D58B519FF779A139CB09EB /* AtlasGPWidget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA6B4CB7C019DA2E47F2AE5D /* Build configuration list for PBXNativeTarget "TaskViewWidget" */;
+			buildConfigurationList = BA6B4CB7C019DA2E47F2AE5D /* Build configuration list for PBXNativeTarget "AtlasGPWidget" */;
 			buildPhases = (
 				2B48B6699C53A2E975CEE972 /* Sources */,
 				8331741D08C05C5C85275E50 /* Frameworks */,
@@ -177,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = TaskViewWidget;
-			productName = TaskViewWidget;
-			productReference = 7F4057F5AC9B7A7AC7E70240 /* TaskViewWidget.appex */;
+			name = AtlasGPWidget;
+			productName = AtlasGPWidget;
+			productReference = 7F4057F5AC9B7A7AC7E70240 /* AtlasGPWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		504EC3031FED79650016851F /* App */ = {
@@ -237,7 +237,7 @@
 			projectRoot = "";
 			targets = (
 				504EC3031FED79650016851F /* App */,
-				13D58B519FF779A139CB09EB /* TaskViewWidget */,
+				13D58B519FF779A139CB09EB /* AtlasGPWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30F5ABA9CC301D3E3BA985C7 /* TaskViewWidgetBundle.swift in Sources */,
+				30F5ABA9CC301D3E3BA985C7 /* AtlasGPWidgetBundle.swift in Sources */,
 				336711805E8F2928D054F35E /* TodayWidget.swift in Sources */,
 				ABED08BA434D23E174534E03 /* WidgetSnapshotModel.swift in Sources */,
 				AB10F00D00000000000000A2 /* OpenTaskIntent.swift in Sources */,
@@ -293,8 +293,8 @@
 /* Begin PBXTargetDependency section */
 		70738FEC670F89727813A33B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TaskViewWidget;
-			target = 13D58B519FF779A139CB09EB /* TaskViewWidget */;
+			name = AtlasGPWidget;
+			target = 13D58B519FF779A139CB09EB /* AtlasGPWidget */;
 			targetProxy = 8471300B26377F4336A38D36 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,7 +451,7 @@
 					AppIntents,
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.handscream.taskview.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.handscream.atlasgp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
@@ -480,7 +480,7 @@
 					"-weak_framework",
 					AppIntents,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.handscream.taskview.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.handscream.atlasgp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
@@ -493,13 +493,13 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
-				CODE_SIGN_ENTITLEMENTS = TaskViewWidget/TaskViewWidget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AtlasGPWidget/AtlasGPWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.50.10;
 				DEVELOPMENT_TEAM = H2W2SG48JT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskViewWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "TaskView Widget";
+				INFOPLIST_FILE = AtlasGPWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "ATLAS GP Widget";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,7 +507,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.50.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.handscream.taskview.app.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.handscream.atlasgp.app.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -522,13 +522,13 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
-				CODE_SIGN_ENTITLEMENTS = TaskViewWidget/TaskViewWidget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AtlasGPWidget/AtlasGPWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.50.10;
 				DEVELOPMENT_TEAM = H2W2SG48JT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskViewWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "TaskView Widget";
+				INFOPLIST_FILE = AtlasGPWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "ATLAS GP Widget";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,7 +536,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.50.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.handscream.taskview.app.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.handscream.atlasgp.app.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -568,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA6B4CB7C019DA2E47F2AE5D /* Build configuration list for PBXNativeTarget "TaskViewWidget" */ = {
+		BA6B4CB7C019DA2E47F2AE5D /* Build configuration list for PBXNativeTarget "AtlasGPWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC8696991AE5C61127E97D40 /* Release */,

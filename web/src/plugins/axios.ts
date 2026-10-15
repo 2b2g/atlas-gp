@@ -1,5 +1,5 @@
 import qs from 'qs'
-import { TvApi } from 'taskview-api'
+import { TvApi } from 'atlasgp-api'
 import type { App } from 'vue'
 import $api from '@/helpers/axios'
 import LocalStorage from '@/helpers/LocalStorage'

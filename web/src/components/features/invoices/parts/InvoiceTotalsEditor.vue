@@ -115,7 +115,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useInvoiceFieldStyle } from '@/composables/useInvoiceFieldStyle'
 import { computeInvoiceTotals, formatMoney } from '@/helpers/money'
-import type { InvoiceDiscountType } from 'taskview-api'
+import type { InvoiceDiscountType } from 'atlasgp-api'
 import type { InvoiceFormValue } from '@/types/invoices.types'
 
 const model = defineModel<InvoiceFormValue>({ required: true })

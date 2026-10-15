@@ -1,6 +1,6 @@
 import { type } from 'arktype'
 import type { NextFunction, Request, Response } from 'express'
-import type { AnalyticsScope } from 'taskview-api'
+import type { AnalyticsScope } from 'atlasgp-api'
 import { $logger } from '../../modules/logget'
 import { parseDrillDownMeta, resolveRange } from './helpers'
 import { AnalyticsDrillDownArkType, AnalyticsFetchSectionsArkType } from './types'

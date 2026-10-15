@@ -53,9 +53,9 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import CounterpartyForm from './CounterpartyForm.vue'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useCounterpartiesStore } from '@/stores/counterparties.store'
-import type { CounterpartyItem } from 'taskview-api'
+import type { CounterpartyItem } from 'atlasgp-api'
 import type { CounterpartyFormValue } from '@/types/invoices.types'
 
 const open = defineModel<boolean>('open', { default: false })
@@ -71,7 +71,7 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const toast = useToast()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const counterpartiesStore = useCounterpartiesStore()
 
 const isEdit = computed(() => !!props.counterparty)

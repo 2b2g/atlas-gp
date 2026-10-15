@@ -1,5 +1,5 @@
 import { and, eq, inArray, sql, type SQL } from 'drizzle-orm'
-import { GoalsSchema } from 'taskview-db-schemas'
+import { GoalsSchema } from 'atlasgp-db-schemas'
 import { Database } from '../../modules/db'
 import { callWithCatch } from '../../utils/helpers'
 import { toIntArraySql } from './helpers'

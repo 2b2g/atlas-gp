@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { TimeReportFilters } from 'taskview-api'
+import type { TimeReportFilters } from 'atlasgp-api'
 import type { TimeReportsFiltersState } from '@/stores/time-reports.types'
 
 export function resolveTimeReportsErrorKey(err: unknown): string {

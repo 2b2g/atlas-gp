@@ -115,7 +115,7 @@ import { useAppStore } from '@/stores/app.store'
 import { provideGoalPermissions } from '@/composables/useGoalPermissions'
 import { provideProjectContext } from '@/composables/useProjectContext'
 import { AllGoalPermissions } from '@/types/goals.types'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useTaskDetailPanel } from '@/composables/useTaskDetailPanel'
 import { useSelectedTaskSync } from '@/composables/useSelectedTaskSync'
 
@@ -123,7 +123,7 @@ const { t } = useI18n()
 const tasksStore = useTasksStore()
 const goalsStore = useGoalsStore()
 const appStore = useAppStore()
-const { isFullscreenModal } = useTaskView()
+const { isFullscreenModal } = useAtlasGP()
 const { isOpen, closeTask } = useTaskDetailPanel()
 const { broadcastRemoval } = useSelectedTaskSync()
 

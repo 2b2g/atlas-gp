@@ -1,3 +1,3 @@
-import { createTaskviewApp } from './bootstrap'
+import { createAtlasGPApp } from './bootstrap'
 
-createTaskviewApp()
+createAtlasGPApp()

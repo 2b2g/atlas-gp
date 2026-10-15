@@ -94,7 +94,7 @@ import CalendarToolbar from './CalendarToolbar.vue'
 import CalendarTaskCard from './CalendarTaskCard.vue'
 import { useCalendarStore } from '@/stores/calendar.store'
 import { useTaskDetailPanel } from '@/composables/useTaskDetailPanel'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useWeekStart } from '@/composables/useWeekStart'
 import { useCalendarRouteState, type CalendarView } from '@/composables/useCalendarRouteState'
 import { isScheduled, occupiesDay, taskToEvent, type TaskCalendarEvent } from '@/helpers/taskCalendarDates'
@@ -110,7 +110,7 @@ const FC_VIEWS: Record<CalendarView, string> = {
 const { t, locale } = useI18n()
 const calendarStore = useCalendarStore()
 const { openTask } = useTaskDetailPanel()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const weekStart = useWeekStart()
 const { view, date } = useCalendarRouteState(isMobile.value ? 'list' : 'week')
 

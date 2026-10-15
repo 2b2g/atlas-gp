@@ -64,7 +64,7 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { storeToRefs } from 'pinia'
-import type { SellerItem } from 'taskview-api'
+import type { SellerItem } from 'atlasgp-api'
 import { useOrganizationStore } from '@/stores/organization.store'
 import { useSellersStore } from '@/stores/sellers.store'
 import { useOrgPermissions } from '@/composables/useOrgPermissions'

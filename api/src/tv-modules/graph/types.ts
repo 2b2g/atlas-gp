@@ -1,6 +1,6 @@
 import { type } from 'arktype';
 import type { InferSelectModel } from 'drizzle-orm';
-import type { GraphRelationsSchema } from 'taskview-db-schemas';
+import type { GraphRelationsSchema } from 'atlasgp-db-schemas';
 
 export const GraphRelationsArkType = type({
     fromTaskId: 'number',

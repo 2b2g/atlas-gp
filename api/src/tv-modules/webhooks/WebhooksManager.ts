@@ -5,7 +5,7 @@ import { WebhooksRepository } from './WebhooksRepository';
 import { WebhookUrlError } from './WebhookUrlError';
 import { resolveWebhookUrl } from './webhooks.utils';
 import type { WebhookArgCreate, WebhookArgUpdate } from './types';
-import type { WebhooksSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { WebhooksSchemaTypeForSelect } from 'atlasgp-db-schemas';
 
 export type WebhookForClient = Omit<WebhooksSchemaTypeForSelect, 'secretEncrypted'>;
 

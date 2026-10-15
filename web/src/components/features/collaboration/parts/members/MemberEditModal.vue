@@ -65,7 +65,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { CollaborationResponseFetchAllUsers } from 'taskview-api'
+import type { CollaborationResponseFetchAllUsers } from 'atlasgp-api'
 import type { CollaborationRole } from '@/types/collaboration-roles.types'
 
 const props = defineProps<{

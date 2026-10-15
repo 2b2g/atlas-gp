@@ -6,7 +6,7 @@ import type {
   SprintVelocityPoint,
   SprintWithRetro,
   Task,
-} from 'taskview-api'
+} from 'atlasgp-api'
 
 /**
  * Tasks carry sprint-related fields at runtime (added by the backend

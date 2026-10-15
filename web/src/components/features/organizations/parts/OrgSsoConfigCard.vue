@@ -69,7 +69,7 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { $tvApi } from '@/plugins/axios'
-import type { SsoConfig } from 'taskview-api'
+import type { SsoConfig } from 'atlasgp-api'
 import OrgSsoScimSection from './OrgSsoScimSection.vue'
 import OrgSsoDomainSection from './OrgSsoDomainSection.vue'
 

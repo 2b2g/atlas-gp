@@ -3,7 +3,7 @@ import { $ls } from '@/plugins/axios'
 
 /**
  * Like `authenticated`, but remembers where the user was going. The OAuth
- * consent screen is usually the first TaskView page a connector opens, so an
+ * consent screen is usually the first ATLAS GP page a connector opens, so an
  * unauthenticated user must come back to it — with its query intact — instead
  * of landing on their project list with the authorization request lost.
  */

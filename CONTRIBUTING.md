@@ -1,6 +1,6 @@
 ## Repository structure (monorepo)
 
-TaskView is a monorepo. Key packages/modules:
+ATLAS GP is a monorepo. Key packages/modules:
 
 - `api/` — Node.js backend (HTTP API, auth, business logic)
 - `web/` — Web client (UI) & Mobile client (Capacitor-based)
@@ -61,21 +61,21 @@ Send a private report with:
 - versions/commit hash (if applicable)
 
 **Contact:**
-- Use: `support@taskview.tech` and prefix the subject with `[SECURITY]`.
+- Use: `support@atlasgp.tech` and prefix the subject with `[SECURITY]`.
 
 We will acknowledge receipt and work on a fix. After a fix is available, we can coordinate a responsible public disclosure.
 
 
 ## Legal: Contributor License Agreement (CLA)
 
-To protect the long-term sustainability of TaskView, we require a Contributor License Agreement (CLA) for **all** contributions.
+To protect the long-term sustainability of ATLAS GP, we require a Contributor License Agreement (CLA) for **all** contributions.
 
 The CLA is a single document covering both individuals and companies:
 - `CLA/CLA.md`
 
 ### Why we require a CLA (plain English)
-You keep ownership of your contribution, but you grant TaskView the rights to use, modify, distribute, sublicense, and relicense
-your contribution (including under commercial/proprietary terms). This allows TaskView to offer commercial licenses and evolve
+You keep ownership of your contribution, but you grant ATLAS GP the rights to use, modify, distribute, sublicense, and relicense
+your contribution (including under commercial/proprietary terms). This allows ATLAS GP to offer commercial licenses and evolve
 licensing in the future without asking contributors for additional permission.
 
 ### How to sign
@@ -94,7 +94,7 @@ block. Be sure you are authorized to sign for your company.
 
 ## Third-party code & dependency licensing
 
-We want to keep TaskView easy to adopt for individuals and companies. Please be careful with third-party code.
+We want to keep ATLAS GP easy to adopt for individuals and companies. Please be careful with third-party code.
 
 ### General rules
 - Do not copy-paste code from the internet unless the license permits it and you include attribution when required.
@@ -116,4 +116,4 @@ Please open an issue before adding dependencies under licenses like:
 - Any notable risks (bundle size, security, maintenance)
 
 ### Questions
-If you have questions about the CLA or commercial licensing, contact: support@taskview.tech
+If you have questions about the CLA or commercial licensing, contact: support@atlasgp.tech

@@ -86,14 +86,14 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const props = defineProps<{ events: string[] }>()
 const emit = defineEmits<{ save: [events: string[]] }>()
 const open = defineModel<boolean>('open', { required: true })
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 
 // Task events are the common ones (shown always); the rest are "noise" hidden
 // behind a "show more" toggle.

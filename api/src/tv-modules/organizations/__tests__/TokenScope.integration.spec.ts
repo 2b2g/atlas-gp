@@ -9,7 +9,7 @@ import { GoalPermissions } from '../../../types/auth.types';
 
 const port = 1811;
 const url = `http://localhost:${port}`;
-const MIGRATION_DIR = join(__dirname, '../../../migrations/taskview/sql/1.65.0');
+const MIGRATION_DIR = join(__dirname, '../../../migrations/atlasgp/sql/1.65.0');
 
 const LOGIN = 'test@mail.dest';
 const PASSWORD = 'user1!#Q';

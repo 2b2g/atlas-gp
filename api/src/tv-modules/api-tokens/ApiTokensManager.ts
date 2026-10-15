@@ -1,7 +1,7 @@
 import { randomBytes, createHash } from 'crypto';
 import { ApiTokensRepository } from './ApiTokensRepository';
 import { TOKEN_PREFIX, type ApiTokenArgCreate } from './types';
-import type { ApiTokensSchemaTypeForSelect, PermissionsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { ApiTokensSchemaTypeForSelect, PermissionsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 
 export type ApiTokenForClient = Omit<ApiTokensSchemaTypeForSelect, 'tokenHash'>;
 

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { SessionItem } from 'taskview-api'
+import type { SessionItem } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 interface SessionsStoreState {

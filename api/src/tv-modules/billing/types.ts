@@ -4,7 +4,7 @@ import type {
   BillingRequisite,
   CounterpartiesSchemaTypeForSelect,
   SellersSchemaTypeForSelect,
-} from 'taskview-db-schemas'
+} from 'atlasgp-db-schemas'
 
 const NumberFromString = type('string|number').pipe((v) => Number(v))
 const BooleanFromString = type('string|boolean|undefined').pipe((v) => {

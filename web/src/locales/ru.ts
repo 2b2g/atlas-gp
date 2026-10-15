@@ -64,7 +64,7 @@ export default {
     // Messages
     success: 'Успешно',
     error: 'Ошибка',
-    loggedIn: 'Добро пожаловать в TaskView',
+    loggedIn: 'Добро пожаловать в ATLAS GP',
     invalidCode: 'Неверный код. Попробуйте снова.',
     invalidCredentials: 'Неверный логин или пароль',
     loginFailed: 'Не удалось войти. Попробуйте снова.',
@@ -80,7 +80,7 @@ export default {
     ssoNotFoundDescription: 'Для домена {domain} не настроен SSO провайдер',
     ssoError: 'Ошибка SSO авторизации. Попробуйте снова.',
     ssoDomainUnverified: 'SSO недоступен, пока организация не подтвердит этот email-домен.',
-    ssoEmailInUse: 'Эта почта уже занята другим аккаунтом TaskView.',
+    ssoEmailInUse: 'Эта почта уже занята другим аккаунтом ATLAS GP.',
     ssoAccountBlocked: 'Аккаунт заблокирован. Обратитесь к администратору.',
 
     // Validation
@@ -882,7 +882,7 @@ export default {
     samlLogoutUrl: 'URL выхода IdP (SLO)',
     requestSigning: 'Подпись запросов (enterprise)',
     requestSigningDescription: 'Подписывать SAML AuthnRequest приватным ключом. Требуется некоторыми IdP для повышенной безопасности.',
-    generateKeysTitle: 'openssl req -x509 -newkey rsa:2048 -keyout sp-key.pem -out sp-cert.pem -days 3650 -nodes -subj "/CN=taskview"',
+    generateKeysTitle: 'openssl req -x509 -newkey rsa:2048 -keyout sp-key.pem -out sp-cert.pem -days 3650 -nodes -subj "/CN=atlasgp"',
     generateKeysHint: 'sp-key.pem → поле Private Key. sp-cert.pem → поле Certificate + загрузить в IdP.',
     samlSigningKey: 'Приватный ключ SP (PEM)',
     samlSigningKeyPlaceholder: 'Вставьте PEM приватный ключ (-----BEGIN PRIVATE KEY-----...)',
@@ -951,8 +951,8 @@ export default {
   oauth: {
     consent: {
       title: 'Подключить {client}',
-      subtitle: '{client} запрашивает доступ к вашему аккаунту TaskView.',
-      rbacNote: 'Доступ никогда не превысит ваши собственные права — если вы чего-то не можете в TaskView, не сможет и приложение.',
+      subtitle: '{client} запрашивает доступ к вашему аккаунту ATLAS GP.',
+      rbacNote: 'Доступ никогда не превысит ваши собственные права — если вы чего-то не можете в ATLAS GP, не сможет и приложение.',
       projectsLabel: 'Ограничить проектами',
       allProjects: 'Все проекты',
       projectsHint: 'Оставьте пустым, чтобы разрешить все доступные вам проекты.',

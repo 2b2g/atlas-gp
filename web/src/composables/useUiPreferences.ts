@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import type { UiPreferencesItem } from 'taskview-api'
+import type { UiPreferencesItem } from 'atlasgp-api'
 import { useUiPreferencesStore } from '@/stores/uiPreferences.store'
 
 export type ItemWidth = 'narrow' | 'wide'

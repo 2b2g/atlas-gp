@@ -112,7 +112,7 @@ import MainScreenAddTaskDialog from './MainScreenAddTaskDialog.vue'
 import TaskItem from '@/components/features/tasks/parts/TaskItem.vue'
 import { useWidgetScrollContainer } from '@/components/features/main/screen-main/useWidgetScrollContainer'
 import { useBaseScreenStore } from '@/stores/base-screen.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import type { TaskItem as TaskItemType } from '@/types/tasks.types'
 import MainScreenWidgetTemplate from './MainScreenWidgetTemplate.vue'
 import NoGoals from './NoGoals.vue'
@@ -122,7 +122,7 @@ const baseScreenStore = useBaseScreenStore()
 const activeBasicTab = ref('lastAdded')
 const addTaskDialogModel = ref(false)
 const scrollContainerData = useWidgetScrollContainer()
-const { hasActiveGoals } = useTaskView()
+const { hasActiveGoals } = useAtlasGP()
 
 
 const noTasksClass = 'min-h-24 flex flex-col items-center justify-center font-bold gap-2 h-full'

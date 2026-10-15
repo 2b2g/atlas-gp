@@ -12,7 +12,7 @@ import {
   type TaskArgToggleAssignee,
   type TaskArgUpdate,
   type TaskBase,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { DEFAULT_ID } from '@/types/app.types'
 import { type TasksStoreState } from '@/types/tasks.types'

@@ -43,7 +43,7 @@
 <script setup lang="ts">
 import { ref, useTemplateRef, watch } from 'vue'
 import { useDebounceFn } from '@vueuse/core'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 
 const props = defineProps<{
   subtask: Task

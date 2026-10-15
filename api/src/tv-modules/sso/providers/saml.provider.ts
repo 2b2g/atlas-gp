@@ -1,6 +1,6 @@
 import { SAML, ValidateInResponseTo } from '@node-saml/node-saml'
 import type { Request, Response } from 'express'
-import type { SsoConfigsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { SsoConfigsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 import { PublicApiUrl } from '../../../modules/public-url'
 import { deriveSamlEmail } from '../sso.utils'
 import type { SamlOptionsArgs } from '../types'

@@ -153,7 +153,7 @@ import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { TabsItem } from '@nuxt/ui'
 import type { TaskItem as TaskItemType } from '@/types/tasks.types'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useLsRef } from '@/composables/useLsRef'
 import TaskItem from '@/components/features/tasks/parts/TaskItem.vue'
 import DashboardAddTask from './DashboardAddTask.vue'
@@ -185,9 +185,9 @@ defineEmits<{
 }>()
 
 const { t, locale } = useI18n()
-const { hasActiveGoals } = useTaskView()
+const { hasActiveGoals } = useAtlasGP()
 
-const grouped = useLsRef(`taskview:dashboard:${props.sectionKey}:grouped`, true)
+const grouped = useLsRef(`atlasgp:dashboard:${props.sectionKey}:grouped`, true)
 
 const NO_DATE_KEY = '~'
 
@@ -225,7 +225,7 @@ const ACCENTS: Record<Accent, { bg: string; icon: string; bar: string }> = {
 
 const accentClasses = computed(() => ACCENTS[props.accent])
 
-const expanded = useLsRef(`taskview:dashboard:${props.sectionKey}:expanded`, true)
+const expanded = useLsRef(`atlasgp:dashboard:${props.sectionKey}:expanded`, true)
 
 const activeTab = ref('active')
 const tabItems = computed<TabsItem[]>(() => [

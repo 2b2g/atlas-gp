@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { OAuthConnectedApp, OAuthConsentRequest } from 'taskview-api'
+import type { OAuthConnectedApp, OAuthConsentRequest } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 interface OAuthStoreState {

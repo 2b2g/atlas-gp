@@ -1,5 +1,5 @@
 import { type } from 'arktype';
-import type { TasksSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { TasksSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import { GoalPermissions } from '../../types/auth.types';
 
 export const TaskArkTypeFetchTaskByIdNew = type({

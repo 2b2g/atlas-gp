@@ -104,8 +104,8 @@
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { TagItem } from 'taskview-api'
-import { useTaskView } from '@/composables/useTaskView'
+import type { TagItem } from 'atlasgp-api'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const props = defineProps<{
   tag?: TagItem | null
@@ -118,7 +118,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 
 const isOpen = defineModel<boolean>('open', { required: true })
 

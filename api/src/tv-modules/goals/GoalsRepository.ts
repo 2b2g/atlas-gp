@@ -4,7 +4,7 @@ import {
     CollaborationUsersToGoalsSchema,
     GoalsSchema,
     type GoalsSchemaTypeForSelect,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import { Database } from '../../modules/db';
 import { $logger } from '../../modules/logget';

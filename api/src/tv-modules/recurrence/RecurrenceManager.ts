@@ -1,4 +1,4 @@
-import type { RecurrenceRulesSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { RecurrenceRulesSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import { eventBus } from '../../core/EventBus';
 import { KanbanRepository } from '../kanban/KanbanRepository';

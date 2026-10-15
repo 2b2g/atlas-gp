@@ -75,14 +75,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Organization } from 'taskview-api'
+import type { Organization } from 'atlasgp-api'
 import { useOrganizationStore } from '@/stores/organization.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import OrgCreateModal from './parts/OrgCreateModal.vue'
 import OrgDetailModal from './parts/OrgDetailModal.vue'
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const orgStore = useOrganizationStore()
 
 const showCreateModal = ref(false)

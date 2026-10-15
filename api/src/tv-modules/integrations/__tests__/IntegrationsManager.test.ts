@@ -2,7 +2,7 @@ import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vite
 import jwt from 'jsonwebtoken'
 import nock from 'nock'
 import { createHash } from 'crypto'
-import type { IntegrationsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { IntegrationsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 
 const repositoryMock = {
     fetchById: vi.fn(),

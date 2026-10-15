@@ -35,7 +35,7 @@
   </span>
 </template>
 <script setup lang="ts">
-import type { AnalyticsSectionHelp, LocalizedText } from 'taskview-api'
+import type { AnalyticsSectionHelp, LocalizedText } from 'atlasgp-api'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useAnalyticsLocale } from './composables/useAnalyticsLocale'

@@ -90,7 +90,7 @@ import { useI18n } from 'vue-i18n'
 import { storeToRefs } from 'pinia'
 import { useDateFormat } from '@vueuse/core'
 import { CalendarDate } from '@internationalized/date'
-import type { GoalItem } from 'taskview-api'
+import type { GoalItem } from 'atlasgp-api'
 import { useTimeReportsStore } from '@/stores/time-reports.store'
 import { useWeekStart } from '@/composables/useWeekStart'
 

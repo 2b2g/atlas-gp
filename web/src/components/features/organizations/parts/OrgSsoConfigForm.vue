@@ -81,7 +81,7 @@ type SsoFormData = {
 
 const form = defineModel<SsoFormData>('form', { required: true })
 
-import type { SsoConfig } from 'taskview-api'
+import type { SsoConfig } from 'atlasgp-api'
 
 defineProps<{
   isEditing: boolean

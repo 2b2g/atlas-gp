@@ -64,8 +64,8 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NotificationType, NotificationChannel } from 'taskview-api'
-import type { NotificationPreferencesSettings } from 'taskview-api'
+import { NotificationType, NotificationChannel } from 'atlasgp-api'
+import type { NotificationPreferencesSettings } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 const { t } = useI18n()

@@ -1,5 +1,5 @@
 import { type } from 'arktype'
-import type { TimeEntriesSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { TimeEntriesSchemaTypeForSelect } from 'atlasgp-db-schemas'
 
 export type TimeEntryWithUser = TimeEntriesSchemaTypeForSelect & {
     userEmail: string | null

@@ -1,5 +1,5 @@
 import { eq, sql } from 'drizzle-orm'
-import { UiPreferencesSchema } from 'taskview-db-schemas'
+import { UiPreferencesSchema } from 'atlasgp-db-schemas'
 import { Database } from '../../modules/db'
 import { callWithCatch } from '../../utils/helpers'
 import type { UiPreferences, UpdateUiPreferencesArgs } from './types'

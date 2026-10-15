@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { isAxiosError } from 'axios'
-import type { InvoiceArgCreate, InvoiceItem, InvoicePdfLang, InvoiceTransitionError } from 'taskview-api'
+import type { InvoiceArgCreate, InvoiceItem, InvoicePdfLang, InvoiceTransitionError } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import { httpStatusOf } from '@/helpers/billingErrors'

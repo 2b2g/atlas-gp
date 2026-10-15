@@ -1,4 +1,4 @@
-import type { SsoConfigsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { SsoConfigsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 import { decryptSsoConfig } from '../sso.utils'
 import type { SsoProvider } from './sso-provider.interface'
 import { SamlProvider } from './saml.provider'

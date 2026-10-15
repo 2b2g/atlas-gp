@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { TaskBase } from 'taskview-api'
+import type { TaskBase } from 'atlasgp-api'
 import { PRIORITY_COLORS } from '@/types/tasks.types'
 
 export type PriorityId = NonNullable<TaskBase['priorityId']>

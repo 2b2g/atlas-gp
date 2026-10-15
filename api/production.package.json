@@ -1,5 +1,5 @@
 {
-    "name": "taskview-ce-api-server",
+    "name": "atlasgp-ce-api-server",
     "version": "1.17.0",
     "scripts": {
         "start": "pm2-runtime start ecosystem.config.js --env production"

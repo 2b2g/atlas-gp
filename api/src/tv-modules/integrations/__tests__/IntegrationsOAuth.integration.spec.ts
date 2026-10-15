@@ -72,7 +72,7 @@ const integrationsOfGoal = async () => {
 };
 
 /**
- * A git integration is connected over OAuth where TaskView is the client. The
+ * A git integration is connected over OAuth where ATLAS GP is the client. The
  * callback must only complete for the browser that started the flow, and only
  * into a project the initiator may manage — otherwise an attacker starts a flow
  * for his own project and tricks a victim into finishing it with her account.

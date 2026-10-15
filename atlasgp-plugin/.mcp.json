@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "atlasgp": {
+      "command": "npx",
+      "args": ["-y", "atlasgp-mcp"],
+      "env": {
+        "ATLAS_GP_URL": "${user_config.atlasgp_url}",
+        "ATLAS_GP_TOKEN": "${user_config.atlasgp_token}"
+      }
+    }
+  }
+}

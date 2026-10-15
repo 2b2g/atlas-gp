@@ -46,7 +46,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { GraphResponseAddEdge } from 'taskview-api'
+import type { GraphResponseAddEdge } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'

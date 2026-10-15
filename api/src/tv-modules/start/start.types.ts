@@ -1,4 +1,4 @@
-import type { TasksSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { TasksSchemaTypeForSelect } from 'atlasgp-db-schemas';
 
 export type SearchTaskArgs = {
     description: string;

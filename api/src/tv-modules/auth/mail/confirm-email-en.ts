@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
   <head>
-    <title>TaskView</title>
+    <title>ATLAS GP</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="color-scheme" content="only" />
@@ -508,7 +508,7 @@ export default `<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
                                         "
                                       >
                                         <strong style="box-sizing: border-box"
-                                          >TaskView helps you achieve your
+                                          >ATLAS GP helps you achieve your
                                           goals, whether you're working alone or
                                           collaborating with your team</strong
                                         >
@@ -699,7 +699,7 @@ export default `<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
                                         - <strong>Self-Hosting</strong>
                                         <br />
                                         <span style="margin-left: 12px">
-                                          Install TaskView on your own servers
+                                          Install ATLAS GP on your own servers
                                         </span>
                                       </p>
                                       <p
@@ -712,13 +712,13 @@ export default `<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
                                       >
                                         -
                                         <strong>
-                                          TaskView Team Support and
+                                          ATLAS GP Team Support and
                                           Customization
                                         </strong>
 
                                         <br />
                                         <span style="margin-left: 12px">
-                                          TaskView Team support and tailored
+                                          ATLAS GP Team support and tailored
                                           customization for your projects
                                         </span>
                                       </p>

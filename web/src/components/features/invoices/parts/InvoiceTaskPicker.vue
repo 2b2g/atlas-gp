@@ -60,7 +60,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ALL_TASKS_LIST_ID, TaskIncomeType } from 'taskview-api'
+import { ALL_TASKS_LIST_ID, TaskIncomeType } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import { formatMoney } from '@/helpers/money'

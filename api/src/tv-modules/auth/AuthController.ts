@@ -38,7 +38,7 @@ export default class AuthController {
     private readonly jwtExp: string = process.env.ACCESS_LIFE_TIME!;
     private readonly jwtRefreshExp: string = process.env.REFRESH_LIFE_TIME!;
 
-    private readonly refreshTokenCookieName: string = 'taskview-refresh';
+    private readonly refreshTokenCookieName: string = 'atlasgp-refresh';
     private readonly orgRepository: OrganizationRepository = new OrganizationRepository();
     private readonly goalsRepository: GoalsRepository = new GoalsRepository();
 
@@ -207,13 +207,13 @@ export default class AuthController {
     };
 
     async sendCodeByEmail(code: string, email: string) {
-        const text = `Your TaskView verification code is ${code}\n\nUse this code to sign in. The code expires in 5 minutes.\n\nIf you didn't request this code, ignore this email.`;
+        const text = `Your ATLAS GP verification code is ${code}\n\nUse this code to sign in. The code expires in 5 minutes.\n\nIf you didn't request this code, ignore this email.`;
         const html = LoginCodeEmailTemplate.replace('{code}', code);
 
         return await Email.send({
             text,
             to: email,
-            subject: `Your TaskView code: ${code}`,
+            subject: `Your ATLAS GP code: ${code}`,
             from: process.env.SMTP_FROM_EMAIL as string,
             attachment: [{ data: html, alternative: true }],
         });
@@ -287,7 +287,7 @@ export default class AuthController {
 
             if (platformData.platform === "mobile") {
                 return res.redirect(
-                    `taskview://login?tokens=${encodedAuthData}`
+                    `atlasgp://login?tokens=${encodedAuthData}`
                 );
             }
         } catch (error) {
@@ -528,7 +528,7 @@ export default class AuthController {
 <div style="display:flex; justify-content:center;">
     <div style="display:flex; flex-direction: column; align-items: center;">
         <p>${result ? 'Success conformation' : 'Can not confirm email'}</p>
-        <a href="https://taskview.handscream.com/">TaskView</a>
+        <a href="https://atlasgp.handscream.com/">ATLAS GP</a>
     </div>
 </div>
 </body>
@@ -747,12 +747,12 @@ export default class AuthController {
             return res.status(500).end();
         }
 
-        const text = `Your TaskView password change code is ${code}\n\nUse this code to confirm your new password. The code expires in 15 minutes.\n\nIf you didn't request this change, ignore this email.`;
+        const text = `Your ATLAS GP password change code is ${code}\n\nUse this code to confirm your new password. The code expires in 15 minutes.\n\nIf you didn't request this change, ignore this email.`;
 
         Email.send({
             text,
             to: userEmail,
-            subject: `Your TaskView password change code: ${code}`,
+            subject: `Your ATLAS GP password change code: ${code}`,
             from: process.env.SMTP_FROM_EMAIL as string,
         })
             .then((ok) => {

@@ -1,6 +1,6 @@
 import { and, eq, not } from 'drizzle-orm';
-import type { CollaborationRolesSchemaTypeForSelect, PermissionsSchemaTypeForSelect } from 'taskview-db-schemas';
-import { CollaborationPermissionsToRoleSchema, CollaborationRolesSchema, PermissionsSchema } from 'taskview-db-schemas';
+import type { CollaborationRolesSchemaTypeForSelect, PermissionsSchemaTypeForSelect } from 'atlasgp-db-schemas';
+import { CollaborationPermissionsToRoleSchema, CollaborationRolesSchema, PermissionsSchema } from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import { logError } from '../../utils/api';
 import { callWithCatch } from '../../utils/helpers';

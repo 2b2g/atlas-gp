@@ -6,7 +6,7 @@
         :key="list.id"
         :to="{ name: 'user', params: { projectId, listId: list.id } }"
         :active="currentListId === list.id"
-        variant="taskview"
+        variant="atlasgp"
         :data-testid="`list-card-${list.name}`"
       >
         <div

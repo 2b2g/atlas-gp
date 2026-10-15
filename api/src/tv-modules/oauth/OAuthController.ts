@@ -66,7 +66,7 @@ export class OAuthController {
             return res.status(400).send(client.description)
         }
 
-        // Empty means "do not narrow", matching how a tvk_ token with no
+        // Empty means "do not narrow", matching how a agp_ token with no
         // permissions selected behaves. The user's own RBAC is still the ceiling.
         const code = await this.manager.issueAuthCode({
             clientId: data.client_id,

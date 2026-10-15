@@ -17,7 +17,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { GoalItem } from 'taskview-api'
+import type { GoalItem } from 'atlasgp-api'
 import { useKanbanStore } from '@/stores/kanban.store'
 import { DEFAULT_ID } from '@/types/app.types'
 import type { TaskItem } from '@/types/tasks.types'

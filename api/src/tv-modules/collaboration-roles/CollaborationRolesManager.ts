@@ -1,4 +1,4 @@
-// import type { CollaborationRolesSchemaTypeForSelect } from 'taskview-db-schemas';
+// import type { CollaborationRolesSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import { $logger } from '../../modules/logget';
 // import { logError } from '../../utils/api';

@@ -168,7 +168,7 @@
 import { ref, shallowRef, computed, watch, nextTick } from 'vue'
 import { useDateFormat } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 import { CalendarDate, Time } from '@internationalized/date'
 import TaskRecurrence from './TaskRecurrence.vue'
 import { useTasksStore } from '@/stores/tasks.store'

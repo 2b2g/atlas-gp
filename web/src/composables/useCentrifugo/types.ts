@@ -1,4 +1,4 @@
-import type { Notification, TimeEntryItem } from 'taskview-api'
+import type { Notification, TimeEntryItem } from 'atlasgp-api'
 
 export type RealtimeEventMap = {
   'notification': {

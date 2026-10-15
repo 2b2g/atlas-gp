@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { CollaborationUsersSchema, UsersSchema } from 'taskview-db-schemas';
+import { CollaborationUsersSchema, UsersSchema } from 'atlasgp-db-schemas';
 import { getCentrifugoClient } from '../../core/CentrifugoClient';
 import type { Dispatcher } from '../../core/Dispatcher';
 import { eventBus, type AppEvents } from '../../core/EventBus';

@@ -1,7 +1,7 @@
 import { type } from 'arktype'
 import { sql, type SQL } from 'drizzle-orm'
 import { DateTime } from 'luxon'
-import type { AnalyticsPeriod } from 'taskview-api'
+import type { AnalyticsPeriod } from 'atlasgp-api'
 import { DrillDownMetaArkType, type AnalyticsRange, type DrillDownMeta, type ResolveRangeArgs } from './types'
 
 const MAX_INT32 = 2147483647

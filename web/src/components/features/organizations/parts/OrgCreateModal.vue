@@ -49,14 +49,14 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useOrganizationStore } from '@/stores/organization.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const open = defineModel<boolean>({ default: false })
 const emit = defineEmits<{ created: [] }>()
 
 const { t } = useI18n()
 const toast = useToast()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const orgStore = useOrganizationStore()
 
 const name = ref('')

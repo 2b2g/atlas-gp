@@ -1,0 +1,24 @@
+{
+  "name": "atlasgp",
+  "displayName": "ATLAS GP",
+  "version": "0.1.0",
+  "description": "Manage ATLAS GP projects and tasks from Claude Code — browse projects, view and create tasks, and log your work without leaving the terminal. Bundles the ATLAS GP MCP server.",
+  "author": {
+    "name": "Nikolai Giman"
+  },
+  "userConfig": {
+    "atlasgp_url": {
+      "type": "string",
+      "title": "ATLAS GP API URL",
+      "description": "ATLAS GP Cloud is https://api.atlasgp.tech — or your own self-hosted instance URL (e.g. https://atlasgp.yourcompany.com).",
+      "required": true
+    },
+    "atlasgp_token": {
+      "type": "string",
+      "title": "ATLAS GP API token",
+      "description": "An API token (agp_...) generated in your ATLAS GP account settings. Scope it to the minimum permissions and projects the assistant should be able to reach.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

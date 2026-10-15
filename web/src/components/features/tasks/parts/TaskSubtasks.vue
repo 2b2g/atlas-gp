@@ -62,7 +62,7 @@
 import { ref, computed, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTasksStore } from '@/stores/tasks.store'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 import TaskSubtaskItem from '@/components/features/tasks/parts/TaskSubtaskItem.vue'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
 

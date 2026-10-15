@@ -109,9 +109,9 @@ import { useI18n } from 'vue-i18n'
 import { useInfiniteScroll } from '@vueuse/core'
 import type { TableColumn } from '@nuxt/ui'
 import { useWebhooksStore } from '@/stores/webhooks.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import PayloadViewer from './PayloadViewer.vue'
-import type { WebhookDeliveryItem } from 'taskview-api'
+import type { WebhookDeliveryItem } from 'atlasgp-api'
 
 const props = defineProps<{
   webhookId: number
@@ -120,7 +120,7 @@ const props = defineProps<{
 const isOpen = defineModel<boolean>('open', { default: false })
 
 const { t } = useI18n()
-const { isFullscreenModal } = useTaskView()
+const { isFullscreenModal } = useAtlasGP()
 const webhooksStore = useWebhooksStore()
 
 const retrying = ref<number | null>(null)

@@ -26,11 +26,11 @@ export const useAdditionalServer = async () => {
   mainServer.value =
     configuredApiUrl ||
     mainServerFromLocalStorage ||
-    (process.env.NODE_ENV !== 'production' ? 'http://localhost:1401' : 'https://api.taskview.tech')
+    (process.env.NODE_ENV !== 'production' ? 'http://localhost:1401' : 'https://api.atlasgp.tech')
 
   systemServer.value =
     configuredApiUrl ||
-    (process.env.NODE_ENV !== 'production' ? 'http://localhost:1401' : 'https://api.taskview.tech')
+    (process.env.NODE_ENV !== 'production' ? 'http://localhost:1401' : 'https://api.atlasgp.tech')
 
   const setMainServer = (server: string) => {
     const normalized = normalizeServerUrl(server) ?? server

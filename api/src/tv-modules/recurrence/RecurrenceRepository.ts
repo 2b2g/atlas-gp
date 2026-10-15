@@ -9,7 +9,7 @@ import {
     TasksSchema,
     type TasksSchemaTypeForSelect,
     TasksToTagsSchema,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import { $logger } from '../../modules/logget';
 import { callWithCatch } from '../../utils/helpers';

@@ -35,7 +35,7 @@
   </UCard>
 </template>
 <script setup lang="ts">
-import type { AnalyticsSection } from 'taskview-api'
+import type { AnalyticsSection } from 'atlasgp-api'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AnalyticsChart from './AnalyticsChart.vue'

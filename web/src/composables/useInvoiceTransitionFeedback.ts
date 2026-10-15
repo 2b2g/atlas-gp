@@ -1,5 +1,5 @@
 import { useI18n } from 'vue-i18n'
-import type { InvoiceMissingRequisite, InvoiceStatus } from 'taskview-api'
+import type { InvoiceMissingRequisite, InvoiceStatus } from 'atlasgp-api'
 import type { InvoiceTransitionResult } from '@/types/invoices.types'
 
 const REQUISITE_KEYS: Record<InvoiceMissingRequisite, string> = {

@@ -9,26 +9,26 @@ services:
     ports:
       - "5433:5432"
     healthcheck: # Health check added here
-      test: ["CMD-SHELL", "pg_isready -U tvdbuser -d taskviewdb"]
+      test: ["CMD-SHELL", "pg_isready -U tvdbuser -d atlasgpdb"]
       interval: 5s
       timeout: 5s
       retries: 5
   migration:
-    image: gimanhead/taskview-ce-db-migration:latest
+    image: gimanhead/atlasgp-ce-db-migration:latest
     restart: "no"
     depends_on:
       db:
         condition: service_healthy
     env_file:
-      - ./.env.taskview
+      - ./.env.atlasgp
 
-  taskview-ce-webapp:
-    image: gimanhead/taskview-ce-webapp:latest
+  atlasgp-ce-webapp:
+    image: gimanhead/atlasgp-ce-webapp:latest
     restart: "no"
     ports:
       - "8888:80"
-  taskview-api-server:
-    image: gimanhead/taskview-ce-api-server:latest
+  atlasgp-api-server:
+    image: gimanhead/atlasgp-ce-api-server:latest
     restart: "no"
     ports:
       - "1725:1401"
@@ -38,7 +38,7 @@ services:
       migration:
         condition: service_completed_successfully
     env_file:
-      - ./.env.taskview
+      - ./.env.atlasgp
     volumes:
       - ../postgresqlusr/log:/usr/src/app/logs
 volumes:

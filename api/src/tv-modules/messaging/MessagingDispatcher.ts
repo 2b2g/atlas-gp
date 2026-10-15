@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { SprintsSchema, TasksSchema } from 'taskview-db-schemas';
+import { SprintsSchema, TasksSchema } from 'atlasgp-db-schemas';
 import { eventBus, type AppEvents } from '../../core/EventBus';
 import { getJobQueue } from '../../core/JobQueue';
 import { Database } from '../../modules/db';
@@ -13,7 +13,7 @@ import { MessagingManager } from './MessagingManager';
 import { buildMessagingMessage } from './messages';
 import { buildTaskDeepLink } from './utils';
 import type { Dispatcher } from '../../core/Dispatcher';
-import type { MessagingConnectionsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { MessagingConnectionsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { MessagingDeliverJobData, MessagingEvent, MessagingProviderId } from './types';
 import type { MessagingDispatchArgs, MessagingRecipient, MessagingTaskContext } from './types.internal';
 
@@ -239,7 +239,7 @@ export class MessagingDispatcher implements Dispatcher {
             await this.enqueueAll(connections, message);
         }
 
-        // Project channel: a shared channel's membership doesn't map to TaskView content
+        // Project channel: a shared channel's membership doesn't map to ATLAS GP content
         // permission. By default the description AND assignees ARE posted (a channel is a
         // deliberate broadcast); a connection can opt out via post_content — then task events
         // get title + link only (no description, no assignee emails). Non-task bodies

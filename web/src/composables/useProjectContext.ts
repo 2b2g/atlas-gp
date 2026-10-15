@@ -1,5 +1,5 @@
 import { ref, computed, watch, provide, inject, type InjectionKey, type Ref, type ComputedRef } from 'vue'
-import type { CollaborationResponseFetchAllUsers, GoalListItem, KanbanColumnItem } from 'taskview-api'
+import type { CollaborationResponseFetchAllUsers, GoalListItem, KanbanColumnItem } from 'atlasgp-api'
 import type { TagItem } from '@/types/tags.types'
 import { DEFAULT_ID } from '@/types/app.types'
 import { $tvApi } from '@/plugins/axios'

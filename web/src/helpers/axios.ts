@@ -1,9 +1,9 @@
 import axios from 'axios'
-import { useTaskViewMainUrl } from '@/composables/useTaskViewMainUrl'
+import { useAtlasGPMainUrl } from '@/composables/useAtlasGPMainUrl'
 
 const $api = axios.create({
   withCredentials: true,
-  baseURL: useTaskViewMainUrl(),
+  baseURL: useAtlasGPMainUrl(),
   timeout: 10000,
 })
 

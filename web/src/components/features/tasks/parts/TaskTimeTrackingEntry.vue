@@ -70,7 +70,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { TimeEntryItem } from 'taskview-api'
+import type { TimeEntryItem } from 'atlasgp-api'
 import { formatDuration } from '@/helpers/formatDuration'
 import TaskTimeTrackingForm, { type TimeEntryFormPayload } from './TaskTimeTrackingForm.vue'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'

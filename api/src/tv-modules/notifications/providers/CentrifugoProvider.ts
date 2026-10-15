@@ -1,4 +1,4 @@
-import type { NotificationsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { NotificationsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import { getCentrifugoClient } from '../../../core/CentrifugoClient';
 import type { NotificationMeta, NotificationProvider } from '../NotificationProvider';
 import { NotificationChannel } from '../types';

@@ -86,7 +86,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { CollaborationPermission } from 'taskview-api'
+import type { CollaborationPermission } from 'atlasgp-api'
 import type { CollaborationRole, CollaborationRolesStore } from '@/types/collaboration-roles.types'
 import TvContextMenu from '@/components/features/base/TvContextMenu.vue'
 import RoleItem from './RoleItem.vue'

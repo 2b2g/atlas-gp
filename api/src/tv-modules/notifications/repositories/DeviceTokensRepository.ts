@@ -1,5 +1,5 @@
 import { and, eq, ne } from 'drizzle-orm';
-import { DeviceTokensSchema, type DeviceTokensSchemaTypeForSelect } from 'taskview-db-schemas';
+import { DeviceTokensSchema, type DeviceTokensSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import { Database } from '../../../modules/db';
 import { callWithCatch } from '../../../utils/helpers';
 

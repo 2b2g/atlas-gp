@@ -93,18 +93,18 @@
   </USlideover>
 </template>
 <script setup lang="ts">
-import { ALL_TASKS_LIST_ID, type AnalyticsDrillDownTask } from 'taskview-api'
+import { ALL_TASKS_LIST_ID, type AnalyticsDrillDownTask } from 'atlasgp-api'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useAnalyticsStore } from '@/stores/analytics.store'
 
 const analyticsStore = useAnalyticsStore()
 const router = useRouter()
 const route = useRoute()
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 
 const open = computed({
   get: () => analyticsStore.drillDown.open,

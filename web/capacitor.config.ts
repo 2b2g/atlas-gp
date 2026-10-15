@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
-  appId: 'com.handscream.taskview.app',
-  appName: 'TaskView',
+  appId: 'com.handscream.atlasgp.app',
+  appName: 'ATLAS GP',
   webDir: 'dist',
   zoomEnabled: false,
   android: {
@@ -13,7 +13,7 @@ const config: CapacitorConfig = {
     webContentsDebuggingEnabled: true,
   },
   server: {
-    hostname: 'app.taskview.tech',
+    hostname: 'app.atlasgp.tech',
   },
   plugins: {
     CapacitorUpdater: {
@@ -26,7 +26,7 @@ const config: CapacitorConfig = {
       enabled: true,
     },
     WidgetBridge: {
-      appGroup: 'group.com.handscream.taskview.app',
+      appGroup: 'group.com.handscream.atlasgp.app',
     },
   },
 }

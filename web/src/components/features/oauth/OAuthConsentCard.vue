@@ -149,7 +149,7 @@ const emit = defineEmits<{
   deny: []
 }>()
 
-// Nothing ticked means "everything you can do", the same as a tvk_ token issued
+// Nothing ticked means "everything you can do", the same as a agp_ token issued
 // with no permissions picked. The warning under the picker spells that out.
 const selectedPermissions = ref<string[]>([])
 const selectedGoalIds = ref<number[]>([])

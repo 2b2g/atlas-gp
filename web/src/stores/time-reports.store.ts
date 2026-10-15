@@ -5,7 +5,7 @@ import type {
   TimeReportByTaskRow,
   TimeReportByUserRow,
   TimeReportFilters,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import {
   resolveTimeReportsErrorKey,

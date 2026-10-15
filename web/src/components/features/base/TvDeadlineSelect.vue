@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 import { CalendarDate } from '@internationalized/date'
 import TvDateRange from '@/components/features/base/TvDateRange.vue'
 import { useTasksStore } from '@/stores/tasks.store'

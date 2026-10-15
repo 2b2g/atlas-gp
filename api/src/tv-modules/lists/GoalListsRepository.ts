@@ -1,6 +1,6 @@
 import { and, desc, eq } from 'drizzle-orm';
-import type { GoalsListSchemaTypeForSelect } from 'taskview-db-schemas';
-import { GoalsListSchema } from 'taskview-db-schemas';
+import type { GoalsListSchemaTypeForSelect } from 'atlasgp-db-schemas';
+import { GoalsListSchema } from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import { Database } from '../../modules/db';
 import type { GoalListInDb } from '../../types/goal-list.types';

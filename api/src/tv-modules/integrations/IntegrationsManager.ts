@@ -7,7 +7,7 @@ import { $logger } from '../../modules/logget';
 
 import { IntegrationsRepository } from './IntegrationsRepository';
 import { TasksRepository } from '../tasks/TasksRepository';
-import type { IntegrationsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { IntegrationsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import {
     INTEGRATIONS_OAUTH_STATE_TTL_SECONDS,
     type CompleteOAuthCallbackArgs,

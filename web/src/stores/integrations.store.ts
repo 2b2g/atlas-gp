@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { IntegrationArgAdd, IntegrationItem, RepoItem } from 'taskview-api'
+import type { IntegrationArgAdd, IntegrationItem, RepoItem } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 interface IntegrationsStoreState {

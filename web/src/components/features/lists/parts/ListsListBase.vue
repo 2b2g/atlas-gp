@@ -3,7 +3,7 @@
     v-model:open="isOpen"
     class="flex flex-col gap-2 w-full group"
   >
-    <TvGoalLikeItem variant="taskview">
+    <TvGoalLikeItem variant="atlasgp">
       {{ title }}
 
       <UIcon
@@ -20,7 +20,7 @@
         <TvGoalLikeItem
           v-for="list in lists"
           :key="list.id"
-          variant="taskview"
+          variant="atlasgp"
           :to="{ name: 'user', params: { projectId, listId: list.id } }"
           :active="currentListId === list.id"
         >

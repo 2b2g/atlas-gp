@@ -67,8 +67,8 @@
 <script setup lang="ts">
 import { computed, reactive, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Sprint, SprintPlanningScope, SprintPlanningSprintPage } from 'taskview-api'
-import { useTaskView } from '@/composables/useTaskView'
+import type { Sprint, SprintPlanningScope, SprintPlanningSprintPage } from 'atlasgp-api'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useSprintsStore } from '@/stores/sprints.store'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useSprintFormat } from '../composables/useSprintFormat'
@@ -86,7 +86,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const toast = useToast()
 const sprintsStore = useSprintsStore()
 const goalsStore = useGoalsStore()

@@ -1,5 +1,5 @@
 import type { Response } from 'express'
-import type { OAuthGrantsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { OAuthGrantsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 import { type } from 'arktype'
 
 export const OAUTH_ACCESS_TOKEN_PREFIX = 'tvo_'

@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import type { CollaborationResponseFetchAllUsers } from 'taskview-api'
+import type { CollaborationResponseFetchAllUsers } from 'atlasgp-api'
 import { useCollaborationStore } from '@/stores/collaboration.store'
 import { useProjectContext } from '@/composables/useProjectContext'
 import type { TvDropdownOption } from '@/types/tvDropdown.types'

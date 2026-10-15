@@ -11,7 +11,7 @@ import {
     type TasksSchemaTypeForSelect,
     TasksStatusesSchema,
     TasksToTagsSchema,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 import { eventBus } from '../../core/EventBus';
 import { Database } from '../../modules/db';
 import { $logger } from '../../modules/logget';

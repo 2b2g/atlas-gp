@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { SprintsSchema, TasksSchema } from 'taskview-db-schemas';
+import { SprintsSchema, TasksSchema } from 'atlasgp-db-schemas';
 import { eventBus, type AppEvents } from '../../core/EventBus';
 import { getJobQueue } from '../../core/JobQueue';
 import { decrypt } from '../../utils/crypto';

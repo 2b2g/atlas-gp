@@ -215,7 +215,7 @@ export class SsoController {
         if (relayState) {
           const platformData = JSON.parse(relayState)
           if (platformData.platform === 'mobile') {
-            return res.redirect(`taskview://login?tokens=${encodedAuthData}`)
+            return res.redirect(`atlasgp://login?tokens=${encodedAuthData}`)
           }
         }
       } catch { /* relay state parse error — ignore, use web redirect */ }

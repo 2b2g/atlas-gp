@@ -1,4 +1,4 @@
-import type { GoalItem } from 'taskview-api'
+import type { GoalItem } from 'atlasgp-api'
 
 export type Project = GoalItem
 

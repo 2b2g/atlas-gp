@@ -86,7 +86,7 @@
 import { computed, ref } from 'vue'
 import type { TabsItem } from '@nuxt/ui'
 import { useI18n } from 'vue-i18n'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 import TaskItem from '@/components/features/tasks/parts/TaskItem.vue'
 import { useWidgetScrollContainer } from '@/components/features/main/screen-main/useWidgetScrollContainer'
 import { useBaseScreenStore } from '@/stores/base-screen.store'

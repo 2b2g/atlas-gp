@@ -35,9 +35,9 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Sprint } from 'taskview-api'
+import type { Sprint } from 'atlasgp-api'
 import SprintForm from './SprintForm.vue'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useSprintsStore } from '@/stores/sprints.store'
 import { useGoalsStore } from '@/stores/goals.store'
 import type { SprintFormValue } from '@/types/sprints.types'
@@ -55,7 +55,7 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const toast = useToast()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const sprintsStore = useSprintsStore()
 const goalsStore = useGoalsStore()
 

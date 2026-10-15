@@ -35,7 +35,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useClipboard } from '@vueuse/core'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const props = defineProps<{
   payload: unknown
@@ -44,7 +44,7 @@ const props = defineProps<{
 const isOpen = defineModel<boolean>('open', { default: false })
 
 const { t } = useI18n()
-const { isFullscreenModal } = useTaskView()
+const { isFullscreenModal } = useAtlasGP()
 const { copy } = useClipboard()
 
 const formattedPayload = computed(() => JSON.stringify(props.payload, null, 2))

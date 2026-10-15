@@ -44,7 +44,7 @@ import { useRoute, useRouter } from 'vue-router'
 import TasksPanel from './TasksPanel.vue'
 import TaskSearchAdd from '@/components/features/tasks/parts/TaskSearchAdd.vue'
 import { useTasksStore } from '@/stores/tasks.store'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
 
 const route = useRoute()

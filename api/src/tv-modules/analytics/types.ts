@@ -5,7 +5,7 @@ import type {
   AnalyticsScope,
   AnalyticsSection,
   AnalyticsSectionGroup,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import type { AppUser } from '../../core/AppUser'
 import type { AnalyticsRepository } from './AnalyticsRepository'
 

@@ -35,7 +35,7 @@
             android:label="@string/widget_today_title">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="tech.taskview.widget.UPDATE" />
+                <action android:name="tech.atlasgp.widget.UPDATE" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"

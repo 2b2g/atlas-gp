@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useBaseScreenStore } from '@/stores/base-screen.store'
 
 interface Props {
@@ -41,7 +41,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const baseScreenStore = useBaseScreenStore()
 
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const changeActiveWidget = (widgetType: 'today' | 'lastAdded' | 'upcoming') => {
   if (!isMobile.value) {
     baseScreenStore.activeWidgetInMobile = 'all'

@@ -1,18 +1,18 @@
 {
-  "name": "taskview-ce-monorepo",
+  "name": "atlasgp-ce-monorepo",
   "version": "1.55.0",
   "private": true,
-  "description": "TaskView CE monorepo containing web, API, and packages",
+  "description": "ATLAS GP CE monorepo containing web, API, and packages",
   "workspaces": [
     "web",
     "api",
-    "taskview-packages/*"
+    "atlasgp-packages/*"
   ],
   "scripts": {
     "dev:webapp": "cd web && pnpm dev",
     "build:webapp": "cd web && pnpm build",
     "build:webapp:dev": "cd web && pnpm build:dev",
-    "build:packages": "pnpm --filter=taskview-api --filter=taskview-db-schemas run build",
+    "build:packages": "pnpm --filter=atlasgp-api --filter=atlasgp-db-schemas run build",
     "dev:api": "cd api && pnpm dev",
     "build:api": "cd api && pnpm build",
     "install:all": "pnpm install",

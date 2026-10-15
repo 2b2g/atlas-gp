@@ -2,7 +2,7 @@
 
 ## Overview
 
-TaskView fires HTTP POST requests to external services when things happen with tasks.
+ATLAS GP fires HTTP POST requests to external services when things happen with tasks.
 User registers a webhook URL, picks which events to listen to, gets a secret for signature verification.
 
 No auth tokens, no OAuth, no API keys for consumers — just signed payloads.
@@ -13,7 +13,7 @@ No auth tokens, no OAuth, no API keys for consumers — just signed payloads.
 
 User with `WEBHOOKS_CAN_MANAGE` permission goes to project settings (or a new "Webhooks" tab in the integrations panel).
 Fills in:
-- **URL** — where to send events (`https://ops.company.com/hooks/taskview`)
+- **URL** — where to send events (`https://ops.company.com/hooks/atlasgp`)
 - **Events** — checkboxes: `task.created`, `task.updated`, `task.completed`, `task.deleted`
 - **Description** (optional) — "Slack notifications", "PagerDuty alerts", etc.
 
@@ -22,14 +22,14 @@ The secret is shown to the user once. Stored encrypted in DB (same `encrypt()` w
 
 ### Payload
 
-When an event fires, TaskView POSTs JSON to the registered URL:
+When an event fires, ATLAS GP POSTs JSON to the registered URL:
 
 ```
-POST https://ops.company.com/hooks/taskview
+POST https://ops.company.com/hooks/atlasgp
 Content-Type: application/json
-X-TaskView-Event: task.completed
-X-TaskView-Signature: sha256=abc123...
-X-TaskView-Delivery: <uuid>
+X-ATLAS GP-Event: task.completed
+X-ATLAS GP-Signature: sha256=abc123...
+X-ATLAS GP-Delivery: <uuid>
 
 {
   "event": "task.completed",
@@ -51,7 +51,7 @@ X-TaskView-Delivery: <uuid>
 
 ### Signature verification
 
-The consumer verifies the request is really from TaskView using the shared secret:
+The consumer verifies the request is really from ATLAS GP using the shared secret:
 
 ```python
 import hmac, hashlib
@@ -63,15 +63,15 @@ def verify(payload_body, signature_header, secret):
     return hmac.compare_digest(expected, signature_header)
 ```
 
-Same approach GitHub uses. No OAuth needed — if the signature matches, it's from TaskView.
-This is simpler than API keys because the consumer doesn't need to store credentials for calling TaskView back.
+Same approach GitHub uses. No OAuth needed — if the signature matches, it's from ATLAS GP.
+This is simpler than API keys because the consumer doesn't need to store credentials for calling ATLAS GP back.
 
 ### Why not API keys / OAuth?
 
-Outgoing webhooks are **push-only**. TaskView pushes data to the consumer.
-The consumer doesn't call TaskView API — it just receives events.
+Outgoing webhooks are **push-only**. ATLAS GP pushes data to the consumer.
+The consumer doesn't call ATLAS GP API — it just receives events.
 
-If we later want consumers to call TaskView back (e.g. update a task from Slack), that's a separate feature (incoming API + API keys).
+If we later want consumers to call ATLAS GP back (e.g. update a task from Slack), that's a separate feature (incoming API + API keys).
 Don't mix the two — outgoing webhooks are simple and should stay simple.
 
 ## Database
@@ -172,7 +172,7 @@ Phase 2 (later): `list.created`, `list.deleted`, `member.added`, `member.removed
 
 ## What this does NOT cover
 
-- **Incoming API** — external services calling TaskView to create/update tasks. That's a separate feature with API keys and rate limiting.
+- **Incoming API** — external services calling ATLAS GP to create/update tasks. That's a separate feature with API keys and rate limiting.
 - **Custom fields** — separate RFC, much bigger scope.
 - **Plugin UI** — separate RFC, needs sandboxing and component API.
 - **Real-time / WebSocket** — separate feature, different use case.

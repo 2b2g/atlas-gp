@@ -1,21 +1,21 @@
-TASKVIEW CONTRIBUTOR LICENSE AGREEMENT (CLA)
+ATLAS_GP CONTRIBUTOR LICENSE AGREEMENT (CLA)
 Unified (Individual + Entity)
 Version 1.0
 
 This Contributor License Agreement (“Agreement”) is between:
-(1) the TaskView project copyright holder / maintainer (“Licensor”), and
+(1) the ATLAS GP project copyright holder / maintainer (“Licensor”), and
 (2) the signatory identified in the Signature Block (“You”).
 
 By submitting a Contribution to the Project, You agree to the terms of this Agreement.
 
 1. Definitions
-1.1 “Project” means the TaskView software, documentation, and related materials maintained by Licensor.
+1.1 “Project” means the ATLAS GP software, documentation, and related materials maintained by Licensor.
 1.2 “Contribution” means any work of authorship (including code, documentation, designs, tests, examples, or other materials)
     that You intentionally submit for inclusion in the Project, unless explicitly marked in writing as “Not a Contribution”.
 1.3 “Submit” means any communication to Licensor or the Project via source control, code review, issue trackers, or email.
 
 2. Relationship to the Project License
-Licensor distributes the Project under the “TaskView Source-Available License” (the “Project License”) as published in the
+Licensor distributes the Project under the “ATLAS GP Source-Available License” (the “Project License”) as published in the
 Project repository. This Agreement governs Contributions and ensures Licensor has the rights needed to maintain, modify,
 distribute, and commercialize the Project. This Agreement does not limit any rights You may have under the Project License
 for using the Project.

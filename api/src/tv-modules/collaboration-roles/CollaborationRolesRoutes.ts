@@ -41,17 +41,17 @@ export default class CollaborationRolesRoutes implements Routable {
         this.router.delete('', [IsLoggedIn, CanDeleteCollaborationRoles], this.controller.deleteRoleNew);
 
         /**
-         * Fetch all permissions for goal for collaboration here we get all permissions which are available for the goal in TaskView
+         * Fetch all permissions for goal for collaboration here we get all permissions which are available for the goal in ATLAS GP
          */
         this.router.get('/all-permissions', [IsLoggedIn], this.controller.fetchAllPermissionsNew);
 
         /**
-         * Fetch roles for goal for collaboration here we get all roles for the specific goal in TaskView
+         * Fetch roles for goal for collaboration here we get all roles for the specific goal in ATLAS GP
          */
         this.router.get('/:goalId', [IsLoggedIn, CanFetchCollaborationRoles], this.controller.fetchRolesForGoalNew);
 
         /**
-         * Fetch role to permissions for goal for collaboration here we get all permissions for the specific role for the specific goal in TaskView
+         * Fetch role to permissions for goal for collaboration here we get all permissions for the specific role for the specific goal in ATLAS GP
          * to know which permissions are assigned to the specific role
          */
         this.router.get(

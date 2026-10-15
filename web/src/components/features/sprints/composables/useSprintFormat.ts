@@ -1,5 +1,5 @@
 import { useI18n } from 'vue-i18n'
-import type { SprintStatus } from 'taskview-api'
+import type { SprintStatus } from 'atlasgp-api'
 import type { SprintTask } from '@/types/sprints.types'
 
 export type EstimateUnit = 'hours' | 'points'

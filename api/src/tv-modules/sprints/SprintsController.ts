@@ -1,6 +1,6 @@
 import { type } from 'arktype';
 import type { Request, Response } from 'express';
-import type { SprintStatus } from 'taskview-db-schemas';
+import type { SprintStatus } from 'atlasgp-db-schemas';
 import { logError } from '../../utils/api';
 import {
     SprintArkTypeClose,

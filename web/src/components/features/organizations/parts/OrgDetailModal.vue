@@ -106,10 +106,10 @@
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Organization } from 'taskview-api'
+import type { Organization } from 'atlasgp-api'
 import type { OrgDetailTab } from '../types'
 import { useOrganizationStore } from '@/stores/organization.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useOrgPermissions } from '@/composables/useOrgPermissions'
 import OrgMembersTable from './OrgMembersTable.vue'
 import OrgSsoSettings from './OrgSsoSettings.vue'
@@ -122,7 +122,7 @@ const props = defineProps<{
 
 const { t } = useI18n()
 const toast = useToast()
-const { isFullscreenModal } = useTaskView()
+const { isFullscreenModal } = useAtlasGP()
 const orgStore = useOrganizationStore()
 const { isAdmin, isOwner } = useOrgPermissions(() => props.organization)
 

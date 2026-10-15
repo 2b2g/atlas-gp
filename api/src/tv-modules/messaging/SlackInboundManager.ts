@@ -15,7 +15,7 @@ import { buildTaskDeepLink, escapeSlackText } from './utils';
 import type { SlackEphemeralReply, SlackInteractionPayload, SlackSlashCommandPayload } from './types.internal';
 
 // Orchestrates inbound Slack actions: /task (create), and Done / Assign buttons.
-// Every path resolves the Slack user to a TaskView user (identity map) and enforces
+// Every path resolves the Slack user to a ATLAS GP user (identity map) and enforces
 // that user's RBAC before touching anything.
 export class SlackInboundManager {
     private readonly repository = new MessagingRepository();
@@ -29,11 +29,11 @@ export class SlackInboundManager {
         if (!description) return this.ephemeral('Usage: /task <description>');
 
         const goalIds = await this.repository.fetchProjectGoalIdsByChannel({ provider: 'slack', channelId: payload.channel_id ?? '', externalTeamId: payload.team_id ?? null });
-        if (goalIds.length === 0) return this.ephemeral('This channel is not linked to a TaskView project.');
-        if (goalIds.length > 1) return this.ephemeral('This channel is linked to several projects — create the task in TaskView.');
+        if (goalIds.length === 0) return this.ephemeral('This channel is not linked to a ATLAS GP project.');
+        if (goalIds.length > 1) return this.ephemeral('This channel is linked to several projects — create the task in ATLAS GP.');
 
         const appUser = await this.buildAppUser(userId);
-        if (!appUser) return this.ephemeral('Could not resolve your TaskView account.');
+        if (!appUser) return this.ephemeral('Could not resolve your ATLAS GP account.');
 
         const checker = await appUser.permissionsFetcher.getCheckerForGoal(goalIds[0]);
         if (!checker.hasPermissions(GoalPermissions.COMPONENT_CAN_ADD_TASKS)) {
@@ -240,6 +240,6 @@ export class SlackInboundManager {
     }
 
     private linkPrompt(): string {
-        return `Link your Slack account in TaskView first: ${process.env.APP_URL ?? ''}`;
+        return `Link your Slack account in ATLAS GP first: ${process.env.APP_URL ?? ''}`;
     }
 }

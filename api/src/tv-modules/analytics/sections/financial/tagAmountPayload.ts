@@ -1,4 +1,4 @@
-import type { AnalyticsDataset, AnalyticsSeriesPayload, LocalizedText } from 'taskview-api'
+import type { AnalyticsDataset, AnalyticsSeriesPayload, LocalizedText } from 'atlasgp-api'
 import type { AmountPerTagMonthSectionRow } from '../row.types'
 import { UNTAGGED_TAG_ID } from '../../types'
 

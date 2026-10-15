@@ -26,7 +26,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PartyFields from './PartyFields.vue'
-import type { CounterpartyKind } from 'taskview-api'
+import type { CounterpartyKind } from 'atlasgp-api'
 import type { CounterpartyFormValue } from '@/types/invoices.types'
 
 const model = defineModel<CounterpartyFormValue>({ required: true })

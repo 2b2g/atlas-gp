@@ -1,5 +1,5 @@
 import { eq, sql } from 'drizzle-orm';
-import { CollaborationUsersSchema, OrganizationMembersSchema, SsoIdentitiesSchema, UsersSchema } from 'taskview-db-schemas';
+import { CollaborationUsersSchema, OrganizationMembersSchema, SsoIdentitiesSchema, UsersSchema } from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import { $logger } from '../../modules/logget';
 import type { RegisterUserInDb, UpdateUserCredentialsArgs, UpdateUserEmailArgs, UpdateUserCredentialsResult, UserDbRecord } from '../../types/auth.types';

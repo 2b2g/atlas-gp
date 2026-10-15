@@ -1,4 +1,4 @@
-import type { LocalizedText } from 'taskview-api'
+import type { LocalizedText } from 'atlasgp-api'
 
 export type SectionLocale = {
   title: LocalizedText
@@ -820,10 +820,10 @@ export const sectionLocales = {
         es: 'Importes de tareas financieras completadas agrupados por mes',
       },
       details: {
-        ru: 'Требует заполнения полей Amount и Transaction Type на задачах. Используется командами, ведущими лёгкий финансовый трекинг в TaskView (частый кейс у small business). Для достоверности проверьте KPI «Заполнено amount» — при низком покрытии картина неполная.',
-        en: 'Requires the Amount and Transaction Type fields to be filled on tasks. Used by teams running lightweight financial tracking inside TaskView (common small-business case). Cross-check with the "Amount coverage" KPI — a low coverage means the picture is incomplete.',
-        de: 'Erfordert das Ausfüllen der Felder Amount und Transaction Type an den Aufgaben. Wird von Teams genutzt, die ein leichtgewichtiges Finanz-Tracking in TaskView betreiben (häufiger Fall bei kleinen Unternehmen). Zur Absicherung den KPI "Betragsabdeckung" prüfen — bei niedriger Abdeckung ist das Bild unvollständig.',
-        es: 'Requiere rellenar los campos Amount y Transaction Type en las tareas. Lo usan equipos que llevan un seguimiento financiero ligero dentro de TaskView (caso común en pequeñas empresas). Para fiabilidad, comprueba el KPI "Cobertura de importe": una cobertura baja significa que la imagen está incompleta.',
+        ru: 'Требует заполнения полей Amount и Transaction Type на задачах. Используется командами, ведущими лёгкий финансовый трекинг в ATLAS GP (частый кейс у small business). Для достоверности проверьте KPI «Заполнено amount» — при низком покрытии картина неполная.',
+        en: 'Requires the Amount and Transaction Type fields to be filled on tasks. Used by teams running lightweight financial tracking inside ATLAS GP (common small-business case). Cross-check with the "Amount coverage" KPI — a low coverage means the picture is incomplete.',
+        de: 'Erfordert das Ausfüllen der Felder Amount und Transaction Type an den Aufgaben. Wird von Teams genutzt, die ein leichtgewichtiges Finanz-Tracking in ATLAS GP betreiben (häufiger Fall bei kleinen Unternehmen). Zur Absicherung den KPI "Betragsabdeckung" prüfen — bei niedriger Abdeckung ist das Bild unvollständig.',
+        es: 'Requiere rellenar los campos Amount y Transaction Type en las tareas. Lo usan equipos que llevan un seguimiento financiero ligero dentro de ATLAS GP (caso común en pequeñas empresas). Para fiabilidad, comprueba el KPI "Cobertura de importe": una cobertura baja significa que la imagen está incompleta.',
       },
     },
     datasets: {
@@ -864,12 +864,12 @@ export const sectionLocales = {
           'Сортировка — по чистой прибыли по убыванию: прибыльные проекты сверху.',
           '',
           'Что нужно для попадания в график:',
-          'У задачи должна быть указана сумма и тип (доход/расход). Если вы не пользуетесь финансовыми полями TaskView — этот график будет пустым. Чтобы понять качество данных, смотрите карточку «Заполнено amount».',
+          'У задачи должна быть указана сумма и тип (доход/расход). Если вы не пользуетесь финансовыми полями ATLAS GP — этот график будет пустым. Чтобы понять качество данных, смотрите карточку «Заполнено amount».',
           '',
           'Что НЕ включено:',
           '• Задачи без указанной суммы',
           '• Задачи без типа транзакции',
-          '• Реальная прибыль после налогов и комиссий — TaskView показывает только то, что вы ввели сами',
+          '• Реальная прибыль после налогов и комиссий — ATLAS GP показывает только то, что вы ввели сами',
         ]),
         en: join([
           'What it shows:',
@@ -886,12 +886,12 @@ export const sectionLocales = {
           'Sorted by net profit descending: profitable projects on top.',
           '',
           "What's needed to appear on the chart:",
-          "A task needs both an amount and a type (income/expense). If you don't use TaskView's financial fields, this chart will be empty. To gauge data quality, check the \"Amount coverage\" card.",
+          "A task needs both an amount and a type (income/expense). If you don't use ATLAS GP's financial fields, this chart will be empty. To gauge data quality, check the \"Amount coverage\" card.",
           '',
           'What is NOT included:',
           '• Tasks without an amount',
           '• Tasks without a transaction type',
-          '• Real profit after taxes and fees — TaskView only shows what you enter yourself',
+          '• Real profit after taxes and fees — ATLAS GP only shows what you enter yourself',
         ]),
         de: join([
           'Was es zeigt:',
@@ -908,12 +908,12 @@ export const sectionLocales = {
           'Sortiert nach Nettogewinn absteigend: profitable Projekte oben.',
           '',
           'Was nötig ist, um im Diagramm zu erscheinen:',
-          'Eine Aufgabe braucht sowohl einen Betrag als auch einen Typ (Einnahme/Ausgabe). Nutzt du die Finanzfelder von TaskView nicht, bleibt dieses Diagramm leer. Um die Datenqualität einzuschätzen, sieh dir die Karte "Betragsabdeckung" an.',
+          'Eine Aufgabe braucht sowohl einen Betrag als auch einen Typ (Einnahme/Ausgabe). Nutzt du die Finanzfelder von ATLAS GP nicht, bleibt dieses Diagramm leer. Um die Datenqualität einzuschätzen, sieh dir die Karte "Betragsabdeckung" an.',
           '',
           'Was NICHT enthalten ist:',
           '• Aufgaben ohne angegebenen Betrag',
           '• Aufgaben ohne Transaktionstyp',
-          '• Echter Gewinn nach Steuern und Gebühren — TaskView zeigt nur, was du selbst eingibst',
+          '• Echter Gewinn nach Steuern und Gebühren — ATLAS GP zeigt nur, was du selbst eingibst',
         ]),
         es: join([
           'Qué muestra:',
@@ -930,12 +930,12 @@ export const sectionLocales = {
           'Ordenado por beneficio neto descendente: los proyectos rentables arriba.',
           '',
           'Qué se necesita para aparecer en el gráfico:',
-          'Una tarea necesita tanto un importe como un tipo (ingreso/gasto). Si no usas los campos financieros de TaskView, este gráfico estará vacío. Para valorar la calidad de los datos, consulta la tarjeta "Cobertura de importe".',
+          'Una tarea necesita tanto un importe como un tipo (ingreso/gasto). Si no usas los campos financieros de ATLAS GP, este gráfico estará vacío. Para valorar la calidad de los datos, consulta la tarjeta "Cobertura de importe".',
           '',
           'Lo que NO se incluye:',
           '• Tareas sin importe indicado',
           '• Tareas sin tipo de transacción',
-          '• El beneficio real tras impuestos y comisiones — TaskView solo muestra lo que introduces tú mismo',
+          '• El beneficio real tras impuestos y comisiones — ATLAS GP solo muestra lo que introduces tú mismo',
         ]),
       },
     },

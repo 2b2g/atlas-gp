@@ -7,7 +7,7 @@ import {
     CollaborationUsersToRolesSchema,
     GoalsSchema,
     PermissionsSchema,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 import { Database } from '../modules/db';
 import type { FetchGoalIdsWithAnyPermissionParams, FetchPermissionsForGoalByUserParams, GoalPermissionItemsFromDb } from '../types/auth.types';
 import type { GoalItemInDb } from '../types/goal.type';

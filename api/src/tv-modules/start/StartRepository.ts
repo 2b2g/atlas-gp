@@ -1,5 +1,5 @@
 import { and, eq, ilike, inArray, isNotNull, isNull, or } from 'drizzle-orm';
-import { GoalsSchema, GoalsListSchema, TasksSchema } from 'taskview-db-schemas';
+import { GoalsSchema, GoalsListSchema, TasksSchema } from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import { Database } from '../../modules/db';
 import { $logger } from '../../modules/logget';

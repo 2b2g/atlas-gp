@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import type { Organization } from 'taskview-api'
+import type { Organization } from 'atlasgp-api'
 
 export function useOrgPermissions(orgRef: () => Organization | null | undefined) {
   const currentUserRole = computed(() => orgRef()?.currentUserRole ?? 'member')

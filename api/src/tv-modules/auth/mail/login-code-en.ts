@@ -4,7 +4,7 @@ export default `<!DOCTYPE html>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="color-scheme" content="only" />
-    <title>TaskView verification code</title>
+    <title>ATLAS GP verification code</title>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f5f7fa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f5f7fa;">
@@ -13,7 +13,7 @@ export default `<!DOCTYPE html>
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 480px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);">
                     <tr>
                         <td style="padding: 40px 32px 24px; text-align: center;">
-                            <div style="font-size: 18px; font-weight: 600; color: #000000; letter-spacing: 0.5px;">TaskView</div>
+                            <div style="font-size: 18px; font-weight: 600; color: #000000; letter-spacing: 0.5px;">ATLAS GP</div>
                         </td>
                     </tr>
                     <tr>
@@ -37,7 +37,7 @@ export default `<!DOCTYPE html>
                         </td>
                     </tr>
                 </table>
-                <p style="margin: 24px 0 0; font-size: 12px; color: #a1a1aa; text-align: center;">© TaskView</p>
+                <p style="margin: 24px 0 0; font-size: 12px; color: #a1a1aa; text-align: center;">© ATLAS GP</p>
             </td>
         </tr>
     </table>

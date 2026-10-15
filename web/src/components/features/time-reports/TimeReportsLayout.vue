@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { onMounted, watch } from 'vue'
-import type { GoalItem } from 'taskview-api'
+import type { GoalItem } from 'atlasgp-api'
 import { useTimeReportsStore } from '@/stores/time-reports.store'
 import TimeReportsFilters from './TimeReportsFilters.vue'
 import TimeReportsKpis from './TimeReportsKpis.vue'

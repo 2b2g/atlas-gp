@@ -26,9 +26,9 @@
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Chart, type ChartConfiguration } from 'chart.js'
-import type { SprintVelocityPoint } from 'taskview-api'
+import type { SprintVelocityPoint } from 'atlasgp-api'
 import { registerChartJs } from '@/components/features/analytics/chart-setup'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useSprintFormat, type EstimateUnit } from '../composables/useSprintFormat'
 
 const props = withDefaults(
@@ -42,7 +42,7 @@ const props = withDefaults(
 )
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const { unitLabel } = useSprintFormat()
 
 registerChartJs()

@@ -5,7 +5,7 @@ import { type BundleInfo, CapacitorUpdater } from '@capgo/capacitor-updater'
 import $api from '@/helpers/axios'
 import { $ls } from '@/plugins/axios'
 import type { AppResponse } from '@/types/global-app.types'
-import { useTaskViewMainUrl } from './useTaskViewMainUrl'
+import { useAtlasGPMainUrl } from './useAtlasGPMainUrl'
 
 let version: BundleInfo
 
@@ -26,7 +26,7 @@ export async function useUpdater(canUpdate: boolean = false) {
     const BRANCH_MODE: 'prod' | 'dev' = (await $ls.getValue('update_loading')) === 'dev' ? 'dev' : 'prod'
 
     const updateInfo = await $api.get<AppResponse<{ version: string; file: string; branch: 'prod' | 'dev' }[]>>(
-      `${useTaskViewMainUrl()}/module/updates/info`,
+      `${useAtlasGPMainUrl()}/module/updates/info`,
     )
 
     const { value: currentVersion } = await Preferences.get({ key: 'app_version' })
@@ -49,7 +49,7 @@ export async function useUpdater(canUpdate: boolean = false) {
 
       version = await CapacitorUpdater.download({
         version: last.version,
-        url: `${useTaskViewMainUrl()}/module/updates/download?branch=${BRANCH_MODE}`,
+        url: `${useAtlasGPMainUrl()}/module/updates/download?branch=${BRANCH_MODE}`,
       })
     } else {
       console.log('[Update] No new updates need to download.')

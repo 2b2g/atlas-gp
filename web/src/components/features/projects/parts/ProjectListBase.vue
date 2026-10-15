@@ -7,7 +7,7 @@
       content: 'p-0 pl-3',
     }"
   >
-    <TvGoalLikeItem variant="taskview">
+    <TvGoalLikeItem variant="atlasgp">
       {{ title }}
 
       <UIcon
@@ -25,7 +25,7 @@
         <TvGoalLikeItem
           v-for="project in projects"
           :key="project.id"
-          variant="taskview"
+          variant="atlasgp"
           :to="projectRoute(project)"
           :active="currentProjectId === project.id"
         >

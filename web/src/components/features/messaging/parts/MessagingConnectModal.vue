@@ -113,10 +113,10 @@
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useClipboard } from '@vueuse/core'
-import type { MessagingConnectLinkResult, MessagingProviderId } from 'taskview-api'
+import type { MessagingConnectLinkResult, MessagingProviderId } from 'atlasgp-api'
 import { useMessagingStore } from '@/stores/messaging.store'
-import { useTaskView } from '@/composables/useTaskView'
-import { useTaskViewMainUrl } from '@/composables/useTaskViewMainUrl'
+import { useAtlasGP } from '@/composables/useAtlasGP'
+import { useAtlasGPMainUrl } from '@/composables/useAtlasGPMainUrl'
 import $api from '@/helpers/axios'
 
 const props = defineProps<{
@@ -129,7 +129,7 @@ const emit = defineEmits<{ connected: [] }>()
 const open = defineModel<boolean>('open', { required: true })
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const { copy } = useClipboard()
 const store = useMessagingStore()
 const toast = useToast()
@@ -156,7 +156,7 @@ function proceed() {
 }
 
 function startSlackOAuth() {
-  const baseUrl = useTaskViewMainUrl()
+  const baseUrl = useAtlasGPMainUrl()
   const token = $api.defaults.headers.common['Authorization']?.toString().replace('Bearer ', '') || ''
   // returnPath brings the user back to this in-app page after the OAuth callback,
   // instead of dumping them on the app root (which shows the login screen).

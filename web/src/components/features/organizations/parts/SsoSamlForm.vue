@@ -29,7 +29,7 @@
     <UFormField :label="t('sso.samlIssuer')">
       <UInput
         v-model="form.samlIssuer"
-        placeholder="taskview"
+        placeholder="atlasgp"
         class="w-full"
       />
     </UFormField>
@@ -151,7 +151,7 @@ type SamlFormData = {
 
 const form = defineModel<SamlFormData>('form', { required: true })
 
-import type { SsoConfig } from 'taskview-api'
+import type { SsoConfig } from 'atlasgp-api'
 
 defineProps<{
   callbackUrlPlaceholder: string
@@ -174,7 +174,7 @@ async function copyToClipboard(text: string) {
 }
 
 function copyOpenSslCommand() {
-  copyToClipboard('openssl req -x509 -newkey rsa:2048 -keyout sp-key.pem -out sp-cert.pem -days 3650 -nodes -subj "/CN=taskview"')
+  copyToClipboard('openssl req -x509 -newkey rsa:2048 -keyout sp-key.pem -out sp-cert.pem -days 3650 -nodes -subj "/CN=atlasgp"')
 }
 
 async function syncMetadata() {

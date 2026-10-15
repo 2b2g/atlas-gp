@@ -1,4 +1,4 @@
-import type { SsoConfigsSchemaTypeForSelect, OrganizationsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { SsoConfigsSchemaTypeForSelect, OrganizationsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 import AuthModel from '../auth/AuthModel'
 import SessionStorage from '../auth/SessionStorage'
 import { OrganizationRepository } from '../organizations/OrganizationRepository'

@@ -1,6 +1,6 @@
-import type { GoalListItem } from 'taskview-api'
+import type { GoalListItem } from 'atlasgp-api'
 
-/** @deprecated use GoalListItem[] from taskview-api instead */
+/** @deprecated use GoalListItem[] from atlasgp-api instead */
 export type GoalListItems = GoalListItem[];
 
 export type GoalListsStoreState = {

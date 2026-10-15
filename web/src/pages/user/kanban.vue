@@ -66,7 +66,7 @@ import TvKanbanFilters from '@/components/features/base/TvKanbanFilters.vue'
 import { useAppRouteInfo } from '@/composables/useAppRouteInfo'
 import { useFiltersFromQuery } from '@/composables/useFiltersFromQuery'
 import { useProjectDataLoader } from '@/composables/useProjectDataLoader'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useKanbanStore } from '@/stores/kanban.store'
 
@@ -76,7 +76,7 @@ const goalsStore = useGoalsStore()
 const kanbanStore = useKanbanStore()
 const projectName = computed(() => goalsStore.goalMap.get(projectId.value)?.name ?? '')
 
-const { isDesktop } = useTaskView()
+const { isDesktop } = useAtlasGP()
 const { selectedListIds, selectedAssigneeIds, selectedSprintId, hasActiveFilters } = useFiltersFromQuery()
 const showFilters = ref(isDesktop.value || hasActiveFilters.value)
 

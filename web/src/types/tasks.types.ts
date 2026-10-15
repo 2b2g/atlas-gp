@@ -1,4 +1,4 @@
-import type { GoalItem, GoalListItem, Task, TaskFilters, TaskSortBy } from 'taskview-api'
+import type { GoalItem, GoalListItem, Task, TaskFilters, TaskSortBy } from 'atlasgp-api'
 
 export type TaskItem = Task;
 
@@ -31,5 +31,5 @@ export const PRIORITY_COLORS = {
   '3': { color: '#FF1744', t: 'priority.high' },
 }
 
-/**@deprecated use ALL_TASKS_LIST_ID from taskview-api */
+/**@deprecated use ALL_TASKS_LIST_ID from atlasgp-api */
 export const ALL_TASKS_LIST_ID = -1401

@@ -44,7 +44,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { RecurrenceRuleDetails, Task } from 'taskview-api'
+import type { RecurrenceRuleDetails, Task } from 'atlasgp-api'
 import TaskRecurrenceDialog from './TaskRecurrenceDialog.vue'
 import { parseRruleToForm, parseRuleDtstart } from '@/helpers/recurrence'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'

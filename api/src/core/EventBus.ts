@@ -1,5 +1,5 @@
 import { EventEmitter } from 'node:events';
-import type { RecurrenceRulesSchemaTypeForSelect, SprintsSchemaTypeForSelect, TasksSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { RecurrenceRulesSchemaTypeForSelect, SprintsSchemaTypeForSelect, TasksSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { TimeEntryWithUser } from '../tv-modules/time-tracking/types';
 import type { InviteEmailLocale } from '../tv-modules/collaboration/collaboration.server.types';
 import { $logger } from '../modules/logget';

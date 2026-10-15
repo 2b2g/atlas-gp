@@ -1,4 +1,4 @@
-import type { GoalsListSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { GoalsListSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import type { GoalListInDb } from '../../types/goal-list.types';
 import { GoalListItemForClient } from './GoalListItemForClient';

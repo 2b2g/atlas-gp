@@ -27,7 +27,7 @@ import { useRoute, useRouter, type RouteLocationRaw } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useDashboard } from '@/composables/useDashboard'
 import { useAppRouteInfo } from '@/composables/useAppRouteInfo'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useGoalPermissionsFor } from '@/composables/useGoalPermissions'
 

@@ -1,7 +1,20 @@
 packages:
   - 'web'
   - 'api'
-  - 'site/*' 
-  - 'taskview-packages/*' 
-public-hoist-pattern:
+  - 'site/*'
+  - 'atlasgp-packages/*'
+allowBuilds:
+  '@firebase/util': true
+  '@parcel/watcher': true
+  aws-sdk: true
+  bun: true
+  core-js: true
+  cpu-features: true
+  esbuild: true
+  maplibre-gl: true
+  protobufjs: true
+  sharp: true
+  ssh2: true
+  vue-demi: true
+publicHoistPattern:
   - arktype

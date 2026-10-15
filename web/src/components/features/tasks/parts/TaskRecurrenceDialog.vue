@@ -69,10 +69,10 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { RecurrenceRule, Task } from 'taskview-api'
+import type { RecurrenceRule, Task } from 'atlasgp-api'
 import TaskRecurrenceForm from './TaskRecurrenceForm.vue'
 import { buildDtstartIso, buildRruleString, defaultRecurrenceForm, dtstartForTask, parseRruleToForm, parseRuleDtstart } from '@/helpers/recurrence'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
 import { useTasksStore } from '@/stores/tasks.store'
 import type { RecurrenceFormValue } from '@/types/recurrence.types'
@@ -92,7 +92,7 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const toast = useToast()
-const { isFullscreenModal } = useTaskView()
+const { isFullscreenModal } = useAtlasGP()
 
 const { canDeleteTask } = useGoalPermissions()
 const tasksStore = useTasksStore()

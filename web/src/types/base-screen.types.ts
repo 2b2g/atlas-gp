@@ -1,5 +1,5 @@
 import type { TagItem } from './tags.types'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 import type { TaskItem } from './tasks.types'
 
 type RespTasks = TaskItem[];

@@ -1,4 +1,4 @@
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 import type { TaskItem } from '@/types/tasks.types'
 
 export type PriorityValues = 'low' | 'medium' | 'high';

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script builds the docker image for the taskview-ce-api-server and migration container
+# This script builds the docker image for the atlasgp-ce-api-server and migration container
 # Build multiple docker images for different platforms
 
 VERSION=$1
@@ -24,15 +24,15 @@ cp ./production.ecosystem.config.js ./dist/ecosystem.config.js
 
 # Build the migration scripts for the docker container
 npm run build:migration
-mkdir -p ./dist-migration/taskview
-cp -R ./src/migrations/taskview/* ./dist-migration/taskview
+mkdir -p ./dist-migration/atlasgp
+cp -R ./src/migrations/atlasgp/* ./dist-migration/atlasgp
 node ./commands/copy-migration-files.js
 
 echo "Building docker image..."
-docker buildx build --platform=linux/amd64,linux/arm64 -t gimanhead/taskview-ce-api-server:$VERSION -t gimanhead/taskview-ce-api-server:latest . --load
+docker buildx build --platform=linux/amd64,linux/arm64 -t gimanhead/atlasgp-ce-api-server:$VERSION -t gimanhead/atlasgp-ce-api-server:latest . --load
 
 cd postgresql
 bash ./build-docker-migrations.sh $VERSION
 cd ..
 
-echo "Build complete! Image: gimanhead/taskview-ce-api-server:$VERSION"
+echo "Build complete! Image: gimanhead/atlasgp-ce-api-server:$VERSION"

@@ -1,6 +1,6 @@
 import { eq, and, or, isNull, inArray } from 'drizzle-orm';
 import { alias } from 'drizzle-orm/pg-core';
-import { TasksSchema, TasksAssigneeSchema, GoalsSchema, CollaborationUsersSchema, UsersSchema } from 'taskview-db-schemas';
+import { TasksSchema, TasksAssigneeSchema, GoalsSchema, CollaborationUsersSchema, UsersSchema } from 'atlasgp-db-schemas';
 import { getJobQueue, cancelJobBySingletonKey } from '../../../core/JobQueue';
 import { GoalPermissionsChecker } from '../../../core/GoalPermissionsChecker';
 import { GoalPermissionsRepository } from '../../../core/GoalPermissionsRepository';

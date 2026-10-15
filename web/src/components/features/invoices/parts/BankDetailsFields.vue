@@ -68,7 +68,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useInvoiceFieldStyle } from '@/composables/useInvoiceFieldStyle'
-import type { BillingBankDetails } from 'taskview-api'
+import type { BillingBankDetails } from 'atlasgp-api'
 
 const model = defineModel<BillingBankDetails>({ required: true })
 

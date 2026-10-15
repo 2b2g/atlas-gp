@@ -9,7 +9,7 @@ import type {
   TimeEntrySummaryByGoal,
   TimeEntrySummaryByTask,
   TimeEntryUpdateArg,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 interface TimeTrackingState {

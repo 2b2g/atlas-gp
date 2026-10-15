@@ -54,7 +54,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Sprint, SprintStatus } from 'taskview-api'
+import type { Sprint, SprintStatus } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { useTasksStore } from '@/stores/tasks.store'
 import { useGoalsStore } from '@/stores/goals.store'

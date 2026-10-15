@@ -5,7 +5,7 @@ import { $tvApi } from '@/plugins/axios'
 import { useNotificationsStore } from '@/stores/notifications.store'
 import { useOrganizationStore } from '@/stores/organization.store'
 import { useRouter } from 'vue-router'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 
 const registered = ref(false)
 let initialized = false

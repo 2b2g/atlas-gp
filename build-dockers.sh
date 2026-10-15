@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# This script builds the docker images for TaskView Community Edition
-# - taskview-ce-api-server
-# - taskview-ce-db-migration
-# - taskview-ce-webapp
+# This script builds the docker images for ATLAS GP Community Edition
+# - atlasgp-ce-api-server
+# - atlasgp-ce-db-migration
+# - atlasgp-ce-webapp
 
 set -e
 
@@ -19,7 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm use 24
 node -v
 
-echo "Building TaskView CE version: $VERSION"
+echo "Building ATLAS GP CE version: $VERSION"
 
 # Build CE API
 echo "========================================="
@@ -41,14 +41,14 @@ cd ..
 echo "========================================="
 echo "Building CE MCP Server..."
 echo "========================================="
-cd taskview-packages/taskview-mcp
-bash build-docker-mcp.sh $VERSION gimanhead/taskview-ce-mcp
+cd atlasgp-packages/atlasgp-mcp
+bash build-docker-mcp.sh $VERSION gimanhead/atlasgp-ce-mcp
 cd ../..
 
 echo "========================================="
 echo "Build complete!"
 echo "Images built:"
-echo "  - gimanhead/taskview-ce-api-server:$VERSION"
-echo "  - gimanhead/taskview-ce-webapp:$VERSION"
-echo "  - gimanhead/taskview-ce-mcp:$VERSION"
+echo "  - gimanhead/atlasgp-ce-api-server:$VERSION"
+echo "  - gimanhead/atlasgp-ce-webapp:$VERSION"
+echo "  - gimanhead/atlasgp-ce-mcp:$VERSION"
 echo "========================================="

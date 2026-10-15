@@ -156,7 +156,7 @@ export const uiPluginOptions: NuxtUIOptions = {
       },
       variants: {
         variant: {
-          taskview: {
+          atlasgp: {
             root: 'cursor-pointer shadow-sm bg-tv-ui-bg-elevated',
             container: 'p-2 px-4 sm:p-2 sm:px-4',
           },

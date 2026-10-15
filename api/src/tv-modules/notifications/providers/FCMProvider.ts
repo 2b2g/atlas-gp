@@ -1,6 +1,6 @@
 import admin from 'firebase-admin';
 import { getMessaging } from 'firebase-admin/messaging';
-import type { NotificationsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { NotificationsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import type { NotificationMeta, NotificationProvider } from '../NotificationProvider';
 import { NotificationChannel } from '../types';
 import { DeviceTokensRepository } from '../repositories/DeviceTokensRepository';

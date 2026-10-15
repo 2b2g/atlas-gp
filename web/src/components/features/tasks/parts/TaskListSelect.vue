@@ -69,7 +69,7 @@ import { useI18n } from 'vue-i18n'
 import { useGoalListsStore } from '@/stores/goal-lists.store'
 import { useTasksStore } from '@/stores/tasks.store'
 import { useProjectContext } from '@/composables/useProjectContext'
-import { ALL_TASKS_LIST_ID } from 'taskview-api'
+import { ALL_TASKS_LIST_ID } from 'atlasgp-api'
 import { useColor } from '@/composables/useColotMode'
 
 const props = defineProps<{

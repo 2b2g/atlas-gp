@@ -5,7 +5,7 @@ import type {
   AnalyticsSection,
   AnalyticsSectionCatalogEntry,
   AnalyticsSectionsResponse,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import type { AppUser } from '../../core/AppUser'
 import { $logger } from '../../modules/logget'
 import { GoalPermissions } from '../../types/auth.types'

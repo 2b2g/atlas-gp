@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "56915832145",
-    "project_id": "taskview-60696",
-    "storage_bucket": "taskview-60696.firebasestorage.app"
+    "project_id": "atlasgp-60696",
+    "storage_bucket": "atlasgp-60696.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:56915832145:android:d41d716f9c4d5ae3e77770",
         "android_client_info": {
-          "package_name": "com.handscreamgnl.taskview.app"
+          "package_name": "com.handscreamgnl.atlasgp.app"
         }
       },
       "oauth_client": [],

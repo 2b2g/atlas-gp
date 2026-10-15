@@ -7,7 +7,7 @@ Please do not report security vulnerabilities through public GitHub issues, disc
 Report them privately using one of these channels:
 
 - **GitHub private vulnerability reporting** (preferred): open the **Security** tab of this repository and click **Report a vulnerability**.
-- **Email**: [support@taskview.tech](mailto:support@taskview.tech) with `[security]` in the subject.
+- **Email**: [support@atlasgp.tech](mailto:support@atlasgp.tech) with `[security]` in the subject.
 
 Please include as much of the following as you can:
 
@@ -31,12 +31,12 @@ Security fixes are released for the latest minor version line only. Self-hosted 
 
 In scope:
 
-- The TaskView API server, web app, MCP server, and mobile app in this repository
-- The hosted service at `app.taskview.tech`
+- The ATLAS GP API server, web app, MCP server, and mobile app in this repository
+- The hosted service at `app.atlasgp.tech`
 
 Out of scope:
 
-- Vulnerabilities in third-party dependencies that are not exploitable in TaskView (report them upstream)
+- Vulnerabilities in third-party dependencies that are not exploitable in ATLAS GP (report them upstream)
 - Findings that require a compromised admin account or physical access to the server
 - Missing security headers, rate limiting, or best-practice recommendations without a demonstrated impact
 - Denial-of-service testing against the hosted service

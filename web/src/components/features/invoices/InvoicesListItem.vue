@@ -50,7 +50,7 @@ import { useI18n } from 'vue-i18n'
 import { useDateFormat } from '@vueuse/core'
 import { formatMoney } from '@/helpers/money'
 import { isInvoiceOverdue } from '@/helpers/invoiceDates'
-import type { InvoiceItem } from 'taskview-api'
+import type { InvoiceItem } from 'atlasgp-api'
 
 const props = defineProps<{
   invoice: InvoiceItem

@@ -59,7 +59,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useInvoiceFieldStyle } from '@/composables/useInvoiceFieldStyle'
-import type { BillingRequisite } from 'taskview-api'
+import type { BillingRequisite } from 'atlasgp-api'
 import { REQUISITE_PRESETS } from '@/types/invoices.types'
 
 const model = defineModel<BillingRequisite[]>({ required: true })

@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { InvoicePdfLang } from 'taskview-api'
+import type { InvoicePdfLang } from 'atlasgp-api'
 import { useInvoicesStore } from '@/stores/invoices.store'
 import InvoicePdfPages from '@/components/features/invoices/InvoicePdfPages.vue'
 

@@ -37,9 +37,9 @@ export default defineConfig({
             external: ['pg-native'],
             output: {
                 format: 'umd',
-                entryFileNames: 'taskview-server.js',
-                chunkFileNames: 'taskview-server-[hash].js',
-                assetFileNames: 'taskview-server-[name]-[hash].[ext]',
+                entryFileNames: 'atlasgp-server.js',
+                chunkFileNames: 'atlasgp-server-[hash].js',
+                assetFileNames: 'atlasgp-server-[name]-[hash].[ext]',
             },
         },
     },

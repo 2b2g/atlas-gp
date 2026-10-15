@@ -1,13 +1,13 @@
 {
-  "name": "taskview",
+  "name": "atlasgp",
   "owner": {
     "name": "Nikolai Giman"
   },
   "plugins": [
     {
-      "name": "taskview",
-      "source": "./taskview-plugin",
-      "description": "Manage TaskView projects and tasks from Claude Code. Bundles the TaskView MCP server, skills, and slash commands."
+      "name": "atlasgp",
+      "source": "./atlasgp-plugin",
+      "description": "Manage ATLAS GP projects and tasks from Claude Code. Bundles the ATLAS GP MCP server, skills, and slash commands."
     }
   ]
 }

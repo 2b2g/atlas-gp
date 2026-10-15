@@ -1,5 +1,5 @@
-import type { GoalItem } from 'taskview-api'
-import { TvPermissions } from 'taskview-api'
+import type { GoalItem } from 'atlasgp-api'
+import { TvPermissions } from 'atlasgp-api'
 
 export const DEFAULT_GOAL_ITEM: GoalItem = {
   id: -1,

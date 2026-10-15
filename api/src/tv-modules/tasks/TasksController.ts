@@ -26,7 +26,7 @@ import {
 // import { Database } from "../../modules/db";
 // import { SchemaTvTasks } from "../../modules/schemas/tasks.schema";
 // import { logError } from "../../utils/api";
-// import { TasksArkType, TasksSchema } from "taskview-db-schemas";
+// import { TasksArkType, TasksSchema } from "atlasgp-db-schemas";
 import {
     TaskArkTypeAdd,
     TaskArkTypeDelete,
@@ -37,7 +37,7 @@ import {
     TaskArkTypeUpdate,
     TasksArkTypeToggleTaskUsers,
 } from './tasks.server.types';
-// import { TasksSchemaArkTypeInsert } from "taskview-db-schemas";
+// import { TasksSchemaArkTypeInsert } from "atlasgp-db-schemas";
 
 export class TasksController {
     /** @deprecated */

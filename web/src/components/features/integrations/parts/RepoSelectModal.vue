@@ -61,7 +61,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { RepoItem } from 'taskview-api'
+import type { RepoItem } from 'atlasgp-api'
 
 const props = defineProps<{
   repos: RepoItem[]

@@ -44,7 +44,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { IntegrationItem } from 'taskview-api'
+import type { IntegrationItem } from 'atlasgp-api'
 import { useIntegrationsStore } from '@/stores/integrations.store'
 import { INTEGRATION_PROVIDERS } from '@/components/features/integrations/integrationProviders'
 

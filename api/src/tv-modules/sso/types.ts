@@ -1,5 +1,5 @@
 import { type } from 'arktype'
-import type { SsoConfigsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { SsoConfigsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 import type { UserDbRecord } from '../../types/auth.types'
 
 export type SamlOptionsArgs = {

@@ -4,7 +4,7 @@ import type {
     RecurrenceRulesSchemaTypeForSelect,
     RecurrenceScheduleMode,
     TasksSchemaTypeForSelect,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 
 /** Request validators (ArkType) */
 

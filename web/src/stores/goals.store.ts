@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { GoalArgItemAdd, GoalArgItemUpdate, GoalItem } from 'taskview-api'
+import type { GoalArgItemAdd, GoalArgItemUpdate, GoalItem } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import type { GoalsStoreState } from '@/types/goals.types'
 import { useUserStore } from './user.store'

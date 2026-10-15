@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace = "com.handscream.taskview.app"
+    namespace = "com.handscream.atlasgp.app"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.handscreamgnl.taskview.app"
+        applicationId "com.handscreamgnl.atlasgp.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 15010

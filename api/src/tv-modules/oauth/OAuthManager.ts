@@ -1,5 +1,5 @@
 import { randomBytes } from 'crypto'
-import type { OAuthClientsSchemaTypeForSelect, OAuthGrantsSchemaTypeForSelect } from 'taskview-db-schemas'
+import type { OAuthClientsSchemaTypeForSelect, OAuthGrantsSchemaTypeForSelect } from 'atlasgp-db-schemas'
 import { OAuthRepository } from './OAuthRepository'
 import {
     OAUTH_ACCESS_TOKEN_PREFIX,
@@ -216,7 +216,7 @@ export class OAuthManager {
     private async issueTokenPair(args: IssueTokenPairArgs): Promise<OAuthResult<OAuthTokenResponse>> {
         // Copied straight from the grant: these are the RBAC keys the user
         // ticked. An empty list means "do not narrow anything", the same thing
-        // it means for a manually issued tvk_ token.
+        // it means for a manually issued agp_ token.
         const allowedPermissions = args.grant.allowedPermissions
         const accessToken = OAUTH_ACCESS_TOKEN_PREFIX + randomToken()
         const refreshToken = randomToken()

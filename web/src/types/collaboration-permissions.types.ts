@@ -1,4 +1,4 @@
-import type { CollaborationPermission } from 'taskview-api'
+import type { CollaborationPermission } from 'atlasgp-api'
 import type { TI18nLocalesInApp } from './app.types'
 
 export type PermissioinGroupsIds = 1 | 2 | 3 | 4 | 5;

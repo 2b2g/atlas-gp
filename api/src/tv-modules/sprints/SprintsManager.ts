@@ -4,7 +4,7 @@ import type {
     SprintsSchemaTypeForSelect,
     SprintStatus,
     TasksSchemaTypeForSelect,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 import type { AppUser } from '../../core/AppUser';
 import { eventBus } from '../../core/EventBus';
 import { $logger } from '../../modules/logget';

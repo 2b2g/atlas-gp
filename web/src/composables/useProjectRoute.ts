@@ -1,5 +1,5 @@
 import type { RouteLocationRaw } from 'vue-router'
-import { ALL_TASKS_LIST_ID, type DefaultView, type GoalItem, type GoalPermissions } from 'taskview-api'
+import { ALL_TASKS_LIST_ID, type DefaultView, type GoalItem, type GoalPermissions } from 'atlasgp-api'
 import { useUiPreferencesStore } from '@/stores/uiPreferences.store'
 import { AllGoalPermissions } from '@/types/goals.types'
 

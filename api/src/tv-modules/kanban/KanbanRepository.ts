@@ -1,4 +1,4 @@
-import { GoalsSchema, TasksSchema, TasksStatusesSchema, type TasksSchemaTypeForSelect } from 'taskview-db-schemas';
+import { GoalsSchema, TasksSchema, TasksStatusesSchema, type TasksSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import type { GoalItemInDb } from '../../types/goal.type';
 import { logError } from '../../utils/api';

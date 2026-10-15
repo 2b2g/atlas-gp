@@ -10,7 +10,7 @@ iconcreator
 node_modules
 __APP_BUILD__
 ssl-create
-update-taskview.sh
+update-atlasgp.sh
 .vscode
 *.tmp.*
 *.sh

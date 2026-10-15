@@ -104,7 +104,7 @@ import { useTaskHistory } from '@/stores/task-history.store'
 import type { TaskItem } from '@/types/tasks.types'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
 import { useNuxtUiTaskItemStyles } from '@/composables/useNuxtUiTaskItemStyles'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 type HistoryChange = {
   historyId: number | null
@@ -119,7 +119,7 @@ const { t } = useI18n()
 const taskHistoryStore = useTaskHistory()
 const { canAccessTaskHistory, canRecoveryTaskHistory } = useGoalPermissions()
 const { activatorUi } = useNuxtUiTaskItemStyles()
-const { isFullscreenModal } = useTaskView()
+const { isFullscreenModal } = useAtlasGP()
 const { history } = storeToRefs(taskHistoryStore)
 
 const isExpanded = ref(false)

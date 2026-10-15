@@ -5,7 +5,7 @@ import {
   type SsoConfigsSchemaTypeForSelect,
   type SsoConfigsSchemaTypeForInsert,
   type SsoIdentitiesSchemaTypeForSelect,
-} from 'taskview-db-schemas'
+} from 'atlasgp-db-schemas'
 import { Database } from '../../modules/db'
 import { callWithCatch } from '../../utils/helpers'
 import type {

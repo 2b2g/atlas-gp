@@ -1,4 +1,4 @@
-import type { AnalyticsDataset, AnalyticsSeriesPayload, LocalizedText } from 'taskview-api'
+import type { AnalyticsDataset, AnalyticsSeriesPayload, LocalizedText } from 'atlasgp-api'
 import type { AmountPerProjectMonthSectionRow } from '../row.types'
 
 export type BuildProjectAmountPayloadArgs = {

@@ -120,7 +120,7 @@ import { computed, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import type { TaskSortBy } from 'taskview-api'
+import type { TaskSortBy } from 'atlasgp-api'
 import { useTasksStore } from '@/stores/tasks.store'
 import TasksFilterDrawer from './TasksFilterDrawer.vue'
 

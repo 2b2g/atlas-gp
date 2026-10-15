@@ -1,5 +1,5 @@
 import { and, eq, ne, isNull, sql } from 'drizzle-orm';
-import { GoalsSchema, IntegrationsSchema, IntegrationTaskMapSchema, OrganizationsSchema, TasksSchema, UsersSchema, type IntegrationsSchemaTypeForSelect, type IntegrationTaskMapSchemaTypeForSelect } from 'taskview-db-schemas';
+import { GoalsSchema, IntegrationsSchema, IntegrationTaskMapSchema, OrganizationsSchema, TasksSchema, UsersSchema, type IntegrationsSchemaTypeForSelect, type IntegrationTaskMapSchemaTypeForSelect } from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import { callWithCatch } from '../../utils/helpers';
 import type { IntegrationProvider, IntegrationsArgAdd, IntegrationsArgDelete, IntegrationsArgSelectRepo, IntegrationsArgToggle } from './types';

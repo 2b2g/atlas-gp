@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import type { KanbanColumnItem } from 'taskview-api'
+import type { KanbanColumnItem } from 'atlasgp-api'
 import { useKanbanStore } from '@/stores/kanban.store'
 
 const props = defineProps<{ status: KanbanColumnItem }>()

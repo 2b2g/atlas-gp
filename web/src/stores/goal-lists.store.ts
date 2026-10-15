@@ -5,7 +5,7 @@ import type {
   GoalListItemArgDelete,
   GoalListItemArgFetch,
   GoalListItemArgUpdate,
-} from 'taskview-api'
+} from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import type { GoalListsStoreState } from '@/types/goal-lists.types'
 

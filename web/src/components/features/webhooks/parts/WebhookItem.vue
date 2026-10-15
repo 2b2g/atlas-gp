@@ -141,9 +141,9 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useClipboard } from '@vueuse/core'
-import type { WebhookItem } from 'taskview-api'
+import type { WebhookItem } from 'atlasgp-api'
 import { useWebhooksStore } from '@/stores/webhooks.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const props = defineProps<{
   webhook: WebhookItem
@@ -158,7 +158,7 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const { copy } = useClipboard()
 const webhooksStore = useWebhooksStore()
 

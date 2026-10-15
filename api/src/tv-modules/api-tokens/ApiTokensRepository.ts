@@ -4,7 +4,7 @@ import {
     PermissionsSchema,
     type ApiTokensSchemaTypeForSelect,
     type PermissionsSchemaTypeForSelect,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import { callWithCatch } from '../../utils/helpers';
 

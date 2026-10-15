@@ -41,7 +41,7 @@ import { computed } from 'vue'
 import type { TaskItem } from '@/types/tasks.types'
 import TaskItemCard from '@/components/features/tasks/parts/TaskItem.vue'
 import { useTasksStore } from '@/stores/tasks.store'
-import { Task } from 'taskview-api'
+import { Task } from 'atlasgp-api'
 
 type TaskNodeProps = {
   toolbarVisible: boolean

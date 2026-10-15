@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { TagItemArgAdd, TagItemArgToggle, TagItemArgUpdate, TagItemResponseToggle } from 'taskview-api'
+import type { TagItemArgAdd, TagItemArgToggle, TagItemArgUpdate, TagItemResponseToggle } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import type { TagItem, TagsState } from '@/types/tags.types'
 import { useGoalsStore } from './goals.store'

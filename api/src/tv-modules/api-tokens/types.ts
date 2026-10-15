@@ -15,4 +15,4 @@ export const ApiTokenArkTypeDelete = type({
 
 export type ApiTokenArgDelete = typeof ApiTokenArkTypeDelete.infer;
 
-export const TOKEN_PREFIX = 'tvk_';
+export const TOKEN_PREFIX = 'agp_';

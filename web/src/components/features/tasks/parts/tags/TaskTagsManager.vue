@@ -137,12 +137,12 @@ import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTagsStore } from '@/stores/tag.store'
 import { useTasksStore } from '@/stores/tasks.store'
-import type { TagItem as TagItemType } from 'taskview-api'
+import type { TagItem as TagItemType } from 'atlasgp-api'
 import TagSearchAdd from './TagSearchAdd.vue'
 import TagEditDialog from './TagEditDialog.vue'
 import { useGoalPermissions } from '@/composables/useGoalPermissions'
 import { useProjectContext } from '@/composables/useProjectContext'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useNuxtUiTaskItemStyles } from '@/composables/useNuxtUiTaskItemStyles'
 import { useLsRef } from '@/composables/useLsRef'
 
@@ -153,7 +153,7 @@ const props = defineProps<{
 }>()
 
 const { canEditTaskTags, canViewTaskTags } = useGoalPermissions()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const { activatorUi } = useNuxtUiTaskItemStyles()
 const { t } = useI18n()
 const tagsStore = useTagsStore()
@@ -166,7 +166,7 @@ onMounted(async () => {
   }
 })
 
-const isExpanded = useLsRef('taskview:task:tagsExpanded', false)
+const isExpanded = useLsRef('atlasgp:task:tagsExpanded', false)
 const isEditMode = ref(false)
 const isEditDialogOpen = ref(false)
 const isDeleteDialogOpen = ref(false)

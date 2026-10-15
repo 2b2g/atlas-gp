@@ -18,10 +18,10 @@ TABLE_COUNT=$(PGPASSWORD=$DB_PASSWORD psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_N
 
 if [ "$TABLE_COUNT" -eq 0 ]; then
   echo "No tables found in the 'tasks' schema. Running migration with --create."
-  node /app-migration/taskview-db-migration.js --create
+  node /app-migration/atlasgp-db-migration.js --create
 else
   echo "Tables already exist in the 'tasks' schema ($TABLE_COUNT tables found). Running standard migration."
-  node /app-migration/taskview-db-migration.js
+  node /app-migration/atlasgp-db-migration.js
 fi
 
 # Check the exit code of the migration script

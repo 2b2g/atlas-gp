@@ -75,16 +75,16 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { SessionItem } from 'taskview-api'
+import type { SessionItem } from 'atlasgp-api'
 import { useSessionsStore } from '@/stores/sessions.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const props = defineProps<{
   session: SessionItem
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const store = useSessionsStore()
 
 const showDeleteConfirm = ref(false)

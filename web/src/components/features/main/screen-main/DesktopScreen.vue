@@ -21,12 +21,12 @@ import WidgetUpcoming from './parts/WidgetUpcoming.vue'
 import { useBaseScreenStore } from '@/stores/base-screen.store'
 import { useCollaborationStore } from '@/stores/collaboration.store'
 import { useOrganizationStore } from '@/stores/organization.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const baseScreenStore = useBaseScreenStore()
 const collaborationStore = useCollaborationStore()
 const orgStore = useOrganizationStore()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 
 
 watch(

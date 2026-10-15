@@ -39,7 +39,7 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import draggable from 'vuedraggable'
-import type { UiPreferencesItem } from 'taskview-api'
+import type { UiPreferencesItem } from 'atlasgp-api'
 import type { ResolvedItem } from '@/composables/useUiPreferences'
 import UiCustomizationItem from './UiCustomizationItem.vue'
 

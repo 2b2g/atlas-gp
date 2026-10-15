@@ -70,7 +70,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import type { InvoiceItem, InvoiceStatus } from 'taskview-api'
+import type { InvoiceItem, InvoiceStatus } from 'atlasgp-api'
 
 defineProps<{
   invoice: InvoiceItem

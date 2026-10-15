@@ -1,4 +1,4 @@
-import type { AnalyticsKpiPayload, AnalyticsSection } from 'taskview-api'
+import type { AnalyticsKpiPayload, AnalyticsSection } from 'atlasgp-api'
 import type { BuilderContext, SectionBuilder } from '../../types'
 import { sectionLocales } from '../locales'
 

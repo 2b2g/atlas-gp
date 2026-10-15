@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { TagItem as TagItemType } from 'taskview-api'
+import type { TagItem as TagItemType } from 'atlasgp-api'
 
 const props = defineProps<{
   tag: TagItemType

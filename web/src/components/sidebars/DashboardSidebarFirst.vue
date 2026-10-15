@@ -10,7 +10,7 @@
     <div class="flex items-center justify-between px-1 gap-2">
       <TvGoalLikeItem
         :to="{ name: 'user' }"
-        variant="taskview"
+        variant="atlasgp"
         class="flex-1"
       >
         {{ t('main') }}

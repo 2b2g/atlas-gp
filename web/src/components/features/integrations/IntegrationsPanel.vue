@@ -126,7 +126,7 @@ import IntegrationItem from './parts/IntegrationItem.vue'
 import AddIntegrationModal from './parts/AddIntegrationModal.vue'
 import RepoSelectModal from './parts/RepoSelectModal.vue'
 import { INTEGRATION_PROVIDERS } from '@/components/features/integrations/integrationProviders'
-import type { IntegrationItem as IntegrationItemType, RepoItem } from 'taskview-api'
+import type { IntegrationItem as IntegrationItemType, RepoItem } from 'atlasgp-api'
 
 const { t } = useI18n()
 const route = useRoute()

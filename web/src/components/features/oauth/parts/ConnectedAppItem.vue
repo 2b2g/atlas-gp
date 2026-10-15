@@ -87,16 +87,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { OAuthConnectedApp } from 'taskview-api'
+import type { OAuthConnectedApp } from 'atlasgp-api'
 import { useOAuthStore } from '@/stores/oauth.store'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 
 const props = defineProps<{
   app: OAuthConnectedApp
 }>()
 
 const { t } = useI18n()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const store = useOAuthStore()
 
 const showRevokeConfirm = ref(false)

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { SellerItem } from 'taskview-api'
+import type { SellerItem } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import { httpStatusOf } from '@/helpers/billingErrors'

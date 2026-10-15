@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Sprint } from 'taskview-api'
+import type { Sprint } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import { useGoalsStore } from '@/stores/goals.store'

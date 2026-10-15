@@ -91,7 +91,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDateFormat } from '@vueuse/core'
-import type { Sprint } from 'taskview-api'
+import type { Sprint } from 'atlasgp-api'
 import { useSprintFormat } from '../composables/useSprintFormat'
 import { useGoalsStore } from '@/stores/goals.store'
 import type { SprintTask } from '@/types/sprints.types'

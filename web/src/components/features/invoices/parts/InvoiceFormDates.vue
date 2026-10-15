@@ -46,7 +46,7 @@ import { useI18n } from 'vue-i18n'
 import { useInvoiceFieldStyle } from '@/composables/useInvoiceFieldStyle'
 import InvoiceDateField from './InvoiceDateField.vue'
 import { addDays } from '@/helpers/invoiceDates'
-import type { InvoicePaymentTerms } from 'taskview-api'
+import type { InvoicePaymentTerms } from 'atlasgp-api'
 import { PAYMENT_TERMS_DAYS, type InvoiceFormValue } from '@/types/invoices.types'
 
 const model = defineModel<InvoiceFormValue>({ required: true })

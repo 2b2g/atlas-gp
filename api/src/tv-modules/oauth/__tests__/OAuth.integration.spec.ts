@@ -9,7 +9,7 @@ import { Database } from '../../../modules/db';
 
 const port = 1810;
 const url = `http://localhost:${port}`;
-const MIGRATION_DIR = join(__dirname, '../../../migrations/taskview/sql/1.64.0');
+const MIGRATION_DIR = join(__dirname, '../../../migrations/atlasgp/sql/1.64.0');
 
 const LOGIN = 'test@mail.dest';
 const PASSWORD = 'user1!#Q';
@@ -502,7 +502,7 @@ describe('OAuth 2.1 authorization server', () => {
                 [sha256(access_token)],
             );
 
-            // Empty means "do not narrow", the same thing it means for a tvk_ token.
+            // Empty means "do not narrow", the same thing it means for a agp_ token.
             expect(result?.rows[0].allowed_permissions).toEqual([]);
         });
 

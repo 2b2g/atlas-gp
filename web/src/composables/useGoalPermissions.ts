@@ -1,7 +1,7 @@
 import { computed, provide, inject, type ComputedRef, type InjectionKey, type Ref } from 'vue'
 import { useGoalsStore } from '@/stores/goals.store'
 import { AllGoalPermissions } from '@/types/goals.types'
-import type { GoalItem } from 'taskview-api'
+import type { GoalItem } from 'atlasgp-api'
 
 type PermissionName = (keyof typeof AllGoalPermissions);
 

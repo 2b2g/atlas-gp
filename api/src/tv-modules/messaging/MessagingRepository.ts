@@ -13,7 +13,7 @@ import {
     UsersSchema,
     type MessagingConnectionsSchemaTypeForSelect,
     type MessagingLinkTokensSchemaTypeForSelect,
-} from 'taskview-db-schemas';
+} from 'atlasgp-db-schemas';
 import { Database } from '../../modules/db';
 import { callWithCatch } from '../../utils/helpers';
 import { SLACK_WEBHOOK_PREFIX } from './config';

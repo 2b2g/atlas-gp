@@ -5,7 +5,7 @@
   "version": "1.55.0",
   "scripts": {
     "dev": "vite",
-    "build:packages": "pnpm --filter taskview-db-schemas build && pnpm --filter taskview-api build && pnpm --filter capacitor-widget-bridge build",
+    "build:packages": "pnpm --filter atlasgp-db-schemas build && pnpm --filter atlasgp-api build && pnpm --filter capacitor-widget-bridge build",
     "build": "pnpm run build:packages && pnpm run typecheck && vite build",
     "build-only": "vite build",
     "preview": "vite preview",
@@ -71,7 +71,7 @@
     "rrule": "^2.8.1",
     "scule": "^1.3.0",
     "tailwindcss": "^4.1.18",
-    "taskview-api": "workspace:^",
+    "atlasgp-api": "workspace:^",
     "temporal-polyfill": "^1.0.5",
     "vue": "^3.5.27",
     "vue-chartjs": "^5.3.3",

@@ -79,7 +79,7 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import draggable from 'vuedraggable'
-import type { Task } from 'taskview-api'
+import type { Task } from 'atlasgp-api'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import KanbanAddStatus from '@/components/features/kanban/parts/KanbanAddStatus.vue'

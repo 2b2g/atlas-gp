@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import type { Organization, OrgMember } from 'taskview-api'
+import type { Organization, OrgMember } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 export const useOrganizationStore = defineStore('organization', () => {

@@ -1,4 +1,4 @@
-import type { GoalItem, KanbanColumnItem, KanbanFilters, KanbanResponseTasksForColumn } from 'taskview-api'
+import type { GoalItem, KanbanColumnItem, KanbanFilters, KanbanResponseTasksForColumn } from 'atlasgp-api'
 
 export type KanbanStoreState = {
     tasksData: {

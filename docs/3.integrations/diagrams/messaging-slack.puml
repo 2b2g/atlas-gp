@@ -1,5 +1,5 @@
 @startuml messaging-slack
-title TaskView — Slack messaging integration (sequence)
+title ATLAS GP — Slack messaging integration (sequence)
 
 actor User
 participant "Web\n(frontend)" as Web

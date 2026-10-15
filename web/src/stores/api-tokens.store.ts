@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { ApiTokenItem, ApiTokenPermission } from 'taskview-api'
+import type { ApiTokenItem, ApiTokenPermission } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 
 interface ApiTokensStoreState {

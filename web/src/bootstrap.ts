@@ -20,7 +20,7 @@ import syncSelectedProject from './middleware/syncSelectedProject'
 import api from './plugins/axios'
 import LoginPage from './pages/login.vue'
 import { registerExtensionOutlets } from './extensions/registry'
-import type { CreateTaskviewAppOptions, TvWebExtension } from './extensions/types'
+import type { CreateAtlasGPAppOptions, TvWebExtension } from './extensions/types'
 import type { Locale } from './locales'
 
 function buildRoutes(extensions: TvWebExtension[]): RouteRecordRaw[] {
@@ -168,7 +168,7 @@ function applyExtensionMessages(extensions: TvWebExtension[]) {
   }
 }
 
-export async function createTaskviewApp(options: CreateTaskviewAppOptions = {}) {
+export async function createAtlasGPApp(options: CreateAtlasGPAppOptions = {}) {
   const extensions = options.extensions ?? []
 
   addCollection(lucide)

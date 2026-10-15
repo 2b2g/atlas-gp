@@ -35,8 +35,8 @@ function readBody(req: IncomingMessage): Promise<string> {
  */
 export async function startMockOidcIdp(port: number): Promise<MockOidcIdp> {
   const issuer = `http://127.0.0.1:${port}`
-  const clientId = 'taskview-e2e-client'
-  const clientSecret = 'taskview-e2e-secret'
+  const clientId = 'atlasgp-e2e-client'
+  const clientSecret = 'atlasgp-e2e-secret'
   const kid = 'e2e-key'
 
   const { publicKey, privateKey } = generateKeyPairSync('rsa', { modulusLength: 2048 })

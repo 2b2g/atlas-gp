@@ -1,5 +1,5 @@
 import { and, count, eq, gte, lt, sql } from 'drizzle-orm';
-import { GoalsSchema, InviteEmailsSchema, OrganizationsSchema, UsersSchema } from 'taskview-db-schemas';
+import { GoalsSchema, InviteEmailsSchema, OrganizationsSchema, UsersSchema } from 'atlasgp-db-schemas';
 import type { Dispatcher } from '../../core/Dispatcher';
 import { Email } from '../../core/Email';
 import { eventBus, type AppEvents } from '../../core/EventBus';
@@ -82,7 +82,7 @@ export class InviteEmailDispatcher implements Dispatcher {
             goalId: data.goalId,
         });
 
-        const fallbackName = data.locale === 'ru' ? 'Пользователь TaskView' : 'A TaskView user';
+        const fallbackName = data.locale === 'ru' ? 'Пользователь ATLAS GP' : 'A ATLAS GP user';
 
         await this.sendInviteEmail({
             email: data.email,
@@ -134,12 +134,12 @@ export class InviteEmailDispatcher implements Dispatcher {
         const template = args.locale === 'ru' ? InviteEmailTemplateRu : InviteEmailTemplateEn;
         const subject =
             args.locale === 'ru'
-                ? `${args.inviterName} приглашает вас в проект «${args.goalName}» в TaskView`
-                : `${args.inviterName} invited you to "${args.goalName}" on TaskView`;
+                ? `${args.inviterName} приглашает вас в проект «${args.goalName}» в ATLAS GP`
+                : `${args.inviterName} invited you to "${args.goalName}" on ATLAS GP`;
         const text =
             args.locale === 'ru'
-                ? `${args.inviterName} приглашает вас присоединиться к проекту «${args.goalName}» в TaskView.\n\nОткрыть проект: ${args.link}`
-                : `${args.inviterName} has invited you to join the project "${args.goalName}" on TaskView.\n\nOpen the project: ${args.link}`;
+                ? `${args.inviterName} приглашает вас присоединиться к проекту «${args.goalName}» в ATLAS GP.\n\nОткрыть проект: ${args.link}`
+                : `${args.inviterName} has invited you to join the project "${args.goalName}" on ATLAS GP.\n\nOpen the project: ${args.link}`;
 
         // Single-pass replace with a function: no re-substitution of placeholders inside
         // inserted values, and no special treatment of $-patterns in the replacement

@@ -104,7 +104,7 @@ import { CalendarDate } from '@internationalized/date'
 import { useGoalsStore } from '@/stores/goals.store'
 import { useBaseScreenStore } from '@/stores/base-screen.store'
 import { $ls, $tvApi } from '@/plugins/axios'
-import { useTaskView } from '@/composables/useTaskView'
+import { useAtlasGP } from '@/composables/useAtlasGP'
 import { useInbox } from '@/composables/useInbox'
 import { useWeekStart } from '@/composables/useWeekStart'
 
@@ -136,7 +136,7 @@ const model = defineModel<boolean>({ default: false })
 const { t } = useI18n()
 const goalsStore = useGoalsStore()
 const baseScreenStore = useBaseScreenStore()
-const { isMobile } = useTaskView()
+const { isMobile } = useAtlasGP()
 const { inbox } = useInbox()
 
 const taskDescription = ref(props.taskName)

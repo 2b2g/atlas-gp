@@ -1,5 +1,5 @@
 import { useRouter } from 'vue-router'
-import type { Organization } from 'taskview-api'
+import type { Organization } from 'atlasgp-api'
 import { useOrganizationStore } from '@/stores/organization.store'
 import { useGoalsStore } from '@/stores/goals.store'
 

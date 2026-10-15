@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ALL_TASKS_LIST_ID, type GoalItem } from 'taskview-api'
+import { ALL_TASKS_LIST_ID, type GoalItem } from 'atlasgp-api'
 import { $tvApi } from '@/plugins/axios'
 import { logError } from '@/helpers/Helper'
 import type { TaskItem } from '@/types/tasks.types'

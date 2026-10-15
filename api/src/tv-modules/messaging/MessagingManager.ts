@@ -8,7 +8,7 @@ import { buildTaskDeepLink } from './utils';
 import type { MessagingProvider } from './providers/MessagingProvider';
 import type { ConnectContext, ConnectStart, InboundIntent, InboundRaw, MessagingConnectionForClient, MessagingConnectLinkResult } from './types.internal';
 import { sanitizeMessagingEvents, type MessagingMessage, type MessagingProviderId } from './types';
-import type { MessagingConnectionsSchemaTypeForSelect } from 'taskview-db-schemas';
+import type { MessagingConnectionsSchemaTypeForSelect } from 'atlasgp-db-schemas';
 
 export class MessagingManager {
     public readonly repository = new MessagingRepository();
@@ -88,14 +88,14 @@ export class MessagingManager {
         const note = (title: string): MessagingMessage => ({ event: 'task.created', title });
 
         const userId = await this.repository.findUserIdByExternalId({ provider: id, externalUserId: intent.externalUserId, externalTeamId: null });
-        if (!userId) return note('Link your account in TaskView first (Personal → Connect), then try /task again.');
+        if (!userId) return note('Link your account in ATLAS GP first (Personal → Connect), then try /task again.');
 
         const goalIds = await this.repository.fetchProjectGoalIdsByChannel({ provider: id, channelId: intent.chatId, externalTeamId: null });
-        if (goalIds.length === 0) return note('This chat is not linked to a TaskView project.');
-        if (goalIds.length > 1) return note('This chat is linked to several projects — create the task in TaskView.');
+        if (goalIds.length === 0) return note('This chat is not linked to a ATLAS GP project.');
+        if (goalIds.length > 1) return note('This chat is linked to several projects — create the task in ATLAS GP.');
 
         const appUser = await this.buildAppUser(userId);
-        if (!appUser) return note('Could not resolve your TaskView account.');
+        if (!appUser) return note('Could not resolve your ATLAS GP account.');
 
         const checker = await appUser.permissionsFetcher.getCheckerForGoal(goalIds[0]);
         if (!checker.hasPermissions(GoalPermissions.COMPONENT_CAN_ADD_TASKS)) {
@@ -142,8 +142,8 @@ export class MessagingManager {
         await this.repository.consumeLinkToken(link.id);
 
         const text = intent.scope === 'user'
-            ? 'Done! Your TaskView account is linked — notifications will be delivered here.'
-            : 'Done! This chat is connected to your TaskView project — project events will be posted here.';
+            ? 'Done! Your ATLAS GP account is linked — notifications will be delivered here.'
+            : 'Done! This chat is connected to your ATLAS GP project — project events will be posted here.';
         await provider.deliver({ chatId: intent.chatId, accessToken: null, message: { event: 'task.created', title: text } });
     }
 
